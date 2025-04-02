@@ -1,0 +1,871 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 26 2025 10:13:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ad70h ( 44400) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001ad98 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d134 vaddr=40080000 size=02ee4h ( 12004) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=164d0h ( 91344) map[0m
+[0;32mI (165) esp_image: segment 4: paddr=000364f8 vaddr=40082ee4 size=0b1a8h ( 45480) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (190) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     ADAS_MASTER_ESP[0m
+[0;32mI (219) app_init: App version:      1[0m
+[0;32mI (224) app_init: Compile time:     Jan 26 2025 10:10:18[0m
+[0;32mI (230) app_init: ELF file SHA256:  2b0a81922...[0m
+[0;32mI (235) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (240) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (245) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (255) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (262) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFB2C68 len 0002D398 (180 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 4008E08C len 00011F74 (71 KiB): IRAM[0m
+[0;32mI (295) spi_flash: detected chip: generic[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (315) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (327) main_task: Started on CPU0[0m
+[0;32mI (337) main_task: Calling app_main()[0m
+[0;32mI (337) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[16]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[17]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (387) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (397) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Gyroscope Z-Axis: 77.50 degrees/second
+Gyroscope Z-Axis: -7.49 degrees/second
+Gyroscope Z-Axis: 0.32 degrees/second
+Gyroscope Z-Axis: 1.55 degrees/second
+Gyroscope Z-Axis: 0.77 degrees/second
+Gyroscope Z-Axis: -12.37 degrees/second
+Gyroscope Z-Axis: -6.27 degrees/second
+Gyroscope Z-Axis: -3.89 degrees/second
+Gyroscope Z-Axis: -2.02 degrees/second
+Gyroscope Z-Axis: -1.62 degrees/second
+Gyroscope Z-Axis: -1.03 degrees/second
+Gyroscope Z-Axis: -4.94 degrees/second
+Gyroscope Z-Axis: -99.73 degrees/second
+Gyroscope Z-Axis: 9.79 degrees/second
+Gyroscope Z-Axis: 26.28 degrees/second
+Gyroscope Z-Axis: -0.92 degrees/second
+Gyroscope Z-Axis: 1.72 degrees/second
+Gyroscope Z-Axis: -2.17 degrees/second
+Gyroscope Z-Axis: -0.24 degrees/second
+Gyroscope Z-Axis: -10.95 degrees/second
+Gyroscope Z-Axis: -7.90 degrees/second
+Gyroscope Z-Axis: 8.05 degrees/second
+Gyroscope Z-Axis: 5.59 degrees/second
+Gyroscope Z-Axis: -3.78 degrees/second
+Gyroscope Z-Axis: -2.69 degrees/second
+Gyroscope Z-Axis: -2.67 degrees/second
+Gyroscope Z-Axis: -22.68 degrees/second
+Gyroscope Z-Axis: -36.18 degrees/second
+Gyroscope Z-Axis: 2.07 degrees/second
+Gyroscope Z-Axis: 5.15 degrees/second
+Gyroscope Z-Axis: 4.08 degrees/second
+Gyroscope Z-Axis: -6.33 degrees/second
+Gyroscope Z-Axis: 0.69 degrees/second
+Gyroscope Z-Axis: -0.03 degrees/second
+Gyroscope Z-Axis: -13.71 degrees/second
+Gyroscope Z-Axis: -9.64 degrees/second
+Gyroscope Z-Axis: 2.56 degrees/second
+Gyroscope Z-Axis: 4.19 degrees/second
+Gyroscope Z-Axis: -10.48 degrees/second
+Gyroscope Z-Axis: 11.90 degrees/second
+Gyroscope Z-Axis: -2.56 degrees/second
+Gyroscope Z-Axis: -0.85 degrees/second
+Gyroscope Z-Axis: -0.26 degrees/second
+Gyroscope Z-Axis: -1.55 degrees/second
+Gyroscope Z-Axis: -0.56 degrees/second
+Gyroscope Z-Axis: 29.79 degrees/second
+Gyroscope Z-Axis: 8.05 degrees/second
+Gyroscope Z-Axis: -3.91 degrees/second
+Gyroscope Z-Axis: -1.81 degrees/second
+Gyroscope Z-Axis: -1.99 degrees/second
+Gyroscope Z-Axis: -1.84 degrees/second
+Gyroscope Z-Axis: -0.90 degrees/second
+Gyroscope Z-Axis: -2.05 degrees/second
+Gyroscope Z-Axis: 0.83 degrees/second
+Gyroscope Z-Axis: 1.22 degrees/second
+Gyroscope Z-Axis: -1.17 degrees/second
+Gyroscope Z-Axis: -0.22 degrees/second
+Gyroscope Z-Axis: -2.23 degrees/second
+Gyroscope Z-Axis: -5.34 degrees/second
+Gyroscope Z-Axis: -16.04 degrees/second
+Gyroscope Z-Axis: -1.60 degrees/second
+Gyroscope Z-Axis: 1.27 degrees/second
+Gyroscope Z-Axis: 21.98 degrees/second
+Gyroscope Z-Axis: -4.22 degrees/second
+Gyroscope Z-Axis: -7.43 degrees/second
+Gyroscope Z-Axis: 153.28 degrees/second
+Gyroscope Z-Axis: -2.21 degrees/second
+Gyroscope Z-Axis: 1.49 degrees/second
+Gyroscope Z-Axis: -47.61 degrees/second
+Gyroscope Z-Axis: -2.01 degrees/second
+Gyroscope Z-Axis: -16.79 degrees/second
+Gyroscope Z-Axis: 5.64 degrees/second
+Gyroscope Z-Axis: -29.89 degrees/second
+Gyroscope Z-Axis: -3.51 degrees/second
+Gyroscope Z-Axis: -3.56 degrees/second
+Gyroscope Z-Axis: 3.84 degrees/second
+Gyroscope Z-Axis: -0.43 degrees/second
+Gyroscope Z-Axis: 2.05 degrees/second
+Gyroscope Z-Axis: 4.36 degrees/second
+Gyroscope Z-Axis: -19.76 degrees/second
+Gyroscope Z-Axis: -18.27 degrees/second
+Gyroscope Z-Axis: -4.56 degrees/second
+Gyroscope Z-Axis: 27.63 degrees/second
+Gyroscope Z-Axis: -2.53 degrees/second
+Gyroscope Z-Axis: -15.40 degrees/second
+Gyroscope Z-Axis: -14.68 degrees/second
+Gyroscope Z-Axis: 68.79 degrees/second
+Gyroscope Z-Axis: -45.88 degrees/second
+Gyroscope Z-Axis: 38.25 degrees/second
+Gyroscope Z-Axis: -22.86 degrees/second
+Gyroscope Z-Axis: 0.54 degrees/second
+Gyroscope Z-Axis: -1.07 degrees/second
+Gyroscope Z-Axis: -1.27 degrees/second
+Gyroscope Z-Axis: -1.82 degrees/second
+Gyroscope Z-Axis: -1.58 degrees/second
+Gyroscope Z-Axis: -1.80 degrees/second
+Gyroscope Z-Axis: -1.11 degrees/second
+Gyroscope Z-Axis: -1.52 degrees/second
+Gyroscope Z-Axis: -1.60 degrees/second
+Gyroscope Z-Axis: -0.41 degrees/second
+Gyroscope Z-Axis: 22.00 degrees/second
+Gyroscope Z-Axis: -0.36 degrees/second
+Gyroscope Z-Axis: -0.62 degrees/second
+Gyroscope Z-Axis: -3.18 degrees/second
+Gyroscope Z-Axis: -2.08 degrees/second
+Gyroscope Z-Axis: -1.95 degrees/second
+Gyroscope Z-Axis: -1.93 degrees/second
+Gyroscope Z-Axis: -1.19 degrees/second
+Gyroscope Z-Axis: -1.70 degrees/second
+Gyroscope Z-Axis: -1.76 degrees/second
+Gyroscope Z-Axis: -1.40 degrees/second
+Gyroscope Z-Axis: -0.44 degrees/second
+Gyroscope Z-Axis: -2.79 degrees/second
+Gyroscope Z-Axis: -1.78 degrees/second
+Gyroscope Z-Axis: -1.51 degrees/second
+Gyroscope Z-Axis: -1.89 degrees/second
+Gyroscope Z-Axis: -0.19 degrees/second
+Gyroscope Z-Axis: -2.33 degrees/second
+Gyroscope Z-Axis: -0.28 degrees/second
+Gyroscope Z-Axis: -1.73 degrees/second
+Gyroscope Z-Axis: -4.58 degrees/second
+Gyroscope Z-Axis: -1.21 degrees/second
+Gyroscope Z-Axis: -0.80 degrees/second
+Gyroscope Z-Axis: -33.78 degrees/second
+Gyroscope Z-Axis: -0.21 degrees/second
+Gyroscope Z-Axis: -5.40 degrees/second
+Gyroscope Z-Axis: -15.36 degrees/second
+Gyroscope Z-Axis: 4.66 degrees/second
+Gyroscope Z-Axis: -5.73 degrees/second
+Gyroscope Z-Axis: -6.44 degrees/second
+Gyroscope Z-Axis: 34.65 degrees/second
+Gyroscope Z-Axis: -55.15 degrees/second
+Gyroscope Z-Axis: -4.78 degrees/second
+Gyroscope Z-Axis: -24.98 degrees/second
+Gyroscope Z-Axis: 0.21 degrees/second
+Gyroscope Z-Axis: -5.08 degrees/second
+Gyroscope Z-Axis: 15.54 degrees/second
+Gyroscope Z-Axis: -26.73 degrees/second
+Gyroscope Z-Axis: -49.14 degrees/second
+Gyroscope Z-Axis: -39.51 degrees/second
+Gyroscope Z-Axis: 42.12 degrees/second
+Gyroscope Z-Axis: -8.55 degrees/second
+Gyroscope Z-Axis: -1.03 degrees/second
+Gyroscope Z-Axis: 20.46 degrees/second
+Gyroscope Z-Axis: -0.46 degrees/second
+Gyroscope Z-Axis: -2.28 degrees/second
+Gyroscope Z-Axis: -33.99 degrees/second
+Gyroscope Z-Axis: -39.85 degrees/second
+Gyroscope Z-Axis: 4.49 degrees/second
+Gyroscope Z-Axis: -10.02 degrees/second
+Gyroscope Z-Axis: 1.89 degrees/second
+Gyroscope Z-Axis: -6.24 degrees/second
+Gyroscope Z-Axis: -1.95 degrees/second
+Gyroscope Z-Axis: 7.11 degrees/second
+Gyroscope Z-Axis: -5.69 degrees/second
+Gyroscope Z-Axis: -0.47 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 125.55 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 26 2025 10:13:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ad70h ( 44400) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001ad98 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d134 vaddr=40080000 size=02ee4h ( 12004) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=164d0h ( 91344) map[0m
+[0;32mI (165) esp_image: segment 4: paddr=000364f8 vaddr=40082ee4 size=0b1a8h ( 45480) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (190) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     ADAS_MASTER_ESP[0m
+[0;32mI (219) app_init: App version:      1[0m
+[0;32mI (224) app_init: Compile time:     Jan 26 2025 10:10:18[0m
+[0;32mI (230) app_init: ELF file SHA256:  2b0a81922...[0m
+[0;32mI (235) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (240) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (245) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (255) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (262) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFB2C68 len 0002D398 (180 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 4008E08C len 00011F74 (71 KiB): IRAM[0m
+[0;32mI (295) spi_flash: detected chip: generic[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (315) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (327) main_task: Started on CPU0[0m
+[0;32mI (337) main_task: Calling app_main()[0m
+[0;32mI (337) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[16]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[17]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (387) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (397) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 17.60 degrees/second
+Gyroscope Z-Axis: 17.60 degrees/second
+Gyroscope Z-Axis: 13.18 degrees/second
+Gyroscope Z-Axis: -3.67 degrees/second
+Gyroscope Z-Axis: 0.53 degrees/second
+Gyroscope Z-Axis: -3.23 degrees/second
+Gyroscope Z-Axis: 3.76 degrees/second
+Gyroscope Z-Axis: -2.91 degrees/second
+Gyroscope Z-Axis: -0.69 degrees/second
+Gyroscope Z-Axis: -8.05 degrees/second
+Gyroscope Z-Axis: 1.60 degrees/second
+Gyroscope Z-Axis: -2.60 degrees/second
+Gyroscope Z-Axis: -0.97 degrees/second
+Gyroscope Z-Axis: 0.59 degrees/second
+Gyroscope Z-Axis: -2.21 degrees/second
+Gyroscope Z-Axis: -7.99 degrees/second
+Gyroscope Z-Axis: 7.56 degrees/second
+Gyroscope Z-Axis: 5.05 degrees/second
+Gyroscope Z-Axis: 4.41 degrees/second
+Gyroscope Z-Axis: -0.60 degrees/second
+Gyroscope Z-Axis: -5.92 degrees/second
+Gyroscope Z-Axis: -1.85 degrees/second
+Gyroscope Z-Axis: -3.98 degrees/second
+Gyroscope Z-Axis: 2.37 degrees/second
+Gyroscope Z-Axis: -17.85 degrees/second
+Gyroscope Z-Axis: 12.27 degrees/second
+Gyroscope Z-Axis: 5.21 degrees/second
+Gyroscope Z-Axis: 11.17 degrees/second
+Gyroscope Z-Axis: -4.20 degrees/second
+Gyroscope Z-Axis: -12.17 degrees/second
+Gyroscope Z-Axis: -11.05 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 1.34 degrees/second
+Gyroscope Z-Axis: -0.71 degrees/second
+Gyroscope Z-Axis: -0.46 degrees/second
+Gyroscope Z-Axis: -69.64 degrees/second
+Gyroscope Z-Axis: -4.66 degrees/second
+Gyroscope Z-Axis: -27.97 degrees/second
+Gyroscope Z-Axis: 0.56 degrees/second
+Gyroscope Z-Axis: -1.24 degrees/second
+Gyroscope Z-Axis: 0.14 degrees/second
+Gyroscope Z-Axis: 0.98 degrees/second
+Gyroscope Z-Axis: 22.62 degrees/second
+Gyroscope Z-Axis: 2.08 degrees/second
+Gyroscope Z-Axis: 0.55 degrees/second
+Gyroscope Z-Axis: -16.44 degrees/second
+Gyroscope Z-Axis: -5.46 degrees/second
+Gyroscope Z-Axis: -0.29 degrees/second
+Gyroscope Z-Axis: 0.25 degrees/second
+Gyroscope Z-Axis: 30.03 degrees/second
+Gyroscope Z-Axis: -2.81 degrees/second
+Gyroscope Z-Axis: -0.32 degrees/second
+Gyroscope Z-Axis: -1.79 degrees/second
+Gyroscope Z-Axis: -1.37 degrees/second
+Gyroscope Z-Axis: -1.41 degrees/second
+Gyroscope Z-Axis: -1.47 degrees/second
+Gyroscope Z-Axis: -1.24 degrees/second
+Gyroscope Z-Axis: -1.33 degrees/second
+Gyroscope Z-Axis: -1.63 degrees/second
+Gyroscope Z-Axis: 0.95 degrees/second
+Gyroscope Z-Axis: -0.89 degrees/second
+Gyroscope Z-Axis: -1.53 degrees/second
+Gyroscope Z-Axis: -0.80 degrees/second
+Gyroscope Z-Axis: -1.52 degrees/second
+Gyroscope Z-Axis: -0.58 degrees/second
+Gyroscope Z-Axis: -2.05 degrees/second
+Gyroscope Z-Axis: -3.89 degrees/second
+Gyroscope Z-Axis: 7.66 degrees/second
+Gyroscope Z-Axis: -0.90 degrees/second
+Gyroscope Z-Axis: -1.59 degrees/second
+Gyroscope Z-Axis: -2.22 degrees/second
+Gyroscope Z-Axis: -1.82 degrees/second
+Gyroscope Z-Axis: -1.73 degrees/second
+Gyroscope Z-Axis: -1.47 degrees/second
+Gyroscope Z-Axis: -0.61 degrees/second
+Gyroscope Z-Axis: -1.79 degrees/second
+Gyroscope Z-Axis: -1.60 degrees/second
+Gyroscope Z-Axis: -0.76 degrees/second
+Gyroscope Z-Axis: -2.10 degrees/second
+Gyroscope Z-Axis: -2.03 degrees/second
+Gyroscope Z-Axis: 0.10 degrees/second
+Gyroscope Z-Axis: -0.65 degrees/second
+Gyroscope Z-Axis: -1.63 degrees/second
+Gyroscope Z-Axis: -0.69 degrees/second
+Gyroscope Z-Axis: -1.47 degrees/second
+Gyroscope Z-Axis: -6.20 degrees/second
+Gyroscope Z-Axis: -0.34 degrees/second
+Gyroscope Z-Axis: -5.12 degrees/second
+Gyroscope Z-Axis: -0.88 degrees/second
+Gyroscope Z-Axis: -1.87 degrees/second
+Gyroscope Z-Axis: -1.21 degrees/second
+Gyroscope Z-Axis: -1.58 degrees/second
+Gyroscope Z-Axis: -2.08 degrees/second
+Gyroscope Z-Axis: -3.37 degrees/second
+Gyroscope Z-Axis: -8.24 degrees/second
+Gyroscope Z-Axis: 14.44 degrees/second
+Gyroscope Z-Axis: -60.15 degrees/second
+Gyroscope Z-Axis: 3.90 degrees/second
+Gyroscope Z-Axis: -35.82 degrees/second
+Gyroscope Z-Axis: -4.39 degrees/second
+Gyroscope Z-Axis: -4.76 degrees/second
+Gyroscope Z-Axis: -6.37 degrees/second
+Gyroscope Z-Axis: 2.23 degrees/second
+Gyroscope Z-Axis: -3.69 degrees/second
+Gyroscope Z-Axis: -2.19 degrees/second
+Gyroscope Z-Axis: -2.84 degrees/second
+Gyroscope Z-Axis: -3.11 degrees/second
+Gyroscope Z-Axis: -1.35 degrees/second
+Gyroscope Z-Axis: -2.44 degrees/second
+Gyroscope Z-Axis: 36.51 degrees/second
+Gyroscope Z-Axis: 59.50 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: 0.00 degrees/second
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 26 2025 10:13:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ad70h ( 44400) map[0m
+[0;32mI (120) esp_image: segment 1: paddr=0001ad98 vaddr=3ffb0000 size=02394h (  9108) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001d134 vaddr=40080000 size=02ee4h ( 12004) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=164d0h ( 91344) map[0m
+[0;32mI (165) esp_image: segment 4: paddr=000364f8 vaddr=40082ee4 size=0b1a8h ( 45480) load[0m
+[0;32mI (190) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (190) boot: Disabling RNG early entropy source...[0m
+[0;32mI (203) cpu_start: Multicore app[0m
+[0;32mI (211) cpu_start: Pro cpu start user code[0m
+[0;32mI (211) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (211) app_init: Application information:[0m
+[0;32mI (214) app_init: Project name:     ADAS_MASTER_ESP[0m
+[0;32mI (219) app_init: App version:      1[0m
+[0;32mI (224) app_init: Compile time:     Jan 26 2025 10:10:18[0m
+[0;32mI (230) app_init: ELF file SHA256:  2b0a81922...[0m
+[0;32mI (235) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (240) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (245) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (250) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (255) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (262) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (268) heap_init: At 3FFB2C68 len 0002D398 (180 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (281) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 4008E08C len 00011F74 (71 KiB): IRAM[0m
+[0;32mI (295) spi_flash: detected chip: generic[0m
+[0;32mI (298) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (315) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (327) main_task: Started on CPU0[0m
+[0;32mI (337) main_task: Calling app_main()[0m
+[0;32mI (337) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (337) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (347) gpio: GPIO[16]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (357) gpio: GPIO[17]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (367) gpio: GPIO[2]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (377) gpio: GPIO[15]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (387) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (397) gpio: GPIO[19]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+Gyroscope Z-Axis: 0.00 degrees/second
+Gyroscope Z-Axis: -2.68 degrees/second
+Gyroscope Z-Axis: -0.21 degrees/second
+Gyroscope Z-Axis: -6.89 degrees/second
+Gyroscope Z-Axis: -9.96 degrees/second
+Gyroscope Z-Axis: -9.02 degrees/second
+Gyroscope Z-Axis: -12.30 degrees/second
+Gyroscope Z-Axis: -3.57 degrees/second
+Gyroscope Z-Axis: -9.12 degrees/second
+Gyroscope Z-Axis: -0.95 degrees/second
+Gyroscope Z-Axis: -1.75 degrees/second
+Gyroscope Z-Axis: -3.66 degrees/second
+Gyroscope Z-Axis: -8.24 degrees/second
+Gyroscope Z-Axis: -3.63 degrees/second
+Gyroscope Z-Axis: 9.56 degrees/second
+Gyroscope Z-Axis: 51.17 degrees/second
+Gyroscope Z-Axis: 66.21 degrees/second
+Gyroscope Z-Axis: 13.34 degrees/second
+Gyroscope Z-Axis: -7.34 degrees/second
+Gyroscope Z-Axis: -10.68 degrees/second
+Gyroscope Z-Axis: -44.56 degrees/second
+Gyroscope Z-Axis: -44.79 degrees/second
+Gyroscope Z-Axis: -77.49 degrees/second
+Gyroscope Z-Axis: -47.49 degrees/second
+Gyroscope Z-Axis: -14.95 degrees/second
+Gyroscope Z-Axis: -1.39 degrees/second
+Gyroscope Z-Axis: 1.83 degrees/second
+Gyroscope Z-Axis: 0.61 degrees/second
+Gyroscope Z-Axis: 10.78 degrees/second
+Gyroscope Z-Axis: 33.17 degrees/second
+Gyroscope Z-Axis: 71.63 degrees/second
+Gyroscope Z-Axis: 87.69 degrees/second
+Gyroscope Z-Axis: 50.76 degrees/second
+Gyroscope Z-Axis: -7.61 degrees/second
+Gyroscope Z-Axis: -77.66 degrees/second
+Gyroscope Z-Axis: -77.96 degrees/second
+Gyroscope Z-Axis: -79.72 degrees/second
+Gyroscope Z-Axis: -8.21 degrees/second
+Gyroscope Z-Axis: -4.56 degrees/second
+Gyroscope Z-Axis: -32.95 degrees/second
+Gyroscope Z-Axis: -7.61 degrees/second
+Gyroscope Z-Axis: -0.23 degrees/second
+Gyroscope Z-Axis: 48.58 degrees/second
+Gyroscope Z-Axis: 119.90 degrees/second
+Gyroscope Z-Axis: 7.25 degrees/second
+Gyroscope Z-Axis: -3.78 degrees/second
+Gyroscope Z-Axis: -2.74 degrees/second
+Gyroscope Z-Axis: -2.14 degrees/second
+Gyroscope Z-Axis: -2.79 degrees/second
+Gyroscope Z-Axis: -30.47 degrees/second
+Gyroscope Z-Axis: -46.51 degrees/second
+Gyroscope Z-Axis: -4.09 degrees/second
+Gyroscope Z-Axis: -4.34 degrees/second
+Gyroscope Z-Axis: -14.70 degrees/second
+Gyroscope Z-Axis: -3.70 degrees/second
+Gyroscope Z-Axis: -6.34 degrees/second
+Gyroscope Z-Axis: -21.68 degrees/second
+Gyroscope Z-Axis: -8.84 degrees/second
+Gyroscope Z-Axis: -4.37 degrees/second
+Gyroscope Z-Axis: 0.69 degrees/second
+Gyroscope Z-Axis: 0.50 degrees/second
+Gyroscope Z-Axis: 1.54 degrees/second
+Gyroscope Z-Axis: 29.62 degrees/second
+Gyroscope Z-Axis: 49.37 degrees/second
+Gyroscope Z-Axis: 65.24 degrees/second
+Gyroscope Z-Axis: 14.70 degrees/second
+Gyroscope Z-Axis: 0.11 degrees/second
+Gyroscope Z-Axis: -11.31 degrees/second
+Gyroscope Z-Axis: -4.66 degrees/second
+Gyroscope Z-Axis: -2.21 degrees/second
+Gyroscope Z-Axis: -3.10 degrees/second
+Gyroscope Z-Axis: -1.36 degrees/second
+Gyroscope Z-Axis: 7.52 degrees/second
+Gyroscope Z-Axis: 18.11 degrees/second
+Gyroscope Z-Axis: 19.65 degrees/second
+Gyroscope Z-Axis: -3.19 degrees/second
+Gyroscope Z-Axis: -3.14 degrees/second
+Gyroscope Z-Axis: 6.41 degrees/second
+Gyroscope Z-Axis: -1.78 degrees/second
+Gyroscope Z-Axis: -0.66 degrees/second
+Gyroscope Z-Axis: -3.55 degrees/second
+Gyroscope Z-Axis: 0.16 degrees/second
+Gyroscope Z-Axis: -2.10 degrees/second
+Gyroscope Z-Axis: -2.02 degrees/second
+Gyroscope Z-Axis: -0.02 degrees/second
+Gyroscope Z-Axis: 33.76 degrees/second
+Gyroscope Z-Axis: 17.77 degrees/second
+Gyroscope Z-Axis: -7.72 degrees/second
+Gyroscope Z-Axis: -4.40 degrees/second
+Gyroscope Z-Axis: -5.95 degrees/second
+Gyroscope Z-Axis: -6.69 degrees/second
+Gyroscope Z-Axis: -32.99 degrees/second
+Gyroscope Z-Axis: -49.63 degrees/second
+Gyroscope Z-Axis: -22.18 degrees/second
+Gyroscope Z-Axis: -10.60 degrees/second
+Gyroscope Z-Axis: -61.11 degrees/second
+Gyroscope Z-Axis: -51.08 degrees/second
+Gyroscope Z-Axis: -1.27 degrees/second
+Gyroscope Z-Axis: 65.06 degrees/second
+Gyroscope Z-Axis: -7.69 degrees/second
+Gyroscope Z-Axis: -1.64 degrees/second
+Gyroscope Z-Axis: -2.37 degrees/second
+Gyroscope Z-Axis: -4.05 degrees/second
+Gyroscope Z-Axis: -59.64 degrees/second
+Gyroscope Z-Axis: -47.89 degrees/second
+Gyroscope Z-Axis: 3.55 degrees/second
+Gyroscope Z-Axis: 0.80 degrees/second
+Gyroscope Z-Axis: 20.38 degrees/second
+Gyroscope Z-Axis: 9.27 degrees/second
+Gyroscope Z-Axis: 24.69 degrees/second
+Gyroscope Z-Axis: 13.44 degrees/second
+Gyroscope Z-Axis: 22.65 degrees/second
+Gyroscope Z-Axis: 1.32 degrees/second
+Gyroscope Z-Axis: -6.11 degrees/second
+Gyroscope Z-Axis: 12.80 degrees/second
+Gyroscope Z-Axis: 28.38 degrees/second
+Gyroscope Z-Axis: -3.76 degrees/second
+Gyroscope Z-Axis: -7.16 degrees/second
+Gyroscope Z-Axis: -3.08 degrees/second
+Gyroscope Z-Axis: -1.76 degrees/second
+Gyroscope Z-Axis: 96.89 degrees/second
+Gyroscope Z-Axis: 15.92 degrees/second
+Gyroscope Z-Axis: -7.65 degrees/second
+Gyroscope Z-Axis: -3.55 degrees/second
+Gyroscope Z-Axis: -2.98 degrees/second
+Gyroscope Z-Axis: -13.31 degrees/second
+Gyroscope Z-Axis: -68.81 degrees/second
+Gyroscope Z-Axis: -21.40 degrees/second
+Gyroscope Z-Axis: -3.34 degrees/second
+Gyroscope Z-Axis: -54.76 degrees/second
+Gyroscope Z-Axis: -47.21 degrees/second
+Gyroscope Z-Axis: -5.92 degrees/second
+Gyroscope Z-Axis: -1.42 degrees/second
+Gyroscope Z-Axis: -40.27 degrees/second
+Gyroscope Z-Axis: 8.92 degrees/second
+Gyroscope Z-Axis: 0.97 degrees/second
+Gyroscope Z-Axis: 44.08 degrees/second
+Gyroscope Z-Axis: -2.87 degrees/second
+Gyroscope Z-Axis: 13.50 degrees/second
+Gyroscope Z-Axis: 8.47 degrees/second
+Gyroscope Z-Axis: -21.49 degrees/second
+Gyroscope Z-Axis: 14.84 degrees/second
+Gyroscope Z-Axis: 45.14 degrees/second
+Gyroscope Z-Axis: 25.79 degrees/second
+Gyroscope Z-Axis: -43.95 degrees/second
+Gyroscope Z-Axis: -6.90 degrees/second
+Gyroscope Z-Axis: -1.12 degrees/second
+Gyroscope Z-Axis: -1.44 degrees/second
+Gyroscope Z-Axis: -1.41 degrees/second
+Gyroscope Z-Axis: -1.38 degrees/second
+Gyroscope Z-Axis: -1.55 degrees/second
+Gyroscope Z-Axis: -1.50 degrees/second
+Gyroscope Z-Axis: -1.40 degrees/second
+Gyroscope Z-Axis: -1.50 degrees/second
+Gyroscope Z-Axis: -1.63 degrees/second
+Gyroscope Z-Axis: -1.60 degrees/second
+Gyroscope Z-Axis: -1.63 degrees/second
+Gyroscope Z-Axis: -1.51 degrees/second
+Gyroscope Z-Axis: -1.56 degrees/second
+Gyroscope Z-Axis: -1.50 degrees/second
+Gyroscope Z-Axis: -1.49 degrees/second
+Gyroscope Z-Axis: -1.68 degrees/second
+Gyroscope Z-Axis: -1.58 degrees/second
+Gyroscope Z-Axis: -1.52 degrees/second
+Gyroscope Z-Axis: -1.63 degrees/second
+Gyroscope Z-Axis: -1.67 degrees/second
+Gyroscope Z-Axis: -1.68 degrees/second
+Gyroscope Z-Axis: -1.49 degrees/second
+Gyroscope Z-Axis: -1.62 degrees/second
+Gyroscope Z-Axis: -1.53 degrees/second
+Gyroscope Z-Axis: -1.79 degrees/second
+Gyroscope Z-Axis: -1.63 degrees/second
+Gyroscope Z-Axis: -1.63 degrees/second
+Gyroscope Z-Axis: -1.53 degrees/second
+Gyroscope Z-Axis: -1.68 degrees/second
+Gyroscope Z-Axis: -1.60 degrees/second
+Gyroscope Z-Axis: -1.54 degrees/second
+Gyroscope Z-Axis: -1.50 degrees/second
+Gyroscope Z-Axis: -1.71 degrees/second
+Gyroscope Z-Axis: -1.56 degrees/second
+Gyroscope Z-Axis: -1.35 degrees/second
+Gyroscope Z-Axis: -1.43 degrees/second
+Gyroscope Z-Axis: -1.46 degrees/second
+Gyroscope Z-Axis: -1.44 degrees/second
+Gyroscope Z-Axis: -1.51 degrees/second
+Gyroscope Z-Axis: -1.56 degrees/second
+Gyroscope Z-Axis: -1.81 degrees/second
+Gyroscope Z-Axis: -1.51 degrees/second
+Gyroscope Z-Axis: -1.71 degrees/second
+Gyroscope Z-Axis: -1.50 degrees/second
+Gyroscope Z-Axis: -1.46 degrees/second
+Gyroscope Z-Axis: -1.46 degrees/second
+Gyroscope Z-Axis: -1.48 degrees/second
+Gyroscope Z-Axis: -1.44 degrees/second
+Gyroscope Z-Axis: -1.49 degrees/second
+Gyroscope Z-Axis: -1.58 degrees/second
+Gyroscope Z-Axis: -1.55 degrees/second
+Gyroscope Z-Axis: -1.61 degrees/second
+Gyroscope Z-Axis: -1.56 degrees/second
+Gyroscope Z-Axis: -1.27 degrees/second
+Gyroscope Z-Axis: -1.53 degrees/second
+Gyroscope Z-Axis: -1.58 degrees/second
+Gyroscope Z-Axis: -1.53 degrees/second
+Gyroscope Z-Axis: -1.59 degrees/second
+Gyroscope Z-Axis: -1.51 degrees/second
+Gyroscope Z-Axis: -1.59 degrees/second
+Gyroscope Z-Axis: -1.64 degrees/second
+Gyroscope Z-Axis: -1.49 degrees/second
+Gyroscope Z-Axis: -1.56 degrees/second
+Gyroscope Z-Axis: -1.55 degrees/second
+Gyroscope Z-Axis: -1.58 degrees/second
+Gyroscope Z-Axis: -1.50 degrees/second
+Gyroscope Z-Axis: -1.52 degrees/second
+Gyroscope Z-Axis: -1.50 degrees/second
+Gyroscope Z-Axis: -0.05 degrees/second
+Gyroscope Z-Axis: 29.90 degrees/second
+Gyroscope Z-Axis: -27.68 degrees/second
+Gyroscope Z-Axis: -26.05 degrees/second
+Gyroscope Z-Axis: 10.47 degrees/second
+Gyroscope Z-Axis: 44.14 degrees/second
+Gyroscope Z-Axis: 37.27 degrees/second
+Gyroscope Z-Axis: -30.73 degrees/second
+Gyroscope Z-Axis: -13.31 degrees/second
+Gyroscope Z-Axis: -6.10 degrees/second
+Gyroscope Z-Axis: 0.22 degrees/second
+Gyroscope Z-Axis: 70.69 degrees/second
+Gyroscope Z-Axis: 51.12 degrees/second
+Gyroscope Z-Axis: 6.89 degrees/second
+Gyroscope Z-Axis: 3.04 degrees/second
+Gyroscope Z-Axis: -3.24 degrees/second
+Gyroscope Z-Axis: 7.39 degrees/second
+Gyroscope Z-Axis: 16.77 degrees/second
+Gyroscope Z-Axis: -26.60 degrees/second
+Gyroscope Z-Axis: -112.35 degrees/second
+Gyroscope Z-Axis: -27.60 degrees/second
+Gyroscope Z-Axis: 19.69 degrees/second
+Gyroscope Z-Axis: -1.60 degrees/second
+Gyroscope Z-Axis: -4.01 degrees/second
+Gyroscope Z-Axis: -3.70 degrees/second
+Gyroscope Z-Axis: -172.55 degrees/second
+Gyroscope Z-Axis: 6.66 degrees/second
+Gyroscope Z-Axis: -7.47 degrees/second
+Gyroscope Z-Axis: -0.60 degrees/second
+Gyroscope Z-Axis: -1.88 degrees/second
+Gyroscope Z-Axis: 127.43 degrees/second
+Gyroscope Z-Axis: 62.53 degrees/second
+Gyroscope Z-Axis: -41.01 degrees/second
+Gyroscope Z-Axis: 31.09 degrees/second
+Gyroscope Z-Axis: -105.80 degrees/second
+Gyroscope Z-Axis: -58.08 degrees/second
+Gyroscope Z-Axis: -21.50 degrees/second
+Gyroscope Z-Axis: -5.09 degrees/second
+Gyroscope Z-Axis: -15.68 degrees/second
+Gyroscope Z-Axis: -51.88 degrees/second
+Gyroscope Z-Axis: -7.30 degrees/second
+Gyroscope Z-Axis: 2.75 degrees/second
+Gyroscope Z-Axis: -0.54 degrees/second
+Gyroscope Z-Axis: -36.45 degrees/second
+Gyroscope Z-Axis: 14.56 degrees/second
+Gyroscope Z-Axis: 200.29 degrees/second
+Gyroscope Z-Axis: 1.99 degrees/second
+Gyroscope Z-Axis: -21.27 degrees/second
+Gyroscope Z-Axis: 5.39 degrees/second
+Gyroscope Z-Axis: -11.22 degrees/second
+Gyroscope Z-Axis: -15.02 degrees/second
+Gyroscope Z-Axis: -6.46 degrees/second
+Gyroscope Z-Axis: 56.24 degrees/second
+Gyroscope Z-Axis: 57.60 degrees/second
+Gyroscope Z-Axis: 0.21 degrees/second
+Gyroscope Z-Axis: -1.10 degrees/second
+Gyroscope Z-Axis: 4.60 degrees/second
+Gyroscope Z-Axis: 0.47 degrees/second
+Gyroscope Z-Axis: 0.80 degrees/second
+Gyroscope Z-Axis: -38.37 degrees/second
+Gyroscope Z-Axis: -163.31 degrees/second
+Gyroscope Z-Axis: 72.14 degrees/second
+Gyroscope Z-Axis: 109.44 degrees/second
+Gyroscope Z-Axis: -15.00 degrees/second
+Gyroscope Z-Axis: -155.61 degrees/second
+Gyroscope Z-Axis: -24.08 degrees/second
+Gyroscope Z-Axis: -14.27 degrees/second
+Gyroscope Z-Axis: -1.98 degrees/second
+Gyroscope Z-Axis: -170.34 degrees/second
+Gyroscope Z-Axis: 18.87 degrees/second
+Gyroscope Z-Axis: 123.75 degrees/second
+Gyroscope Z-Axis: -7.50 degrees/second
+Gyroscope Z-Axis: -126.80 degrees/second
+Gyroscope Z-Axis: -16.72 degrees/second
+Gyroscope Z-Axis: 49.19 degrees/second
+Gyroscope Z-Axis: 45.44 degrees/second
+Gyroscope Z-Axis: 12.64 degrees/second
+Gyroscope Z-Axis: -7.33 degrees/second
+Gyroscope Z-Axis: -22.79 degrees/second
+Gyroscope Z-Axis: -16.52 degrees/second
+Gyroscope Z-Axis: -12.39 degrees/second
+Gyroscope Z-Axis: 28.58 degrees/second
+Gyroscope Z-Axis: 54.10 degrees/second
+Gyroscope Z-Axis: 51.09 degrees/second
+Gyroscope Z-Axis: -2.31 degrees/second
+Gyroscope Z-Axis: -1.51 degrees/second
+Gyroscope Z-Axis: -1.85 degrees/second
+Gyroscope Z-Axis: -1.31 degrees/second
+Gyroscope Z-Axis: -1.67 degrees/second
+Gyroscope Z-Axis: -1.53 degrees/second
+Gyroscope Z-Axis: -1.36 degrees/second
+Gyroscope Z-Axis: -1.67 degrees/second
+Gyroscope Z-Axis: -1.60 degrees/second
+Gyroscope Z-Axis: -1.74 degrees/second
+Gyroscope Z-Axis: -1.56 degrees/second
+Gyroscope Z-Axis: -1.37 degrees/second
+Gyroscope Z-Axis: -1.70 degrees/second
+Gyroscope Z-Axis: -1.44 degrees/second
+Gyroscope Z-Axis: -1.59 degrees/second
+Gyroscope Z-Axis: -1.44 degrees/second
+Gyroscope Z-Axis: -1.63 degrees/second
+Gyroscope Z-Axis: -1.72 degrees/second
+Gyroscope Z-Axis: -1.48 degrees/second
+Gyroscope Z-Axis: -1.65 degrees/second
+Gyroscope Z-Axis: -1.57 degrees/second
+Gyroscope Z-Axis: -1.50 degrees/second

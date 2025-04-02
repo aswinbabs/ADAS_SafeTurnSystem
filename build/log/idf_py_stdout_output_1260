@@ -1,0 +1,1976 @@
+0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 26 2025 10:13:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be38h ( 48696) map[0m
+[0;32mI (122) esp_image: segment 1: paddr=0001be60 vaddr=3ffb0000 size=023fch (  9212) load[0m
+[0;32mI (125) esp_image: segment 2: paddr=0001e264 vaddr=40080000 size=01db4h (  7604) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=191bch (102844) map[0m
+[0;32mI (171) esp_image: segment 4: paddr=000391e4 vaddr=40081db4 size=0c550h ( 50512) load[0m
+[0;32mI (198) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (198) boot: Disabling RNG early entropy source...[0m
+[0;32mI (211) cpu_start: Multicore app[0m
+[0;32mI (219) cpu_start: Pro cpu start user code[0m
+[0;32mI (219) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (219) app_init: Application information:[0m
+[0;32mI (222) app_init: Project name:     ADAS_MASTER_ESP[0m
+[0;32mI (227) app_init: App version:      1[0m
+[0;32mI (232) app_init: Compile time:     Jan 26 2025 10:10:18[0m
+[0;32mI (238) app_init: ELF file SHA256:  5df2dc233...[0m
+[0;32mI (243) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (248) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (253) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (258) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (263) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (270) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFB2D88 len 0002D278 (180 KiB): DRAM[0m
+[0;32mI (282) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (295) heap_init: At 4008E304 len 00011CFC (71 KiB): IRAM[0m
+[0;32mI (303) spi_flash: detected chip: generic[0m
+[0;32mI (306) spi_flash: flash io: dio[0m
+[0;33mW (310) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (323) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (334) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (343) main_task: Started on CPU0[0m
+[0;32mI (353) main_task: Calling app_main()[0m
+[0;32mI (353) MPU6050: MPU6050 initialized successfully[0m
+[0;32mI (353) DIRECTION: MATCH: STRAIGHT (Pot: 29, MPU: 1)[0m
+[0;32mI (453) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 0)[0m
+[0;32mI (553) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (653) DIRECTION: MATCH: STRAIGHT (Pot: -20, MPU: 0)[0m
+[0;32mI (753) DIRECTION: MATCH: STRAIGHT (Pot: -24, MPU: 0)[0m
+[0;32mI (853) DIRECTION: MATCH: STRAIGHT (Pot: 31, MPU: 0)[0m
+[0;32mI (953) DIRECTION: MATCH: STRAIGHT (Pot: 31, MPU: 0)[0m
+[0;32mI (1053) DIRECTION: MATCH: STRAIGHT (Pot: 32, MPU: 0)[0m
+[0;32mI (1153) DIRECTION: MATCH: STRAIGHT (Pot: 32, MPU: 0)[0m
+[0;32mI (1253) DIRECTION: MATCH: STRAIGHT (Pot: 31, MPU: 0)[0m
+[0;32mI (1353) DIRECTION: MATCH: STRAIGHT (Pot: 31, MPU: 0)[0m
+[0;32mI (1453) DIRECTION: MATCH: STRAIGHT (Pot: 32, MPU: 0)[0m
+[0;32mI (1553) DIRECTION: MATCH: STRAIGHT (Pot: 32, MPU: 0)[0m
+[0;32mI (1653) DIRECTION: MATCH: STRAIGHT (Pot: 32, MPU: 0)[0m
+[0;32mI (1753) DIRECTION: MATCH: STRAIGHT (Pot: 32, MPU: 0)[0m
+[0;32mI (1853) DIRECTION: MATCH: STRAIGHT (Pot: 32, MPU: 0)[0m
+[0;32mI (1953) DIRECTION: MATCH: STRAIGHT (Pot: 32, MPU: 0)[0m
+[0;32mI (2053) DIRECTION: MATCH: STRAIGHT (Pot: 32, MPU: 0)[0m
+[0;32mI (2153) DIRECTION: MATCH: STRAIGHT (Pot: 32, MPU: 0)[0m
+[0;32mI (2253) DIRECTION: MATCH: STRAIGHT (Pot: 18, MPU: 0)[0m
+[0;32mI (2353) DIRECTION: MATCH: STRAIGHT (Pot: 28, MPU: 0)[0m
+[0;32mI (2453) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 0)[0m
+[0;32mI (2553) DIRECTION: MATCH: STRAIGHT (Pot: -3, MPU: 0)[0m
+[0;32mI (2653) DIRECTION: MATCH: STRAIGHT (Pot: 12, MPU: 0)[0m
+[0;32mI (2753) DIRECTION: MATCH: STRAIGHT (Pot: -11, MPU: 0)[0m
+[0;32mI (2853) DIRECTION: MATCH: STRAIGHT (Pot: -20, MPU: 0)[0m
+[0;32mI (2953) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (3053) DIRECTION: MATCH: STRAIGHT (Pot: -23, MPU: 0)[0m
+[0;32mI (3153) DIRECTION: MATCH: STRAIGHT (Pot: -23, MPU: 0)[0m
+[0;32mI (3253) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 0)[0m
+[0;32mI (3353) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 0)[0m
+[0;32mI (3453) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 0)[0m
+[0;32mI (3553) DIRECTION: MATCH: STRAIGHT (Pot: -5, MPU: 0)[0m
+[0;32mI (3653) DIRECTION: MATCH: STRAIGHT (Pot: 12, MPU: 0)[0m
+[0;32mI (3753) DIRECTION: MATCH: STRAIGHT (Pot: 14, MPU: 0)[0m
+[0;32mI (3853) DIRECTION: MATCH: STRAIGHT (Pot: 15, MPU: 0)[0m
+[0;32mI (3953) DIRECTION: MATCH: STRAIGHT (Pot: 12, MPU: 0)[0m
+[0;32mI (4053) DIRECTION: MATCH: STRAIGHT (Pot: 17, MPU: 0)[0m
+[0;32mI (4153) DIRECTION: MATCH: STRAIGHT (Pot: 17, MPU: 0)[0m
+[0;32mI (4253) DIRECTION: MATCH: STRAIGHT (Pot: 17, MPU: 0)[0m
+[0;32mI (4353) DIRECTION: MATCH: STRAIGHT (Pot: 20, MPU: 0)[0m
+[0;32mI (4453) DIRECTION: MATCH: STRAIGHT (Pot: 18, MPU: 0)[0m
+[0;32mI (4553) DIRECTION: MATCH: STRAIGHT (Pot: 17, MPU: 0)[0m
+[0;32mI (4653) DIRECTION: MATCH: STRAIGHT (Pot: 14, MPU: 0)[0m
+[0;32mI (4753) DIRECTION: MATCH: STRAIGHT (Pot: -41, MPU: 0)[0m
+[0;32mI (4853) DIRECTION: MATCH: STRAIGHT (Pot: -40, MPU: 0)[0m
+[0;32mI (4953) DIRECTION: MATCH: STRAIGHT (Pot: -34, MPU: 0)[0m
+[0;32mI (5053) DIRECTION: MATCH: STRAIGHT (Pot: -40, MPU: 0)[0m
+[0;32mI (5153) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;32mI (5253) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 0)[0m
+[0;32mI (5353) DIRECTION: MATCH: STRAIGHT (Pot: -59, MPU: 0)[0m
+[0;33mW (5453) DIRECTION: MISMATCH: POT=LEFT (-67), MPU=STRAIGHT (0)[0m
+[0;31mE (5453) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (5453) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (5453) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (5563) DIRECTION: MISMATCH: POT=LEFT (-75), MPU=STRAIGHT (0)[0m
+[0;31mE (5563) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (5563) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (5563) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (5673) DIRECTION: MISMATCH: POT=LEFT (-88), MPU=STRAIGHT (0)[0m
+[0;31mE (5673) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (5673) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (5673) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (5783) DIRECTION: MISMATCH: POT=LEFT (-91), MPU=STRAIGHT (0)[0m
+[0;31mE (5783) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (5783) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (5883) DIRECTION: MISMATCH: POT=LEFT (-97), MPU=STRAIGHT (0)[0m
+[0;31mE (5883) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (5883) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (5983) DIRECTION: MISMATCH: POT=LEFT (-102), MPU=STRAIGHT (0)[0m
+[0;31mE (5983) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (5983) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (6083) DIRECTION: MISMATCH: POT=LEFT (-106), MPU=STRAIGHT (0)[0m
+[0;31mE (6083) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (6083) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (6183) DIRECTION: MISMATCH: POT=LEFT (-109), MPU=STRAIGHT (0)[0m
+[0;31mE (6183) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (6183) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (6283) DIRECTION: MISMATCH: POT=LEFT (-109), MPU=STRAIGHT (0)[0m
+[0;31mE (6283) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (6283) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (6383) DIRECTION: MISMATCH: POT=LEFT (-108), MPU=STRAIGHT (0)[0m
+[0;31mE (6383) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (6383) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (6483) DIRECTION: MISMATCH: POT=LEFT (-108), MPU=STRAIGHT (0)[0m
+[0;31mE (6483) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (6483) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (6583) DIRECTION: MISMATCH: POT=LEFT (-107), MPU=STRAIGHT (0)[0m
+[0;31mE (6583) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (6583) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (6683) DIRECTION: MISMATCH: POT=LEFT (-108), MPU=STRAIGHT (0)[0m
+[0;31mE (6683) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (6683) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (6783) DIRECTION: MISMATCH: POT=LEFT (-107), MPU=STRAIGHT (0)[0m
+[0;31mE (6783) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (6783) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (6883) DIRECTION: MISMATCH: POT=LEFT (-107), MPU=STRAIGHT (0)[0m
+[0;31mE (6883) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (6883) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (6983) DIRECTION: MISMATCH: POT=LEFT (-107), MPU=STRAIGHT (0)[0m
+[0;31mE (6983) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (6983) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (7083) DIRECTION: MISMATCH: POT=LEFT (-108), MPU=STRAIGHT (0)[0m
+[0;31mE (7083) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (7083) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (7183) DIRECTION: MISMATCH: POT=LEFT (-108), MPU=STRAIGHT (0)[0m
+[0;31mE (7183) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (7183) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (7283) DIRECTION: MISMATCH: POT=LEFT (-107), MPU=STRAIGHT (0)[0m
+[0;31mE (7283) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (7283) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (7383) DIRECTION: MISMATCH: POT=LEFT (-106), MPU=STRAIGHT (0)[0m
+[0;31mE (7383) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (7383) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (7483) DIRECTION: MISMATCH: POT=LEFT (-109), MPU=STRAIGHT (0)[0m
+[0;31mE (7483) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (7483) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (7583) DIRECTION: MISMATCH: POT=LEFT (-107), MPU=STRAIGHT (0)[0m
+[0;31mE (7583) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (7583) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (7683) DIRECTION: MISMATCH: POT=LEFT (-107), MPU=STRAIGHT (0)[0m
+[0;31mE (7683) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (7683) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (7783) DIRECTION: MISMATCH: POT=LEFT (-106), MPU=STRAIGHT (0)[0m
+[0;31mE (7783) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (7783) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (7883) DIRECTION: MISMATCH: POT=LEFT (-102), MPU=STRAIGHT (0)[0m
+[0;31mE (7883) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (7883) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (7983) DIRECTION: MISMATCH: POT=LEFT (-98), MPU=STRAIGHT (0)[0m
+[0;31mE (7983) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (7983) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (8083) DIRECTION: MISMATCH: POT=LEFT (-93), MPU=STRAIGHT (0)[0m
+[0;31mE (8083) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (8083) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (8183) DIRECTION: MISMATCH: POT=LEFT (-90), MPU=STRAIGHT (0)[0m
+[0;31mE (8183) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (8183) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (8283) DIRECTION: MISMATCH: POT=LEFT (-91), MPU=STRAIGHT (0)[0m
+[0;31mE (8283) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (8283) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (8383) DIRECTION: MISMATCH: POT=LEFT (-91), MPU=STRAIGHT (0)[0m
+[0;31mE (8383) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (8383) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (8483) DIRECTION: MISMATCH: POT=LEFT (-84), MPU=STRAIGHT (0)[0m
+[0;33mW (8583) DIRECTION: MISMATCH: POT=LEFT (-83), MPU=STRAIGHT (0)[0m
+[0;31mE (8583) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (8583) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (8583) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (8693) DIRECTION: MISMATCH: POT=LEFT (-82), MPU=STRAIGHT (0)[0m
+[0;31mE (8693) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (8693) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (8693) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (8803) DIRECTION: MISMATCH: POT=LEFT (-77), MPU=STRAIGHT (0)[0m
+[0;31mE (8803) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (8803) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (8803) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (8913) DIRECTION: MISMATCH: POT=LEFT (-77), MPU=STRAIGHT (0)[0m
+[0;31mE (8913) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (8913) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (9013) DIRECTION: MISMATCH: POT=LEFT (-74), MPU=STRAIGHT (0)[0m
+[0;31mE (9013) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (9013) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (9113) DIRECTION: MISMATCH: POT=LEFT (-69), MPU=STRAIGHT (0)[0m
+[0;31mE (9113) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (9113) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (9213) DIRECTION: MISMATCH: POT=LEFT (-69), MPU=STRAIGHT (0)[0m
+[0;31mE (9213) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (9213) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (9313) DIRECTION: MISMATCH: POT=LEFT (-69), MPU=STRAIGHT (0)[0m
+[0;31mE (9313) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (9313) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (9413) DIRECTION: MISMATCH: POT=LEFT (-69), MPU=STRAIGHT (0)[0m
+[0;31mE (9413) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (9413) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (9513) DIRECTION: MISMATCH: POT=LEFT (-66), MPU=STRAIGHT (0)[0m
+[0;31mE (9513) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (9513) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (9613) DIRECTION: MISMATCH: POT=LEFT (-62), MPU=STRAIGHT (0)[0m
+[0;31mE (9613) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (9613) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (9713) DIRECTION: MATCH: STRAIGHT (Pot: -58, MPU: 0)[0m
+[0;32mI (9813) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (9913) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (10013) DIRECTION: MATCH: STRAIGHT (Pot: -42, MPU: 0)[0m
+[0;32mI (10113) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (10213) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (10313) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (10413) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (10513) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;32mI (10613) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (10713) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;32mI (10813) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (10913) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (11013) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (11113) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (11213) DIRECTION: MATCH: STRAIGHT (Pot: -43, MPU: 0)[0m
+[0;32mI (11313) DIRECTION: MATCH: STRAIGHT (Pot: -43, MPU: 0)[0m
+[0;32mI (11413) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (11513) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (11613) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (11713) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (11813) DIRECTION: MATCH: STRAIGHT (Pot: -41, MPU: 0)[0m
+[0;32mI (11913) DIRECTION: MATCH: STRAIGHT (Pot: -40, MPU: 0)[0m
+[0;32mI (12013) DIRECTION: MATCH: STRAIGHT (Pot: -8, MPU: 0)[0m
+[0;32mI (12113) DIRECTION: MATCH: STRAIGHT (Pot: 29, MPU: 0)[0m
+[0;32mI (12213) DIRECTION: MATCH: STRAIGHT (Pot: 41, MPU: 0)[0m
+[0;32mI (12313) DIRECTION: MATCH: STRAIGHT (Pot: 41, MPU: 0)[0m
+[0;32mI (12413) DIRECTION: MATCH: STRAIGHT (Pot: 50, MPU: 0)[0m
+[0;32mI (12513) DIRECTION: MATCH: STRAIGHT (Pot: 48, MPU: 0)[0m
+[0;32mI (12613) DIRECTION: MATCH: STRAIGHT (Pot: 52, MPU: 0)[0m
+[0;32mI (12713) DIRECTION: MATCH: STRAIGHT (Pot: 54, MPU: 0)[0m
+[0;32mI (12813) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (12913) DIRECTION: MATCH: STRAIGHT (Pot: 37, MPU: 0)[0m
+[0;33mW (13013) DIRECTION: MISMATCH: POT=RIGHT (176), MPU=STRAIGHT (0)[0m
+[0;33mW (13113) DIRECTION: MISMATCH: POT=RIGHT (104), MPU=STRAIGHT (0)[0m
+[0;31mE (13113) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (13113) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (13113) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (13223) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (13223) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (13223) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (13223) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (13333) DIRECTION: MISMATCH: POT=RIGHT (107), MPU=STRAIGHT (0)[0m
+[0;31mE (13333) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (13333) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (13333) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (13443) DIRECTION: MISMATCH: POT=RIGHT (123), MPU=STRAIGHT (0)[0m
+[0;31mE (13443) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (13443) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (13543) DIRECTION: MISMATCH: POT=RIGHT (81), MPU=STRAIGHT (0)[0m
+[0;31mE (13543) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (13543) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (13643) DIRECTION: MISMATCH: POT=RIGHT (83), MPU=STRAIGHT (0)[0m
+[0;31mE (13643) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (13643) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (13743) DIRECTION: MATCH: STRAIGHT (Pot: 0, MPU: 0)[0m
+[0;32mI (13843) DIRECTION: MATCH: STRAIGHT (Pot: -7, MPU: 0)[0m
+[0;32mI (13943) DIRECTION: MATCH: STRAIGHT (Pot: 21, MPU: 0)[0m
+[0;33mW (14043) DIRECTION: MISMATCH: POT=RIGHT (86), MPU=STRAIGHT (0)[0m
+[0;31mE (14043) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (14043) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (14143) DIRECTION: MATCH: STRAIGHT (Pot: 52, MPU: 0)[0m
+[0;32mI (14243) DIRECTION: MATCH: STRAIGHT (Pot: 48, MPU: 0)[0m
+[0;32mI (14343) DIRECTION: MATCH: STRAIGHT (Pot: 35, MPU: 0)[0m
+[0;32mI (14443) DIRECTION: MATCH: STRAIGHT (Pot: 52, MPU: 0)[0m
+[0;32mI (14543) DIRECTION: MATCH: STRAIGHT (Pot: 56, MPU: 0)[0m
+[0;32mI (14643) DIRECTION: MATCH: STRAIGHT (Pot: 41, MPU: 0)[0m
+[0;32mI (14743) DIRECTION: MATCH: STRAIGHT (Pot: 39, MPU: 0)[0m
+[0;32mI (14843) DIRECTION: MATCH: STRAIGHT (Pot: 23, MPU: 0)[0m
+[0;32mI (14943) DIRECTION: MATCH: STRAIGHT (Pot: 16, MPU: 0)[0m
+[0;32mI (15043) DIRECTION: MATCH: STRAIGHT (Pot: 22, MPU: 0)[0m
+[0;32mI (15143) DIRECTION: MATCH: STRAIGHT (Pot: 18, MPU: 0)[0m
+[0;32mI (15243) DIRECTION: MATCH: STRAIGHT (Pot: 31, MPU: 0)[0m
+[0;32mI (15343) DIRECTION: MATCH: STRAIGHT (Pot: 34, MPU: 0)[0m
+[0;32mI (15443) DIRECTION: MATCH: STRAIGHT (Pot: 50, MPU: 0)[0m
+[0;32mI (15543) DIRECTION: MATCH: STRAIGHT (Pot: 40, MPU: 0)[0m
+[0;32mI (15643) DIRECTION: MATCH: STRAIGHT (Pot: 34, MPU: 0)[0m
+[0;32mI (15743) DIRECTION: MATCH: STRAIGHT (Pot: 29, MPU: 0)[0m
+[0;32mI (15843) DIRECTION: MATCH: STRAIGHT (Pot: 21, MPU: 0)[0m
+[0;32mI (15943) DIRECTION: MATCH: STRAIGHT (Pot: 13, MPU: 0)[0m
+[0;32mI (16043) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (16143) DIRECTION: MATCH: STRAIGHT (Pot: -48, MPU: 0)[0m
+[0;32mI (16243) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 0)[0m
+[0;32mI (16343) DIRECTION: MATCH: STRAIGHT (Pot: -55, MPU: 0)[0m
+[0;32mI (16443) DIRECTION: MATCH: STRAIGHT (Pot: -55, MPU: 0)[0m
+[0;32mI (16543) DIRECTION: MATCH: STRAIGHT (Pot: -56, MPU: 0)[0m
+[0;32mI (16643) DIRECTION: MATCH: STRAIGHT (Pot: -60, MPU: 0)[0m
+[0;33mW (16743) DIRECTION: MISMATCH: POT=LEFT (-63), MPU=STRAIGHT (0)[0m
+[0;33mW (16843) DIRECTION: MISMATCH: POT=LEFT (-66), MPU=STRAIGHT (0)[0m
+[0;31mE (16843) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (16843) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (16843) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (16953) DIRECTION: MATCH: STRAIGHT (Pot: -8, MPU: 0)[0m
+[0;32mI (17053) DIRECTION: MATCH: STRAIGHT (Pot: 12, MPU: 0)[0m
+[0;32mI (17153) DIRECTION: MATCH: STRAIGHT (Pot: 13, MPU: 0)[0m
+[0;32mI (17253) DIRECTION: MATCH: STRAIGHT (Pot: 14, MPU: 0)[0m
+[0;32mI (17353) DIRECTION: MATCH: STRAIGHT (Pot: 15, MPU: 0)[0m
+[0;32mI (17453) DIRECTION: MATCH: STRAIGHT (Pot: 19, MPU: 0)[0m
+[0;32mI (17553) DIRECTION: MATCH: STRAIGHT (Pot: 32, MPU: 0)[0m
+[0;32mI (17653) DIRECTION: MATCH: STRAIGHT (Pot: 42, MPU: 0)[0m
+[0;32mI (17753) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 0)[0m
+[0;32mI (17853) DIRECTION: MATCH: STRAIGHT (Pot: 47, MPU: 0)[0m
+[0;32mI (17953) DIRECTION: MATCH: STRAIGHT (Pot: 48, MPU: 0)[0m
+[0;32mI (18053) DIRECTION: MATCH: STRAIGHT (Pot: 48, MPU: 0)[0m
+[0;32mI (18153) DIRECTION: MATCH: STRAIGHT (Pot: 40, MPU: 0)[0m
+[0;32mI (18253) DIRECTION: MATCH: STRAIGHT (Pot: 40, MPU: 0)[0m
+[0;32mI (18353) DIRECTION: MATCH: STRAIGHT (Pot: 37, MPU: 0)[0m
+[0;32mI (18453) DIRECTION: MATCH: STRAIGHT (Pot: 38, MPU: 0)[0m
+[0;32mI (18553) DIRECTION: MATCH: STRAIGHT (Pot: 37, MPU: 0)[0m
+[0;32mI (18653) DIRECTION: MATCH: STRAIGHT (Pot: 33, MPU: 0)[0m
+[0;32mI (18753) DIRECTION: MATCH: STRAIGHT (Pot: 33, MPU: 0)[0m
+[0;32mI (18853) DIRECTION: MATCH: STRAIGHT (Pot: 34, MPU: 0)[0m
+[0;32mI (18953) DIRECTION: MATCH: STRAIGHT (Pot: 31, MPU: 0)[0m
+[0;32mI (19053) DIRECTION: MATCH: STRAIGHT (Pot: 29, MPU: 0)[0m
+[0;32mI (19153) DIRECTION: MATCH: STRAIGHT (Pot: 30, MPU: 0)[0m
+[0;32mI (19253) DIRECTION: MATCH: STRAIGHT (Pot: 38, MPU: 0)[0m
+[0;32mI (19353) DIRECTION: MATCH: STRAIGHT (Pot: 48, MPU: 0)[0m
+[0;32mI (19453) DIRECTION: MATCH: STRAIGHT (Pot: 48, MPU: 0)[0m
+[0;32mI (19553) DIRECTION: MATCH: STRAIGHT (Pot: 48, MPU: 0)[0m
+[0;32mI (19653) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;31mE (19653) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (19653) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (19653) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (19763) DIRECTION: MATCH: STRAIGHT (Pot: -24, MPU: 0)[0m
+[0;32mI (19863) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 0)[0m
+[0;32mI (19963) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (20063) DIRECTION: MATCH: STRAIGHT (Pot: -33, MPU: 0)[0m
+[0;32mI (20163) DIRECTION: MATCH: STRAIGHT (Pot: -1, MPU: 0)[0m
+[0;31mE (20163) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (20163) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (20263) DIRECTION: MATCH: STRAIGHT (Pot: -2, MPU: 0)[0m
+[0;32mI (20363) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 0)[0m
+[0;32mI (20463) DIRECTION: MATCH: STRAIGHT (Pot: -40, MPU: 0)[0m
+[0;32mI (20563) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (20663) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;31mE (20663) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (20663) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (20663) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (20773) DIRECTION: MATCH: STRAIGHT (Pot: -43, MPU: 0)[0m
+[0;32mI (20873) DIRECTION: MATCH: STRAIGHT (Pot: -49, MPU: 0)[0m
+[0;32mI (20973) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 0)[0m
+[0;32mI (21073) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 0)[0m
+[0;32mI (21173) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;31mE (21173) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (21173) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (21273) DIRECTION: MATCH: STRAIGHT (Pot: -56, MPU: 0)[0m
+[0;32mI (21373) DIRECTION: MATCH: STRAIGHT (Pot: -55, MPU: 0)[0m
+[0;32mI (21473) DIRECTION: MATCH: STRAIGHT (Pot: -56, MPU: 0)[0m
+[0;32mI (21573) DIRECTION: MATCH: STRAIGHT (Pot: -57, MPU: 0)[0m
+[0;32mI (21673) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;31mE (21673) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (21673) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (21673) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (21783) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;32mI (21883) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (21983) DIRECTION: MATCH: STRAIGHT (Pot: -6, MPU: 0)[0m
+[0;32mI (22083) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 0)[0m
+[0;32mI (22183) DIRECTION: MATCH: STRAIGHT (Pot: -7, MPU: 0)[0m
+[0;31mE (22183) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (22183) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (22283) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (22383) DIRECTION: MATCH: STRAIGHT (Pot: -40, MPU: 0)[0m
+[0;32mI (22483) DIRECTION: MATCH: STRAIGHT (Pot: -48, MPU: 0)[0m
+[0;32mI (22583) DIRECTION: MATCH: STRAIGHT (Pot: 25, MPU: 0)[0m
+[0;32mI (22683) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;31mE (22683) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (22683) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (22683) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (22793) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 0)[0m
+[0;32mI (22893) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 0)[0m
+[0;32mI (22993) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 0)[0m
+[0;32mI (23093) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 0)[0m
+[0;32mI (23193) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;31mE (23193) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (23193) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (23293) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (23393) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (23493) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (23593) DIRECTION: MATCH: STRAIGHT (Pot: -40, MPU: 0)[0m
+[0;32mI (23693) DIRECTION: MATCH: STRAIGHT (Pot: -39, MPU: 0)[0m
+[0;31mE (23693) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (23693) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (23693) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (23803) DIRECTION: MATCH: STRAIGHT (Pot: -41, MPU: 0)[0m
+[0;32mI (23903) DIRECTION: MATCH: STRAIGHT (Pot: -40, MPU: 0)[0m
+[0;32mI (24003) DIRECTION: MATCH: STRAIGHT (Pot: -40, MPU: 0)[0m
+[0;32mI (24103) DIRECTION: MATCH: STRAIGHT (Pot: -42, MPU: 0)[0m
+[0;32mI (24203) DIRECTION: MATCH: STRAIGHT (Pot: -41, MPU: 0)[0m
+[0;31mE (24203) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (24203) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (24303) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (24403) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (24503) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (24603) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (24703) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;31mE (24703) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (24703) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (24703) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (24813) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (24913) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (25013) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (25113) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (25213) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;31mE (25213) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (25213) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (25313) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (25413) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;32mI (25513) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;32mI (25613) DIRECTION: MATCH: STRAIGHT (Pot: -47, MPU: 0)[0m
+[0;32mI (25713) DIRECTION: MATCH: STRAIGHT (Pot: -48, MPU: 0)[0m
+[0;31mE (25713) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (25713) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (25713) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (25823) DIRECTION: MATCH: STRAIGHT (Pot: -47, MPU: 0)[0m
+[0;32mI (25923) DIRECTION: MATCH: STRAIGHT (Pot: -49, MPU: 0)[0m
+[0;32mI (26023) DIRECTION: MATCH: STRAIGHT (Pot: -47, MPU: 0)[0m
+[0;32mI (26123) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (26223) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 0)[0m
+[0;31mE (26223) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (26223) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (26323) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (26423) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (26523) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (26623) DIRECTION: MATCH: STRAIGHT (Pot: -56, MPU: 0)[0m
+[0;32mI (26723) DIRECTION: MATCH: STRAIGHT (Pot: -57, MPU: 0)[0m
+[0;31mE (26723) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (26723) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (26723) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (26833) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (26933) DIRECTION: MATCH: STRAIGHT (Pot: -55, MPU: 0)[0m
+[0;32mI (27033) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (27133) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 0)[0m
+[0;32mI (27233) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;31mE (27233) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (27233) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (27333) DIRECTION: MATCH: STRAIGHT (Pot: -47, MPU: 0)[0m
+[0;32mI (27433) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (27533) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (27633) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (27733) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;31mE (27733) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (27733) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (27733) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (27843) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (27943) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (28043) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (28143) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (28243) DIRECTION: MATCH: STRAIGHT (Pot: -43, MPU: 0)[0m
+[0;31mE (28243) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (28243) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (28343) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (28443) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (28543) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (28643) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (28743) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;31mE (28743) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (28743) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (28743) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (28853) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (28953) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (29053) DIRECTION: MATCH: STRAIGHT (Pot: -23, MPU: 0)[0m
+[0;32mI (29153) DIRECTION: MATCH: STRAIGHT (Pot: -23, MPU: 0)[0m
+[0;32mI (29253) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 0)[0m
+[0;31mE (29253) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (29253) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (29353) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (29453) DIRECTION: MATCH: STRAIGHT (Pot: -23, MPU: 0)[0m
+[0;32mI (29553) DIRECTION: MATCH: STRAIGHT (Pot: -23, MPU: 0)[0m
+[0;32mI (29653) DIRECTION: MATCH: STRAIGHT (Pot: -15, MPU: 0)[0m
+[0;32mI (29753) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;31mE (29753) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (29753) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (29753) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (29863) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (29963) DIRECTION: MATCH: STRAIGHT (Pot: -12, MPU: 0)[0m
+[0;32mI (30063) DIRECTION: MATCH: STRAIGHT (Pot: -15, MPU: 0)[0m
+[0;32mI (30163) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (30263) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;31mE (30263) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (30263) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (30363) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (30463) DIRECTION: MATCH: STRAIGHT (Pot: -20, MPU: 0)[0m
+[0;32mI (30563) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (30663) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (30763) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;31mE (30763) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (30763) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (30763) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (30873) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (30973) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 0)[0m
+[0;32mI (31073) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 0)[0m
+[0;32mI (31173) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (31273) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;31mE (31273) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (31273) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (31373) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (31473) DIRECTION: MATCH: STRAIGHT (Pot: -20, MPU: 0)[0m
+[0;32mI (31573) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (31673) DIRECTION: MATCH: STRAIGHT (Pot: -12, MPU: 0)[0m
+[0;32mI (31773) DIRECTION: MATCH: STRAIGHT (Pot: -23, MPU: 0)[0m
+[0;31mE (31773) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (31773) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (31773) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (31883) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 0)[0m
+[0;32mI (31983) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 0)[0m
+[0;32mI (32083) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 0)[0m
+[0;32mI (32183) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;32mI (32283) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 0)[0m
+[0;31mE (32283) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (32283) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (32383) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 0)[0m
+[0;32mI (32483) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 0)[0m
+[0;32mI (32583) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 0)[0m
+[0;32mI (32683) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 0)[0m
+[0;32mI (32783) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 0)[0m
+[0;31mE (32783) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (32783) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (32783) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (32893) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 0)[0m
+[0;32mI (32993) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 0)[0m
+[0;32mI (33093) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 0)[0m
+[0;32mI (33193) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 0)[0m
+[0;32mI (33293) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 0)[0m
+[0;31mE (33293) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (33293) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (33393) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 0)[0m
+[0;32mI (33493) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 0)[0m
+[0;32mI (33593) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 0)[0m
+[0;32mI (33693) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 0)[0m
+[0;32mI (33793) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 0)[0m
+[0;31mE (33793) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (33793) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (33793) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (33903) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 0)[0m
+[0;32mI (34003) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 0)[0m
+[0;32mI (34103) DIRECTION: MATCH: STRAIGHT (Pot: -10, MPU: 0)[0m
+[0;32mI (34203) DIRECTION: MATCH: STRAIGHT (Pot: -7, MPU: 0)[0m
+[0;32mI (34303) DIRECTION: MATCH: STRAIGHT (Pot: -7, MPU: 0)[0m
+[0;31mE (34303) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (34303) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (34403) DIRECTION: MATCH: STRAIGHT (Pot: -8, MPU: 0)[0m
+[0;32mI (34503) DIRECTION: MATCH: STRAIGHT (Pot: -8, MPU: 0)[0m
+[0;32mI (34603) DIRECTION: MATCH: STRAIGHT (Pot: -8, MPU: 0)[0m
+[0;32mI (34703) DIRECTION: MATCH: STRAIGHT (Pot: -7, MPU: 0)[0m
+[0;32mI (34803) DIRECTION: MATCH: STRAIGHT (Pot: -7, MPU: 0)[0m
+[0;31mE (34803) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (34803) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (34803) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (34913) DIRECTION: MATCH: STRAIGHT (Pot: -5, MPU: 0)[0m
+[0;32mI (35013) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 0)[0m
+[0;32mI (35113) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 0)[0m
+[0;32mI (35213) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 1)[0m
+[0;32mI (35313) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 0)[0m
+[0;31mE (35313) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (35313) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (35413) DIRECTION: MATCH: STRAIGHT (Pot: 10, MPU: 0)[0m
+[0;32mI (35513) DIRECTION: MATCH: STRAIGHT (Pot: 12, MPU: 0)[0m
+[0;32mI (35613) DIRECTION: MATCH: STRAIGHT (Pot: 12, MPU: 0)[0m
+[0;32mI (35713) DIRECTION: MATCH: STRAIGHT (Pot: 12, MPU: 0)[0m
+[0;32mI (35813) DIRECTION: MATCH: STRAIGHT (Pot: 12, MPU: 0)[0m
+[0;31mE (35813) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (35813) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (35813) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (35923) DIRECTION: MATCH: STRAIGHT (Pot: 14, MPU: 0)[0m
+[0;32mI (36023) DIRECTION: MATCH: STRAIGHT (Pot: 14, MPU: 0)[0m
+[0;32mI (36123) DIRECTION: MATCH: STRAIGHT (Pot: 14, MPU: 0)[0m
+[0;32mI (36223) DIRECTION: MATCH: STRAIGHT (Pot: 14, MPU: 0)[0m
+[0;32mI (36323) DIRECTION: MATCH: STRAIGHT (Pot: 16, MPU: 0)[0m
+[0;31mE (36323) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (36323) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (36423) DIRECTION: MATCH: STRAIGHT (Pot: 13, MPU: 0)[0m
+[0;32mI (36523) DIRECTION: MATCH: STRAIGHT (Pot: 13, MPU: 0)[0m
+[0;32mI (36623) DIRECTION: MATCH: STRAIGHT (Pot: 13, MPU: 0)[0m
+[0;32mI (36723) DIRECTION: MATCH: STRAIGHT (Pot: 13, MPU: 0)[0m
+[0;32mI (36823) DIRECTION: MATCH: STRAIGHT (Pot: 13, MPU: 0)[0m
+[0;31mE (36823) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (36823) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (36823) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (36933) DIRECTION: MATCH: STRAIGHT (Pot: 14, MPU: 0)[0m
+[0;32mI (37033) DIRECTION: MATCH: STRAIGHT (Pot: 12, MPU: 0)[0m
+[0;32mI (37133) DIRECTION: MATCH: STRAIGHT (Pot: 12, MPU: 0)[0m
+[0;32mI (37233) DIRECTION: MATCH: STRAIGHT (Pot: 13, MPU: 0)[0m
+[0;32mI (37333) DIRECTION: MATCH: STRAIGHT (Pot: 13, MPU: 2)[0m
+[0;31mE (37333) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (37333) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (37433) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 1)[0m
+[0;32mI (37533) DIRECTION: MATCH: STRAIGHT (Pot: -34, MPU: 4)[0m
+[0;32mI (37633) DIRECTION: MATCH: STRAIGHT (Pot: -49, MPU: 0)[0m
+[0;32mI (37733) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (37833) DIRECTION: MATCH: STRAIGHT (Pot: -56, MPU: 0)[0m
+[0;31mE (37833) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (37833) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (37833) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (37943) DIRECTION: MATCH: STRAIGHT (Pot: -14, MPU: 0)[0m
+[0;32mI (38043) DIRECTION: MATCH: STRAIGHT (Pot: -1, MPU: 0)[0m
+[0;32mI (38143) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 0)[0m
+[0;32mI (38243) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 0)[0m
+[0;32mI (38343) DIRECTION: MATCH: STRAIGHT (Pot: 8, MPU: 0)[0m
+[0;31mE (38343) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (38343) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (38443) DIRECTION: MATCH: STRAIGHT (Pot: 10, MPU: 0)[0m
+[0;32mI (38543) DIRECTION: MATCH: STRAIGHT (Pot: 7, MPU: 0)[0m
+[0;32mI (38643) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 0)[0m
+[0;32mI (38743) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;32mI (38843) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;31mE (38843) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (38843) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (38843) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (38953) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 0)[0m
+[0;32mI (39053) DIRECTION: MATCH: STRAIGHT (Pot: -57, MPU: 0)[0m
+[0;32mI (39153) DIRECTION: MATCH: STRAIGHT (Pot: -60, MPU: 0)[0m
+[0;33mW (39253) DIRECTION: MISMATCH: POT=LEFT (-63), MPU=STRAIGHT (0)[0m
+[0;33mW (39353) DIRECTION: MISMATCH: POT=LEFT (-63), MPU=STRAIGHT (0)[0m
+[0;31mE (39353) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (39353) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (39453) DIRECTION: MISMATCH: POT=LEFT (-64), MPU=STRAIGHT (0)[0m
+[0;33mW (39553) DIRECTION: MISMATCH: POT=LEFT (-65), MPU=STRAIGHT (0)[0m
+[0;33mW (39653) DIRECTION: MISMATCH: POT=LEFT (-66), MPU=STRAIGHT (0)[0m
+[0;33mW (39753) DIRECTION: MISMATCH: POT=LEFT (-67), MPU=STRAIGHT (0)[0m
+[0;33mW (39853) DIRECTION: MISMATCH: POT=LEFT (-67), MPU=STRAIGHT (0)[0m
+[0;31mE (39853) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (39853) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (39853) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (39963) DIRECTION: MISMATCH: POT=LEFT (-66), MPU=STRAIGHT (0)[0m
+[0;33mW (40063) DIRECTION: MISMATCH: POT=LEFT (-63), MPU=STRAIGHT (0)[0m
+[0;33mW (40163) DIRECTION: MISMATCH: POT=LEFT (-64), MPU=STRAIGHT (0)[0m
+[0;32mI (40263) DIRECTION: MATCH: STRAIGHT (Pot: -34, MPU: 0)[0m
+[0;32mI (40363) DIRECTION: MATCH: STRAIGHT (Pot: 7, MPU: 0)[0m
+[0;31mE (40363) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (40363) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (40463) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (40563) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 0)[0m
+[0;32mI (40663) DIRECTION: MATCH: STRAIGHT (Pot: 12, MPU: 0)[0m
+[0;32mI (40763) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 0)[0m
+[0;32mI (40863) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 0)[0m
+[0;31mE (40863) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (40863) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (40863) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (40973) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 0)[0m
+[0;32mI (41073) DIRECTION: MATCH: STRAIGHT (Pot: -55, MPU: 0)[0m
+[0;32mI (41173) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (41273) DIRECTION: MATCH: STRAIGHT (Pot: -39, MPU: 0)[0m
+[0;32mI (41373) DIRECTION: MATCH: STRAIGHT (Pot: 29, MPU: 0)[0m
+[0;32mI (41473) DIRECTION: MATCH: STRAIGHT (Pot: 49, MPU: 0)[0m
+[0;32mI (41573) DIRECTION: MATCH: STRAIGHT (Pot: 48, MPU: 0)[0m
+[0;32mI (41673) DIRECTION: MATCH: STRAIGHT (Pot: 48, MPU: 0)[0m
+[0;32mI (41773) DIRECTION: MATCH: STRAIGHT (Pot: 48, MPU: 0)[0m
+[0;32mI (41873) DIRECTION: MATCH: STRAIGHT (Pot: 48, MPU: 0)[0m
+[0;32mI (41973) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 0)[0m
+[0;32mI (42073) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 0)[0m
+[0;32mI (42173) DIRECTION: MATCH: STRAIGHT (Pot: 48, MPU: 0)[0m
+[0;32mI (42273) DIRECTION: MATCH: STRAIGHT (Pot: 49, MPU: 0)[0m
+[0;32mI (42373) DIRECTION: MATCH: STRAIGHT (Pot: 49, MPU: 0)[0m
+[0;32mI (42473) DIRECTION: MATCH: STRAIGHT (Pot: 20, MPU: 0)[0m
+[0;32mI (42573) DIRECTION: MATCH: STRAIGHT (Pot: -5, MPU: 0)[0m
+[0;32mI (42673) DIRECTION: MATCH: STRAIGHT (Pot: 0, MPU: 0)[0m
+[0;32mI (42773) DIRECTION: MATCH: STRAIGHT (Pot: -13, MPU: 0)[0m
+[0;32mI (42873) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 0)[0m
+[0;32mI (42973) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 0)[0m
+[0;32mI (43073) DIRECTION: MATCH: STRAIGHT (Pot: 47, MPU: 0)[0m
+[0;32mI (43173) DIRECTION: MATCH: STRAIGHT (Pot: 33, MPU: 0)[0m
+[0;32mI (43273) DIRECTION: MATCH: STRAIGHT (Pot: 43, MPU: 0)[0m
+[0;32mI (43373) DIRECTION: MATCH: STRAIGHT (Pot: 43, MPU: 0)[0m
+[0;32mI (43473) DIRECTION: MATCH: STRAIGHT (Pot: 39, MPU: 0)[0m
+[0;32mI (43573) DIRECTION: MATCH: STRAIGHT (Pot: -20, MPU: 0)[0m
+[0;32mI (43673) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 0)[0m
+[0;32mI (43773) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (43873) DIRECTION: MATCH: STRAIGHT (Pot: -15, MPU: 0)[0m
+[0;32mI (43973) DIRECTION: MATCH: STRAIGHT (Pot: -14, MPU: 0)[0m
+[0;32mI (44073) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (44173) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (44273) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 0)[0m
+[0;32mI (44373) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (44473) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (44573) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (44673) DIRECTION: MATCH: STRAIGHT (Pot: -15, MPU: 0)[0m
+[0;32mI (44773) DIRECTION: MATCH: STRAIGHT (Pot: -13, MPU: 0)[0m
+[0;32mI (44873) DIRECTION: MATCH: STRAIGHT (Pot: -14, MPU: 0)[0m
+[0;32mI (44973) DIRECTION: MATCH: STRAIGHT (Pot: -13, MPU: 0)[0m
+[0;32mI (45073) DIRECTION: MATCH: STRAIGHT (Pot: -11, MPU: 0)[0m
+[0;32mI (45173) DIRECTION: MATCH: STRAIGHT (Pot: -12, MPU: 0)[0m
+[0;32mI (45273) DIRECTION: MATCH: STRAIGHT (Pot: -12, MPU: 0)[0m
+[0;32mI (45373) DIRECTION: MATCH: STRAIGHT (Pot: -13, MPU: 0)[0m
+[0;32mI (45473) DIRECTION: MATCH: STRAIGHT (Pot: -12, MPU: 0)[0m
+[0;32mI (45573) DIRECTION: MATCH: STRAIGHT (Pot: -12, MPU: 0)[0m
+[0;32mI (45673) DIRECTION: MATCH: STRAIGHT (Pot: -13, MPU: 0)[0m
+[0;32mI (45773) DIRECTION: MATCH: STRAIGHT (Pot: -12, MPU: 0)[0m
+[0;32mI (45873) DIRECTION: MATCH: STRAIGHT (Pot: -41, MPU: 0)[0m
+[0;32mI (45973) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (46073) DIRECTION: MATCH: STRAIGHT (Pot: -43, MPU: 0)[0m
+[0;32mI (46173) DIRECTION: MATCH: STRAIGHT (Pot: -48, MPU: 0)[0m
+[0;32mI (46273) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (46373) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 0)[0m
+[0;32mI (46473) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;32mI (46573) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 0)[0m
+[0;32mI (46673) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (46773) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 0)[0m
+[0;32mI (46873) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 0)[0m
+[0;32mI (46973) DIRECTION: MATCH: STRAIGHT (Pot: -33, MPU: 0)[0m
+[0;32mI (47073) DIRECTION: MATCH: STRAIGHT (Pot: -41, MPU: 0)[0m
+[0;32mI (47173) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 0)[0m
+[0;32mI (47273) DIRECTION: MATCH: STRAIGHT (Pot: -58, MPU: 0)[0m
+[0;32mI (47373) DIRECTION: MATCH: STRAIGHT (Pot: -60, MPU: 0)[0m
+[0;32mI (47473) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 0)[0m
+[0;32mI (47573) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (47673) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (47773) DIRECTION: MATCH: STRAIGHT (Pot: -47, MPU: 0)[0m
+[0;32mI (47873) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 0)[0m
+[0;32mI (47973) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 0)[0m
+[0;32mI (48073) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (48173) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 0)[0m
+[0;32mI (48273) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 0)[0m
+[0;32mI (48373) DIRECTION: MATCH: STRAIGHT (Pot: -47, MPU: 0)[0m
+[0;32mI (48473) DIRECTION: MATCH: STRAIGHT (Pot: -42, MPU: 0)[0m
+[0;32mI (48573) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 0)[0m
+[0;32mI (48673) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (48773) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (48873) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (48973) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (49073) DIRECTION: MATCH: STRAIGHT (Pot: -34, MPU: 0)[0m
+[0;32mI (49173) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 0)[0m
+[0;32mI (49273) DIRECTION: MATCH: STRAIGHT (Pot: -34, MPU: 0)[0m
+[0;32mI (49373) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (49473) DIRECTION: MATCH: STRAIGHT (Pot: -34, MPU: 0)[0m
+[0;32mI (49573) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 0)[0m
+[0;32mI (49673) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 0)[0m
+[0;32mI (49773) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 0)[0m
+[0;32mI (49873) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 0)[0m
+[0;32mI (49973) DIRECTION: MATCH: STRAIGHT (Pot: -33, MPU: 0)[0m
+[0;32mI (50073) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (50173) DIRECTION: MATCH: STRAIGHT (Pot: -33, MPU: 0)[0m
+[0;32mI (50273) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (50373) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 0)[0m
+[0;32mI (50473) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (50573) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 0)[0m
+[0;32mI (50673) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 0)[0m
+[0;32mI (50773) DIRECTION: MATCH: STRAIGHT (Pot: -34, MPU: 0)[0m
+[0;32mI (50873) DIRECTION: MATCH: STRAIGHT (Pot: -34, MPU: 0)[0m
+[0;32mI (50973) DIRECTION: MATCH: STRAIGHT (Pot: -6, MPU: 0)[0m
+[0;32mI (51073) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 0)[0m
+[0;32mI (51173) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 0)[0m
+[0;32mI (51273) DIRECTION: MATCH: STRAIGHT (Pot: -40, MPU: 0)[0m
+[0;32mI (51373) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (51473) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;32mI (51573) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;32mI (51673) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (51773) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 0)[0m
+[0;32mI (51873) DIRECTION: MATCH: STRAIGHT (Pot: -42, MPU: 0)[0m
+[0;32mI (51973) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;32mI (52073) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;32mI (52173) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (52273) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (52373) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (52473) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (52573) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (52673) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 0)[0m
+[0;32mI (52773) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (52873) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (52973) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 0)[0m
+[0;32mI (53073) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 0)[0m
+[0;32mI (53173) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 0)[0m
+[0;32mI (53273) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (53373) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (53473) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (53573) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (53673) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (53773) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (53873) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 0)[0m
+[0;32mI (53973) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (54073) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 0)[0m
+[0;32mI (54173) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (54273) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (54373) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (54473) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 0)[0m
+[0;32mI (54573) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (54673) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (54773) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 0)[0m
+[0;32mI (54873) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (54973) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (55073) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 0)[0m
+[0;32mI (55173) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 0)[0m
+[0;32mI (55273) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (55373) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (55473) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (55573) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 0)[0m
+[0;32mI (55673) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (55773) DIRECTION: MATCH: STRAIGHT (Pot: -57, MPU: 0)[0m
+[0;32mI (55873) DIRECTION: MATCH: STRAIGHT (Pot: -60, MPU: 0)[0m
+[0;32mI (55973) DIRECTION: MATCH: STRAIGHT (Pot: -60, MPU: 0)[0m
+[0;32mI (56073) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 1)[0m
+[0;32mI (56173) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (56273) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (56373) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (56473) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (56573) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (56673) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;31mE (56673) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (56673) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (56773) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (56873) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (56973) DIRECTION: MATCH: STRAIGHT (Pot: 54, MPU: 0)[0m
+[0;32mI (57073) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (57173) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;31mE (57173) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (57173) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (57173) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (57283) DIRECTION: MATCH: STRAIGHT (Pot: 56, MPU: 0)[0m
+[0;32mI (57383) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (57483) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (57583) DIRECTION: MATCH: STRAIGHT (Pot: 56, MPU: 0)[0m
+[0;32mI (57683) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;31mE (57683) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (57683) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (57783) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (57883) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (57983) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (58083) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (58183) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;31mE (58183) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (58183) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (58183) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (58293) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (58393) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (58493) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (58593) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (58693) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;31mE (58693) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (58693) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (58793) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (58893) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (58993) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (59093) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (59193) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;31mE (59193) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (59193) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (59193) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (59303) DIRECTION: MATCH: STRAIGHT (Pot: 56, MPU: 0)[0m
+[0;32mI (59403) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (59503) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (59603) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (59703) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;31mE (59703) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (59703) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (59803) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (59903) DIRECTION: MATCH: STRAIGHT (Pot: 54, MPU: 0)[0m
+[0;32mI (60003) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (60103) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (60203) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;31mE (60203) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (60203) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (60203) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (60313) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (60413) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (60513) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (60613) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (60713) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;31mE (60713) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (60713) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (60813) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 0)[0m
+[0;32mI (60913) DIRECTION: MATCH: STRAIGHT (Pot: 30, MPU: 0)[0m
+[0;33mW (61013) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;33mW (61113) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (61113) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (61113) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (61113) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (61223) DIRECTION: MISMATCH: POT=RIGHT (68), MPU=STRAIGHT (0)[0m
+[0;31mE (61223) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (61223) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (61223) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (61233) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (61243) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (61243) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (61353) DIRECTION: MISMATCH: POT=RIGHT (70), MPU=STRAIGHT (0)[0m
+[0;31mE (61353) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (61353) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (61353) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (61463) DIRECTION: MISMATCH: POT=RIGHT (70), MPU=STRAIGHT (0)[0m
+[0;31mE (61463) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (61463) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (61563) DIRECTION: MISMATCH: POT=RIGHT (70), MPU=STRAIGHT (0)[0m
+[0;31mE (61563) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (61563) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (61663) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 0)[0m
+[0;32mI (61763) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 0)[0m
+[0;31mE (61763) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (61763) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (61863) DIRECTION: MATCH: STRAIGHT (Pot: -34, MPU: 0)[0m
+[0;32mI (61963) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 0)[0m
+[0;32mI (62063) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (62163) DIRECTION: MATCH: STRAIGHT (Pot: -39, MPU: 0)[0m
+[0;32mI (62263) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;31mE (62263) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (62263) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (62263) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (62373) DIRECTION: MATCH: STRAIGHT (Pot: -23, MPU: 0)[0m
+[0;32mI (62473) DIRECTION: MATCH: STRAIGHT (Pot: -40, MPU: 0)[0m
+[0;32mI (62573) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (62673) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 0)[0m
+[0;33mW (62773) DIRECTION: MISMATCH: POT=RIGHT (72), MPU=STRAIGHT (0)[0m
+[0;31mE (62773) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (62773) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (62773) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (62783) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (62893) DIRECTION: MISMATCH: POT=RIGHT (71), MPU=STRAIGHT (0)[0m
+[0;31mE (62893) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (62893) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (62993) DIRECTION: MISMATCH: POT=RIGHT (71), MPU=STRAIGHT (0)[0m
+[0;31mE (62993) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (62993) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (63093) DIRECTION: MISMATCH: POT=RIGHT (71), MPU=STRAIGHT (0)[0m
+[0;31mE (63093) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (63093) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (63193) DIRECTION: MISMATCH: POT=RIGHT (72), MPU=STRAIGHT (0)[0m
+[0;31mE (63193) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (63193) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (63293) DIRECTION: MISMATCH: POT=RIGHT (72), MPU=STRAIGHT (0)[0m
+[0;31mE (63293) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (63293) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (63293) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (63303) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (63313) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (63413) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (63413) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (63413) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (63513) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (63513) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (63513) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (63613) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (63613) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (63613) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (63713) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (63713) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (63713) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (63813) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (63813) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (63813) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (63813) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (63823) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (63933) DIRECTION: MISMATCH: POT=RIGHT (72), MPU=STRAIGHT (0)[0m
+[0;31mE (63933) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (63933) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (64033) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (0)[0m
+[0;31mE (64033) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (64033) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (64133) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (0)[0m
+[0;33mW (64233) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (0)[0m
+[0;31mE (64233) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (64233) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (64233) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (64343) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (0)[0m
+[0;31mE (64343) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (64343) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (64343) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (64353) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (64363) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (64363) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (64473) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (64473) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (64473) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (64473) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (64583) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (64583) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (64583) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (64683) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (64683) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (64683) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (64783) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (64783) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (64783) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (64883) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (64883) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (64883) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (64883) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (64893) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (65003) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (0)[0m
+[0;31mE (65003) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (65003) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (65103) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (0)[0m
+[0;31mE (65103) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (65103) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (65203) DIRECTION: MISMATCH: POT=RIGHT (72), MPU=STRAIGHT (0)[0m
+[0;31mE (65203) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (65203) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (65303) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (0)[0m
+[0;31mE (65303) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (65303) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (65403) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (0)[0m
+[0;31mE (65403) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (65403) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (65403) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (65413) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (65423) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (65523) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (65523) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (65523) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (65623) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (65623) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (65623) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (65723) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (65723) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (65723) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (65823) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (65823) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (65823) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (65923) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (65923) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (65923) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (65923) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (65933) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (66043) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (0)[0m
+[0;31mE (66043) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (66043) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (66143) DIRECTION: MISMATCH: POT=RIGHT (72), MPU=STRAIGHT (0)[0m
+[0;31mE (66143) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (66143) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (66243) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (0)[0m
+[0;31mE (66243) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (66243) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (66343) DIRECTION: MISMATCH: POT=RIGHT (72), MPU=STRAIGHT (0)[0m
+[0;31mE (66343) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (66343) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (66443) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (0)[0m
+[0;31mE (66443) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (66443) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (66443) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (66453) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (66463) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (66563) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;31mE (66563) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (66563) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (66663) DIRECTION: MATCH: STRAIGHT (Pot: 13, MPU: 0)[0m
+[0;32mI (66763) DIRECTION: MATCH: STRAIGHT (Pot: 8, MPU: 0)[0m
+[0;32mI (66863) DIRECTION: MATCH: STRAIGHT (Pot: 10, MPU: 0)[0m
+[0;32mI (66963) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 0)[0m
+[0;31mE (66963) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (66963) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (67063) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 0)[0m
+[0;32mI (67163) DIRECTION: MATCH: STRAIGHT (Pot: -9, MPU: 0)[0m
+[0;32mI (67263) DIRECTION: MATCH: STRAIGHT (Pot: -6, MPU: 0)[0m
+[0;32mI (67363) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 0)[0m
+[0;32mI (67463) DIRECTION: MATCH: STRAIGHT (Pot: -9, MPU: 0)[0m
+[0;31mE (67463) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (67463) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (67463) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (67573) DIRECTION: MATCH: STRAIGHT (Pot: -5, MPU: 0)[0m
+[0;32mI (67673) DIRECTION: MATCH: STRAIGHT (Pot: -5, MPU: 0)[0m
+[0;32mI (67773) DIRECTION: MATCH: STRAIGHT (Pot: -6, MPU: 0)[0m
+[0;32mI (67873) DIRECTION: MATCH: STRAIGHT (Pot: -6, MPU: 0)[0m
+[0;32mI (67973) DIRECTION: MATCH: STRAIGHT (Pot: -4, MPU: 0)[0m
+[0;31mE (67973) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (67973) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (68073) DIRECTION: MATCH: STRAIGHT (Pot: -5, MPU: 0)[0m
+[0;32mI (68173) DIRECTION: MATCH: STRAIGHT (Pot: -5, MPU: 0)[0m
+[0;32mI (68273) DIRECTION: MATCH: STRAIGHT (Pot: -4, MPU: 0)[0m
+[0;32mI (68373) DIRECTION: MATCH: STRAIGHT (Pot: -4, MPU: 0)[0m
+[0;32mI (68473) DIRECTION: MATCH: STRAIGHT (Pot: -5, MPU: 0)[0m
+[0;31mE (68473) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (68473) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (68473) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (68583) DIRECTION: MATCH: STRAIGHT (Pot: -3, MPU: 0)[0m
+[0;32mI (68683) DIRECTION: MATCH: STRAIGHT (Pot: -3, MPU: 0)[0m
+[0;32mI (68783) DIRECTION: MATCH: STRAIGHT (Pot: -3, MPU: 0)[0m
+[0;32mI (68883) DIRECTION: MATCH: STRAIGHT (Pot: 8, MPU: 0)[0m
+[0;33mW (68983) DIRECTION: MISMATCH: POT=RIGHT (68), MPU=STRAIGHT (0)[0m
+[0;31mE (68983) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (68983) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (69083) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;32mI (69183) DIRECTION: MATCH: STRAIGHT (Pot: 60, MPU: 0)[0m
+[0;32mI (69283) DIRECTION: MATCH: STRAIGHT (Pot: 60, MPU: 0)[0m
+[0;32mI (69383) DIRECTION: MATCH: STRAIGHT (Pot: 59, MPU: 0)[0m
+[0;33mW (69483) DIRECTION: MISMATCH: POT=RIGHT (63), MPU=STRAIGHT (0)[0m
+[0;31mE (69483) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (69483) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (69483) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (69493) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (69503) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (69503) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (69613) DIRECTION: MISMATCH: POT=RIGHT (63), MPU=STRAIGHT (0)[0m
+[0;31mE (69613) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (69613) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (69613) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (69723) DIRECTION: MISMATCH: POT=RIGHT (63), MPU=STRAIGHT (0)[0m
+[0;31mE (69723) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (69723) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (69723) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (69833) DIRECTION: MISMATCH: POT=RIGHT (64), MPU=STRAIGHT (0)[0m
+[0;31mE (69833) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (69833) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (69933) DIRECTION: MISMATCH: POT=RIGHT (63), MPU=STRAIGHT (0)[0m
+[0;31mE (69933) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (69933) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (70033) DIRECTION: MISMATCH: POT=RIGHT (63), MPU=STRAIGHT (0)[0m
+[0;31mE (70033) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (70033) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (70033) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (70043) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (70153) DIRECTION: MATCH: STRAIGHT (Pot: 60, MPU: 0)[0m
+[0;33mW (70253) DIRECTION: MISMATCH: POT=RIGHT (64), MPU=STRAIGHT (0)[0m
+[0;31mE (70253) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (70253) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (70353) DIRECTION: MISMATCH: POT=RIGHT (64), MPU=STRAIGHT (0)[0m
+[0;31mE (70353) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (70353) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (70453) DIRECTION: MISMATCH: POT=RIGHT (64), MPU=STRAIGHT (0)[0m
+[0;31mE (70453) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (70453) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (70553) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (70553) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (70553) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (70553) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (70563) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (70573) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (70673) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (70673) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (70673) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (70773) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (70773) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (70773) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (70873) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (70873) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (70873) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (70973) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (70973) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (70973) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (71073) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (71073) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (71073) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (71073) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (71083) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (71193) DIRECTION: MISMATCH: POT=RIGHT (65), MPU=STRAIGHT (0)[0m
+[0;31mE (71193) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (71193) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (71293) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (71293) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (71293) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (71393) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (71393) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (71393) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (71493) DIRECTION: MISMATCH: POT=RIGHT (65), MPU=STRAIGHT (0)[0m
+[0;31mE (71493) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (71493) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (71593) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (71593) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (71593) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (71593) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (71603) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (71613) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (71713) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (71713) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (71713) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (71813) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (71813) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (71813) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (71913) DIRECTION: MISMATCH: POT=RIGHT (68), MPU=STRAIGHT (0)[0m
+[0;31mE (71913) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (71913) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (72013) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (72013) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (72013) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (72113) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (72113) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (72113) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (72113) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (72123) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (72233) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (72233) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (72233) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (72333) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (72333) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (72333) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (72433) DIRECTION: MISMATCH: POT=RIGHT (65), MPU=STRAIGHT (0)[0m
+[0;31mE (72433) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (72433) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (72533) DIRECTION: MISMATCH: POT=RIGHT (65), MPU=STRAIGHT (0)[0m
+[0;33mW (72633) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (72633) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (72633) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (72633) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (72643) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (72653) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (72653) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (72763) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (72763) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (72763) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (72763) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (72873) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (72873) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (72873) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (72873) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (72983) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (72983) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (72983) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (73083) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (73083) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (73083) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (73183) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (73183) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (73183) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (73183) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (73193) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (73303) DIRECTION: MISMATCH: POT=RIGHT (65), MPU=STRAIGHT (0)[0m
+[0;31mE (73303) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (73303) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (73403) DIRECTION: MISMATCH: POT=RIGHT (64), MPU=STRAIGHT (0)[0m
+[0;31mE (73403) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (73403) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (73503) DIRECTION: MISMATCH: POT=RIGHT (64), MPU=STRAIGHT (0)[0m
+[0;31mE (73503) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (73503) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (73603) DIRECTION: MISMATCH: POT=RIGHT (65), MPU=STRAIGHT (0)[0m
+[0;31mE (73603) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (73603) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (73703) DIRECTION: MISMATCH: POT=RIGHT (65), MPU=STRAIGHT (0)[0m
+[0;31mE (73703) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (73703) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (73703) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (73713) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (73723) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (73823) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (73823) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (73823) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (73923) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (73923) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (73923) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (74023) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (74023) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (74023) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (74123) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (74123) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (74123) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (74223) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (74223) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (74223) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (74223) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (74233) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (74343) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (74343) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (74343) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (74443) DIRECTION: MISMATCH: POT=RIGHT (64), MPU=STRAIGHT (0)[0m
+[0;31mE (74443) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (74443) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (74543) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (74543) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (74543) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (74643) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (74643) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (74643) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (74743) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (74743) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (74743) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (74743) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (74753) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (74763) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (74863) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (74863) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (74863) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (74963) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (74963) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (74963) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (75063) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (75063) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (75063) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (75163) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (75163) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (75163) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (75263) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (75263) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (75263) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (75263) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (75273) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (75383) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (75383) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (75383) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (75483) DIRECTION: MISMATCH: POT=RIGHT (66), MPU=STRAIGHT (0)[0m
+[0;31mE (75483) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (75483) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (75583) DIRECTION: MISMATCH: POT=RIGHT (65), MPU=STRAIGHT (0)[0m
+[0;31mE (75583) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (75583) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (75683) DIRECTION: MISMATCH: POT=RIGHT (65), MPU=STRAIGHT (0)[0m
+[0;33mW (75783) DIRECTION: MISMATCH: POT=RIGHT (65), MPU=STRAIGHT (0)[0m
+[0;31mE (75783) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (75783) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (75783) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (75793) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (75803) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (75803) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (75913) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (75913) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (75913) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (75913) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (76023) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (76023) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (76023) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (76023) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (76133) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (76133) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (76133) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (76233) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (76233) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (76233) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (76333) DIRECTION: MISMATCH: POT=RIGHT (68), MPU=STRAIGHT (0)[0m
+[0;31mE (76333) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (76333) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;31mE (76333) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (76343) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (76453) DIRECTION: MISMATCH: POT=RIGHT (67), MPU=STRAIGHT (0)[0m
+[0;31mE (76453) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (76453) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (76553) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 0)[0m
+[0;32mI (76653) DIRECTION: MATCH: STRAIGHT (Pot: 16, MPU: 0)[0m
+[0;32mI (76753) DIRECTION: MATCH: STRAIGHT (Pot: 27, MPU: 0)[0m
+[0;32mI (76853) DIRECTION: MATCH: STRAIGHT (Pot: 36, MPU: 0)[0m
+[0;31mE (76853) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (76853) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (76853) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (76963) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 0)[0m
+[0;32mI (77063) DIRECTION: MATCH: STRAIGHT (Pot: 48, MPU: 0)[0m
+[0;32mI (77163) DIRECTION: MATCH: STRAIGHT (Pot: 40, MPU: 0)[0m
+[0;32mI (77263) DIRECTION: MATCH: STRAIGHT (Pot: 35, MPU: 0)[0m
+[0;32mI (77363) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 0)[0m
+[0;31mE (77363) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (77363) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (77463) DIRECTION: MATCH: STRAIGHT (Pot: 39, MPU: 0)[0m
+[0;32mI (77563) DIRECTION: MATCH: STRAIGHT (Pot: 40, MPU: 0)[0m
+[0;32mI (77663) DIRECTION: MATCH: STRAIGHT (Pot: 40, MPU: 0)[0m
+[0;32mI (77763) DIRECTION: MATCH: STRAIGHT (Pot: 40, MPU: 0)[0m
+[0;32mI (77863) DIRECTION: MATCH: STRAIGHT (Pot: 42, MPU: 0)[0m
+[0;31mE (77863) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (77863) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (77863) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (77973) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 0)[0m
+[0;32mI (78073) DIRECTION: MATCH: STRAIGHT (Pot: 41, MPU: 0)[0m
+[0;32mI (78173) DIRECTION: MATCH: STRAIGHT (Pot: 42, MPU: 0)[0m
+[0;32mI (78273) DIRECTION: MATCH: STRAIGHT (Pot: 43, MPU: 0)[0m
+[0;32mI (78373) DIRECTION: MATCH: STRAIGHT (Pot: 36, MPU: 0)[0m
+[0;31mE (78373) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (78373) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (78473) DIRECTION: MATCH: STRAIGHT (Pot: 37, MPU: 0)[0m
+[0;32mI (78573) DIRECTION: MATCH: STRAIGHT (Pot: 32, MPU: 0)[0m
+[0;32mI (78673) DIRECTION: MATCH: STRAIGHT (Pot: 36, MPU: 0)[0m
+[0;32mI (78773) DIRECTION: MATCH: STRAIGHT (Pot: 35, MPU: 0)[0m
+[0;32mI (78873) DIRECTION: MATCH: STRAIGHT (Pot: 35, MPU: 0)[0m
+[0;31mE (78873) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (78873) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (78873) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (78983) DIRECTION: MATCH: STRAIGHT (Pot: 37, MPU: 0)[0m
+[0;32mI (79083) DIRECTION: MATCH: STRAIGHT (Pot: 39, MPU: 0)[0m
+[0;32mI (79183) DIRECTION: MATCH: STRAIGHT (Pot: 43, MPU: 0)[0m
+[0;32mI (79283) DIRECTION: MATCH: STRAIGHT (Pot: 49, MPU: 0)[0m
+[0;32mI (79383) DIRECTION: MATCH: STRAIGHT (Pot: 49, MPU: 0)[0m
+[0;31mE (79383) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (79383) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (79483) DIRECTION: MATCH: STRAIGHT (Pot: 50, MPU: 0)[0m
+[0;32mI (79583) DIRECTION: MATCH: STRAIGHT (Pot: 49, MPU: 0)[0m
+[0;32mI (79683) DIRECTION: MATCH: STRAIGHT (Pot: 41, MPU: 0)[0m
+[0;32mI (79783) DIRECTION: MATCH: STRAIGHT (Pot: -41, MPU: 0)[0m
+[0;32mI (79883) DIRECTION: MATCH: STRAIGHT (Pot: -47, MPU: 0)[0m
+[0;31mE (79883) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (79883) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (79883) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (79993) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 0)[0m
+[0;32mI (80093) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 0)[0m
+[0;32mI (80193) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 0)[0m
+[0;32mI (80293) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;32mI (80393) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 0)[0m
+[0;31mE (80393) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (80393) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (80493) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 0)[0m
+[0;32mI (80593) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (80693) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 0)[0m
+[0;32mI (80793) DIRECTION: MATCH: STRAIGHT (Pot: -56, MPU: 0)[0m
+[0;32mI (80893) DIRECTION: MATCH: STRAIGHT (Pot: -57, MPU: 0)[0m
+[0;31mE (80893) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (80893) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (80893) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (81003) DIRECTION: MATCH: STRAIGHT (Pot: -55, MPU: 0)[0m
+[0;32mI (81103) DIRECTION: MATCH: STRAIGHT (Pot: -59, MPU: 0)[0m
+[0;32mI (81203) DIRECTION: MATCH: STRAIGHT (Pot: -59, MPU: 0)[0m
+[0;32mI (81303) DIRECTION: MATCH: STRAIGHT (Pot: -59, MPU: 0)[0m
+[0;32mI (81403) DIRECTION: MATCH: STRAIGHT (Pot: -60, MPU: 0)[0m
+[0;31mE (81403) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (81403) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (81503) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 0)[0m
+[0;33mW (81603) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (0)[0m
+[0;32mI (81703) DIRECTION: MATCH: STRAIGHT (Pot: 29, MPU: 0)[0m
+[0;32mI (81803) DIRECTION: MATCH: STRAIGHT (Pot: 23, MPU: 0)[0m
+[0;32mI (81903) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 0)[0m
+[0;31mE (81903) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (81903) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (81903) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (82013) DIRECTION: MATCH: STRAIGHT (Pot: 10, MPU: 0)[0m
+[0;32mI (82113) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 0)[0m
+[0;32mI (82213) DIRECTION: MATCH: STRAIGHT (Pot: 9, MPU: 0)[0m
+[0;32mI (82313) DIRECTION: MATCH: STRAIGHT (Pot: -2, MPU: 0)[0m
+[0;32mI (82413) DIRECTION: MATCH: STRAIGHT (Pot: 0, MPU: 0)[0m
+[0;31mE (82413) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (82413) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (82513) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (82613) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;32mI (82713) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;32mI (82813) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 0)[0m
+[0;32mI (82913) DIRECTION: MATCH: STRAIGHT (Pot: -20, MPU: 0)[0m
+[0;32mI (83013) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 0)[0m
+[0;32mI (83113) DIRECTION: MATCH: STRAIGHT (Pot: -33, MPU: 0)[0m
+[0;32mI (83213) DIRECTION: MATCH: STRAIGHT (Pot: -34, MPU: 0)[0m
+[0;32mI (83313) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 0)[0m
+[0;32mI (83413) DIRECTION: MATCH: STRAIGHT (Pot: -33, MPU: 0)[0m
+[0;32mI (83513) DIRECTION: MATCH: STRAIGHT (Pot: -34, MPU: 0)[0m
+[0;32mI (83613) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 0)[0m
+[0;32mI (83713) DIRECTION: MATCH: STRAIGHT (Pot: -39, MPU: 0)[0m
+[0;32mI (83813) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 0)[0m
+[0;32mI (83913) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 0)[0m
+[0;32mI (84013) DIRECTION: MATCH: STRAIGHT (Pot: -40, MPU: 0)[0m
+[0;32mI (84113) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (84213) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (84313) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (84413) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (84513) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 0)[0m
+[0;32mI (84613) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (84713) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (84813) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 0)[0m
+[0;32mI (84913) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 0)[0m
+[0;32mI (85013) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 0)[0m
+[0;32mI (85113) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 0)[0m
+[0;32mI (85213) DIRECTION: MATCH: STRAIGHT (Pot: 9, MPU: 0)[0m
+[0;32mI (85313) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 0)[0m
+[0;32mI (85413) DIRECTION: MATCH: STRAIGHT (Pot: 7, MPU: 0)[0m
+[0;32mI (85513) DIRECTION: MATCH: STRAIGHT (Pot: 9, MPU: 0)[0m
+[0;32mI (85613) DIRECTION: MATCH: STRAIGHT (Pot: 9, MPU: 0)[0m
+[0;32mI (85713) DIRECTION: MATCH: STRAIGHT (Pot: 16, MPU: 0)[0m
+[0;32mI (85813) DIRECTION: MATCH: STRAIGHT (Pot: 16, MPU: 0)[0m
+[0;32mI (85913) DIRECTION: MATCH: STRAIGHT (Pot: 18, MPU: 0)[0m
+[0;32mI (86013) DIRECTION: MATCH: STRAIGHT (Pot: 18, MPU: 0)[0m
+[0;32mI (86113) DIRECTION: MATCH: STRAIGHT (Pot: 21, MPU: 0)[0m
+[0;32mI (86213) DIRECTION: MATCH: STRAIGHT (Pot: 21, MPU: 0)[0m
+[0;32mI (86313) DIRECTION: MATCH: STRAIGHT (Pot: 23, MPU: 0)[0m
+[0;32mI (86413) DIRECTION: MATCH: STRAIGHT (Pot: 39, MPU: 0)[0m
+[0;32mI (86513) DIRECTION: MATCH: STRAIGHT (Pot: 42, MPU: 0)[0m
+[0;32mI (86613) DIRECTION: MATCH: STRAIGHT (Pot: 52, MPU: 0)[0m
+[0;32mI (86713) DIRECTION: MATCH: STRAIGHT (Pot: 47, MPU: 0)[0m
+[0;32mI (86813) DIRECTION: MATCH: STRAIGHT (Pot: 23, MPU: 0)[0m
+[0;32mI (86913) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (87013) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 0)[0m
+[0;32mI (87113) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 0)[0m
+[0;32mI (87213) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (87313) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (87413) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (87513) DIRECTION: MATCH: STRAIGHT (Pot: -34, MPU: 0)[0m
+[0;32mI (87613) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 0)[0m
+[0;32mI (87713) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (87813) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (87913) DIRECTION: MATCH: STRAIGHT (Pot: -33, MPU: 0)[0m
+[0;32mI (88013) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 0)[0m
+[0;32mI (88113) DIRECTION: MATCH: STRAIGHT (Pot: -33, MPU: 0)[0m
+[0;32mI (88213) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 0)[0m
+[0;32mI (88313) DIRECTION: MATCH: STRAIGHT (Pot: -40, MPU: 0)[0m
+[0;32mI (88413) DIRECTION: MATCH: STRAIGHT (Pot: -42, MPU: 0)[0m
+[0;32mI (88513) DIRECTION: MATCH: STRAIGHT (Pot: -43, MPU: 0)[0m
+[0;32mI (88613) DIRECTION: MATCH: STRAIGHT (Pot: -42, MPU: 0)[0m
+[0;32mI (88713) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (88813) DIRECTION: MATCH: STRAIGHT (Pot: -43, MPU: 0)[0m
+[0;32mI (88913) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (89013) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;32mI (89113) DIRECTION: MATCH: STRAIGHT (Pot: -42, MPU: 0)[0m
+[0;32mI (89213) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;32mI (89313) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 1)[0m
+[0;32mI (89413) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (89513) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 0)[0m
+[0;32mI (89613) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 0)[0m
+[0;32mI (89713) DIRECTION: MATCH: STRAIGHT (Pot: 1, MPU: 0)[0m
+[0;32mI (89813) DIRECTION: MATCH: STRAIGHT (Pot: 1, MPU: 0)[0m
+[0;32mI (89913) DIRECTION: MATCH: STRAIGHT (Pot: 3, MPU: 0)[0m
+[0;33mW (90013) DIRECTION: MISMATCH: POT=RIGHT (89), MPU=STRAIGHT (0)[0m
+[0;31mE (90013) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (90013) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (90013) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (90123) DIRECTION: MISMATCH: POT=RIGHT (93), MPU=STRAIGHT (0)[0m
+[0;31mE (90123) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (90123) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (90123) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (90233) DIRECTION: MATCH: STRAIGHT (Pot: 25, MPU: 0)[0m
+[0;33mW (90333) DIRECTION: MISMATCH: POT=RIGHT (92), MPU=STRAIGHT (0)[0m
+[0;31mE (90333) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (90333) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (90433) DIRECTION: MATCH: STRAIGHT (Pot: 49, MPU: 0)[0m
+[0;33mW (90533) DIRECTION: MISMATCH: POT=RIGHT (87), MPU=STRAIGHT (0)[0m
+[0;31mE (90533) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (90533) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (90633) DIRECTION: MISMATCH: POT=RIGHT (88), MPU=STRAIGHT (0)[0m
+[0;31mE (90633) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (90633) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (90733) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (90733) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (90733) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (90833) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 0)[0m
+[0;33mW (90933) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (90933) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (90933) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (91033) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 0)[0m
+[0;32mI (91133) DIRECTION: MATCH: STRAIGHT (Pot: 24, MPU: 0)[0m
+[0;32mI (91233) DIRECTION: MATCH: STRAIGHT (Pot: 43, MPU: 0)[0m
+[0;33mW (91333) DIRECTION: MISMATCH: POT=RIGHT (93), MPU=STRAIGHT (0)[0m
+[0;31mE (91333) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (91333) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (91433) DIRECTION: MATCH: STRAIGHT (Pot: -3, MPU: 0)[0m
+[0;33mW (91533) DIRECTION: MISMATCH: POT=RIGHT (92), MPU=STRAIGHT (0)[0m
+[0;31mE (91533) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (91533) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (91633) DIRECTION: MATCH: STRAIGHT (Pot: 35, MPU: 0)[0m
+[0;32mI (91733) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 0)[0m
+[0;32mI (91833) DIRECTION: MATCH: STRAIGHT (Pot: 38, MPU: 0)[0m
+[0;32mI (91933) DIRECTION: MATCH: STRAIGHT (Pot: 1, MPU: 0)[0m
+[0;32mI (92033) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 0)[0m
+[0;32mI (92133) DIRECTION: MATCH: STRAIGHT (Pot: 42, MPU: 0)[0m
+[0;32mI (92233) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (92333) DIRECTION: MATCH: STRAIGHT (Pot: -9, MPU: 0)[0m
+[0;32mI (92433) DIRECTION: MATCH: STRAIGHT (Pot: 25, MPU: 0)[0m
+[0;33mW (92533) DIRECTION: MISMATCH: POT=RIGHT (82), MPU=STRAIGHT (0)[0m
+[0;31mE (92533) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (92533) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (92633) DIRECTION: MATCH: STRAIGHT (Pot: 14, MPU: 0)[0m
+[0;33mW (92733) DIRECTION: MISMATCH: POT=RIGHT (92), MPU=STRAIGHT (0)[0m
+[0;31mE (92733) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (92733) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (92833) DIRECTION: MISMATCH: POT=RIGHT (92), MPU=STRAIGHT (0)[0m
+[0;31mE (92833) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (92833) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (92933) DIRECTION: MISMATCH: POT=RIGHT (92), MPU=STRAIGHT (0)[0m
+[0;31mE (92933) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (92933) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (93033) DIRECTION: MISMATCH: POT=RIGHT (92), MPU=STRAIGHT (0)[0m
+[0;33mW (93133) DIRECTION: MISMATCH: POT=RIGHT (92), MPU=STRAIGHT (0)[0m
+[0;31mE (93133) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (93133) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (93133) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (93243) DIRECTION: MISMATCH: POT=RIGHT (92), MPU=STRAIGHT (0)[0m
+[0;31mE (93243) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (93243) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (93243) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (93353) DIRECTION: MISMATCH: POT=RIGHT (93), MPU=STRAIGHT (0)[0m
+[0;31mE (93353) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (93353) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (93353) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (93463) DIRECTION: MISMATCH: POT=RIGHT (92), MPU=STRAIGHT (0)[0m
+[0;31mE (93463) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (93463) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (93563) DIRECTION: MISMATCH: POT=RIGHT (93), MPU=STRAIGHT (0)[0m
+[0;31mE (93563) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (93563) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (93663) DIRECTION: MISMATCH: POT=RIGHT (92), MPU=STRAIGHT (0)[0m
+[0;31mE (93663) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (93663) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (93763) DIRECTION: MISMATCH: POT=RIGHT (92), MPU=STRAIGHT (0)[0m
+[0;31mE (93763) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (93763) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (93863) DIRECTION: MISMATCH: POT=RIGHT (92), MPU=STRAIGHT (0)[0m
+[0;31mE (93863) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (93863) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (93963) DIRECTION: MISMATCH: POT=RIGHT (93), MPU=STRAIGHT (0)[0m
+[0;31mE (93963) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (93963) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (94063) DIRECTION: MISMATCH: POT=RIGHT (92), MPU=STRAIGHT (0)[0m
+[0;31mE (94063) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (94063) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (94163) DIRECTION: MATCH: STRAIGHT (Pot: 21, MPU: 0)[0m
+[0;32mI (94263) DIRECTION: MATCH: STRAIGHT (Pot: 21, MPU: 0)[0m
+[0;32mI (94363) DIRECTION: MATCH: STRAIGHT (Pot: 34, MPU: 0)[0m
+[0;32mI (94463) DIRECTION: MATCH: STRAIGHT (Pot: 36, MPU: 0)[0m
+[0;32mI (94563) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 0)[0m
+[0;32mI (94663) DIRECTION: MATCH: STRAIGHT (Pot: 26, MPU: 0)[0m
+[0;32mI (94763) DIRECTION: MATCH: STRAIGHT (Pot: 22, MPU: 0)[0m
+[0;32mI (94863) DIRECTION: MATCH: STRAIGHT (Pot: -7, MPU: 0)[0m
+[0;32mI (94963) DIRECTION: MATCH: STRAIGHT (Pot: -3, MPU: 0)[0m
+[0;32mI (95063) DIRECTION: MATCH: STRAIGHT (Pot: -2, MPU: 0)[0m
+[0;32mI (95163) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 0)[0m
+[0;32mI (95263) DIRECTION: MATCH: STRAIGHT (Pot: 10, MPU: 0)[0m
+[0;32mI (95363) DIRECTION: MATCH: STRAIGHT (Pot: 33, MPU: 0)[0m
+[0;32mI (95463) DIRECTION: MATCH: STRAIGHT (Pot: 42, MPU: 0)[0m
+[0;33mW (95563) DIRECTION: MISMATCH: POT=RIGHT (70), MPU=STRAIGHT (0)[0m
+[0;31mE (95563) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (95563) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (95663) DIRECTION: MISMATCH: POT=RIGHT (89), MPU=STRAIGHT (0)[0m
+[0;31mE (95663) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (95663) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (95763) DIRECTION: MISMATCH: POT=RIGHT (93), MPU=STRAIGHT (0)[0m
+[0;31mE (95763) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (95763) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (95863) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (95863) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (95863) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (95963) DIRECTION: MISMATCH: POT=RIGHT (93), MPU=STRAIGHT (0)[0m
+[0;31mE (95963) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (95963) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (96063) DIRECTION: MISMATCH: POT=RIGHT (93), MPU=STRAIGHT (0)[0m
+[0;31mE (96063) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (96063) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (96163) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;33mW (96263) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (96263) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (96263) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (96263) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (96373) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (96373) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (96373) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (96373) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (96483) DIRECTION: MISMATCH: POT=RIGHT (93), MPU=STRAIGHT (0)[0m
+[0;31mE (96483) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (96483) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (96483) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (96593) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (96593) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (96593) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (96693) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (96693) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (96693) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (96793) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (96793) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (96793) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (96893) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (96893) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (96893) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (96993) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (96993) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (96993) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (97093) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (97093) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (97093) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (97193) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (97193) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (97193) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (97293) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (97293) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (97293) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (97393) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (97393) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (97393) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (97493) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (97493) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (97493) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (97593) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (97593) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (97593) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (97693) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (97693) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (97693) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (97793) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (97793) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (97793) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (97893) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (97893) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (97893) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (97993) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (97993) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (97993) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (98093) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (98093) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (98093) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (98193) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (98193) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (98193) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (98293) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (98293) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (98293) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (98393) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (98393) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (98393) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (98493) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (98493) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (98493) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (98593) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (98593) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (98593) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (98693) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (98693) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (98693) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (98793) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (98793) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (98793) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (98893) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (98893) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (98893) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (98993) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (98993) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (98993) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (99093) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (99093) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (99093) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (99193) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (99193) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (99193) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (99293) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;33mW (99393) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (99393) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (99393) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (99393) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (99503) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (99503) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (99503) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (99503) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (99613) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (99613) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (99613) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (99613) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (99723) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (99723) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (99723) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (99823) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (-1)[0m
+[0;31mE (99823) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (99823) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (99923) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (99923) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (99923) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (100023) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (100023) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (100023) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (100123) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (100123) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (100123) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (100223) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (100223) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (100223) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (100323) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (100323) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (100323) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (100423) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (100423) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (100423) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (100523) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (100523) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (100523) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (100623) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (100623) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (100623) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (100723) DIRECTION: MISMATCH: POT=RIGHT (93), MPU=STRAIGHT (0)[0m
+[0;31mE (100723) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (100723) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (100823) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (100823) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (100823) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;32mI (100923) DIRECTION: MATCH: STRAIGHT (Pot: 20, MPU: 0)[0m
+[0;32mI (101023) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 0)[0m
+[0;32mI (101123) DIRECTION: MATCH: STRAIGHT (Pot: -22, MPU: 0)[0m
+[0;32mI (101223) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 0)[0m
+[0;32mI (101323) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 0)[0m
+[0;32mI (101423) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 0)[0m
+[0;32mI (101523) DIRECTION: MATCH: STRAIGHT (Pot: -22, MPU: 0)[0m
+[0;32mI (101623) DIRECTION: MATCH: STRAIGHT (Pot: -20, MPU: 0)[0m
+[0;32mI (101723) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (101823) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (101923) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (102023) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (102123) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (102223) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (102323) DIRECTION: MATCH: STRAIGHT (Pot: -15, MPU: 0)[0m
+[0;32mI (102423) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;32mI (102523) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (102623) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;32mI (102723) DIRECTION: MATCH: STRAIGHT (Pot: -24, MPU: 0)[0m
+[0;32mI (102823) DIRECTION: MATCH: STRAIGHT (Pot: -23, MPU: 0)[0m
+[0;32mI (102923) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 0)[0m
+[0;32mI (103023) DIRECTION: MATCH: STRAIGHT (Pot: -23, MPU: 0)[0m
+[0;32mI (103123) DIRECTION: MATCH: STRAIGHT (Pot: -22, MPU: 0)[0m
+[0;32mI (103223) DIRECTION: MATCH: STRAIGHT (Pot: -22, MPU: 0)[0m
+[0;32mI (103323) DIRECTION: MATCH: STRAIGHT (Pot: -23, MPU: 0)[0m
+[0;32mI (103423) DIRECTION: MATCH: STRAIGHT (Pot: -23, MPU: 0)[0m
+[0;32mI (103523) DIRECTION: MATCH: STRAIGHT (Pot: -24, MPU: 0)[0m
+[0;32mI (103623) DIRECTION: MATCH: STRAIGHT (Pot: -22, MPU: 0)[0m
+[0;32mI (103723) DIRECTION: MATCH: STRAIGHT (Pot: -23, MPU: 0)[0m
+[0;32mI (103823) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 0)[0m
+[0;32mI (103923) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (104023) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (104123) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (104223) DIRECTION: MATCH: STRAIGHT (Pot: -20, MPU: 0)[0m
+[0;32mI (104323) DIRECTION: MATCH: STRAIGHT (Pot: -22, MPU: 0)[0m
+[0;32mI (104423) DIRECTION: MATCH: STRAIGHT (Pot: -22, MPU: 0)[0m
+[0;32mI (104523) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;32mI (104623) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 0)[0m
+[0;32mI (104723) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 0)[0m
+[0;32mI (104823) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (104923) DIRECTION: MATCH: STRAIGHT (Pot: -13, MPU: 0)[0m
+[0;32mI (105023) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 0)[0m
+[0;32mI (105123) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (105223) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (105323) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (105423) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (105523) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (105623) DIRECTION: MATCH: STRAIGHT (Pot: -13, MPU: 0)[0m
+[0;32mI (105723) DIRECTION: MATCH: STRAIGHT (Pot: -13, MPU: 0)[0m
+[0;32mI (105823) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 0)[0m
+[0;32mI (105923) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (106023) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (106123) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (106223) DIRECTION: MATCH: STRAIGHT (Pot: -13, MPU: 0)[0m
+[0;32mI (106323) DIRECTION: MATCH: STRAIGHT (Pot: -15, MPU: 0)[0m
+[0;32mI (106423) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (106523) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 0)[0m
+[0;32mI (106623) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (106723) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 0)[0m
+[0;32mI (106823) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (106923) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 0)[0m
+[0;32mI (107023) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;32mI (107123) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;32mI (107223) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;32mI (107323) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;32mI (107423) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;32mI (107523) DIRECTION: MATCH: STRAIGHT (Pot: -20, MPU: 0)[0m
+[0;32mI (107623) DIRECTION: MATCH: STRAIGHT (Pot: -20, MPU: 0)[0m
+[0;32mI (107723) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 0)[0m
+[0;33mW (107823) DIRECTION: MISMATCH: POT=RIGHT (79), MPU=STRAIGHT (0)[0m
+[0;33mW (107923) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (107923) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (107923) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (107923) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (108033) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (108033) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (108033) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (108033) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (108143) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (108143) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (108143) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (108143) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (108253) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (108253) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (108253) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (108353) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (108353) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (108353) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (108453) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (108453) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (108453) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (108553) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (108553) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (108553) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (108653) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (108653) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (108653) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (108753) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (108753) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (108753) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (108853) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (108853) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (108853) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (108953) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (108953) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (108953) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (109053) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (109053) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (109053) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (109153) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (109153) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (109153) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (109253) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (109253) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (109253) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (109353) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (109353) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (109353) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (109453) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (109453) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (109453) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (109553) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (109553) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (109553) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (109653) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (109653) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (109653) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (109753) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (109753) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (109753) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (109853) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (109853) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (109853) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (109953) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (109953) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (109953) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (110053) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (110053) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (110053) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (110153) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (110153) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (110153) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (110253) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (110253) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (110253) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (110353) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (110353) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (110353) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (110453) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (110453) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (110453) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (110553) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (110553) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (110553) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (110653) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (110653) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (110653) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (110753) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (110753) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (110753) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (110853) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (110853) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (110853) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (110953) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;33mW (111053) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (111053) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (111053) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (111053) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (111163) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (111163) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (111163) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (111163) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (111273) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (111273) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (111273) ledc: ledc_set_duty(803): LEDC is not initialized[0m
+[0;31mE (111273) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (111383) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (111383) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (111383) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (111483) DIRECTION: MISMATCH: POT=RIGHT (93), MPU=STRAIGHT (0)[0m
+[0;31mE (111483) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (111483) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (111583) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (111583) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (111583) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (111683) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (111683) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (111683) ledc: ledc_update_duty(729): LEDC is not initialized[0m
+[0;33mW (111783) DIRECTION: MISMATCH: POT=RIGHT (94), MPU=STRAIGHT (0)[0m
+[0;31mE (111783) ledc: ledc_set_freq(845): LEDC is not initialized[0m
+[0;31mE (111783) ledc: ledc_update_duty(729): LEDC is not initialized[0m
