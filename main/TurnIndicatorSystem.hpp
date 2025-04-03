@@ -35,9 +35,9 @@
 
 // Define sound frequencies and durations
 #define TICK_FREQ           3200    // Tick frequency in Hz
-#define TICK_DURATION       15      // Tick duration in ms
+#define TICK_DURATION       5 //15      // Tick duration in ms
 #define TOCK_FREQ           2400    // Tock frequency in Hz
-#define TOCK_DURATION       20      // Tock duration in ms
+#define TOCK_DURATION       10//20      // Tock duration in ms
 #define WARNING_FREQ        2000    // Warning frequency in Hz
 #define WARNING_BEEP_DUR    200     // Warning beep duration in ms
 #define WARNING_BEEP_GAP    200     // Gap between warning beeps
@@ -56,6 +56,10 @@ public:
     void compareAndLogReadings();    // Compare both sensors and log result
     void blinkIndicator();
     void warningTone();
+
+    static void toneOffCallbackStatic(TimerHandle_t xTimer);
+    void toneOffCallback();
+    TimerHandle_t toneTimerHandle;
 
 private:
     void handleIndicator(gpio_num_t switchPin, gpio_num_t indicatorPin, bool &state);
@@ -89,7 +93,7 @@ private:
     buzzerTone currentTone = OFF;
     unsigned long toneStartTime = 0;
     void setTone(buzzerTone tone);
-
+   
 };
 
 #endif // LIGHT_INDICATOR_SYSTEM_HPP

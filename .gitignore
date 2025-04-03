@@ -3,3 +3,4 @@ sdkconfig
 *.bin
 *.elf
 
+main/build/
