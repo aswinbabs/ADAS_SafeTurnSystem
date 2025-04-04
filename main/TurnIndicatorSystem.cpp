@@ -4,7 +4,7 @@
 
 
 LightIndicatorSystem::LightIndicatorSystem() 
-    : leftIndicatorState(false), rightIndicatorState(false), 
+    : warningFlag(false), leftIndicatorState(false), rightIndicatorState(false), 
       headlightState(false), foglightState(false), 
       steeringAnglePot(0), steeringAngleMPU(0), mpuInitialized(false) {}
 
@@ -213,8 +213,7 @@ int LightIndicatorSystem::readMPUAngle() {
     // Convert roll to steering angle (-180 to +180)
     steeringAngleMPU = (int)roll;
     
-    // Adjust based on mounting orientation (you may need to adjust this)
-    steeringAngleMPU = -steeringAngleMPU; // Invert if needed based on mounting
+    steeringAngleMPU = -steeringAngleMPU; 
     
     return steeringAngleMPU;
 }
@@ -229,7 +228,6 @@ void LightIndicatorSystem::compareAndLogReadings() {
     std::string potDirection = getSteeringDirection(steeringAnglePot);
     std::string mpuDirection = getSteeringDirection(steeringAngleMPU);
     
-    // Log basic sensor data for debugging
     ESP_LOGD("SENSORS", "Pot Angle: %d, MPU Angle: %d", steeringAnglePot, steeringAngleMPU);
     
     // Only log direction if both sensors agree, otherwise log mismatch
@@ -245,42 +243,35 @@ void LightIndicatorSystem::compareAndLogReadings() {
 
 void LightIndicatorSystem::blinkIndicator() {
     unsigned long currentTime = xTaskGetTickCount() * portTICK_PERIOD_MS;
-    static bool isTickPhase = true;
-
+    
     // Check if it's time to toggle the indicator
-    if(currentTime - lastIndicatorToggle >= 500) {  // 500ms toggle period
+    if(currentTime - lastIndicatorToggle >= TOGGLEPERIOD) {
         lastIndicatorToggle = currentTime;
-        indicatorState = !indicatorState; // Toggle indicator state
-        isTickPhase = !isTickPhase;
         
-        // Blink for left indicator
+        // Toggle between TICK and TOCK
+        tickState = !tickState;
+        if(!warningFlag)
+        {
+            if(tickState) {
+                setTone(TICK);
+            } else {
+                setTone(TOCK);
+            }
+        }
+        // Handle indicator lights 
         if (leftIndicatorState) {
-            gpio_set_level(LEFT_INDICATOR_PIN, indicatorState); 
-            gpio_set_level(RIGHT_INDICATOR_PIN, 0); 
-
-            if(indicatorState) {
-                setTone(isTickPhase ? TICK : TOCK);
-            }
+            gpio_set_level(LEFT_INDICATOR_PIN, tickState ? 1 : 0);
+            gpio_set_level(RIGHT_INDICATOR_PIN, 0);
         }
-
-        // Blink for right indicator
+        
         if (rightIndicatorState) {
-            gpio_set_level(RIGHT_INDICATOR_PIN, indicatorState); 
-            gpio_set_level(LEFT_INDICATOR_PIN, 0); 
-
-            if(indicatorState) {
-                setTone(isTickPhase ? TICK : TOCK);
-            }
+            gpio_set_level(RIGHT_INDICATOR_PIN, tickState ? 1 : 0);
+            gpio_set_level(LEFT_INDICATOR_PIN, 0);
         }
-
-        // If both active (Hazard)
+        
         if(leftIndicatorState && rightIndicatorState) {
-            gpio_set_level(LEFT_INDICATOR_PIN, indicatorState);
-            gpio_set_level(RIGHT_INDICATOR_PIN, indicatorState);
-
-            if(indicatorState) {
-                setTone(isTickPhase ? TICK : TOCK);
-            }
+            gpio_set_level(LEFT_INDICATOR_PIN, tickState ? 1 : 0);
+            gpio_set_level(RIGHT_INDICATOR_PIN, tickState ? 1 : 0);
         }
     }
 }
@@ -294,65 +285,11 @@ void LightIndicatorSystem::warningTone() {
         setTone(WARNING);
     }
     else {
-        // Only repeat the warning every 3 seconds
-        // if(currentTime - warningStartTime >= 3000) {
-        //     warningActive = false;
-        // }
-        if(currentTime - warningStartTime >= 30) {    //30
+        if(currentTime - warningStartTime >= WARNING_BEEP_DUR) {    
             warningActive = false;
         }
     }
 }
-
-// void LightIndicatorSystem::setTone(buzzerTone tone) {
-//     currentTone = tone;
-//     toneStartTime = xTaskGetTickCount() * portTICK_PERIOD_MS;
-
-//     switch(tone) {
-//         case TICK:
-//             ledc_set_freq(LEDC_LOW_SPEED_MODE, BUZZER_TIMER, TICK_FREQ);
-//             ledc_set_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL, LEDC_DUTY);
-//             ledc_update_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL);
-//             // Schedule automatic tone off after duration
-//             vTaskDelay(TICK_DURATION / portTICK_PERIOD_MS);
-//             ledc_set_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL, 0);
-//             ledc_update_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL);
-//             break;
-            
-//         case TOCK:
-//             ledc_set_freq(LEDC_LOW_SPEED_MODE, BUZZER_TIMER, TOCK_FREQ);
-//             ledc_set_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL, LEDC_DUTY);
-//             ledc_update_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL);
-//             // Schedule automatic tone off after duration
-//             vTaskDelay(TOCK_DURATION / portTICK_PERIOD_MS);
-//             ledc_set_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL, 0);
-//             ledc_update_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL);
-//             break;
-            
-//         case WARNING:
-//             // Play warning beep sequence
-//             for (int i = 0; i < WARNING_NUM_BEEPS; i++) {
-//                 ledc_set_freq(LEDC_LOW_SPEED_MODE, BUZZER_TIMER, WARNING_FREQ);
-//                 ledc_set_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL, WARNING_DUTY);
-//                 ledc_update_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL);
-                
-//                 vTaskDelay(WARNING_BEEP_DUR / portTICK_PERIOD_MS);
-//                 ledc_set_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL, 0);
-//                 ledc_update_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL);
-                
-//                 //Don't delay after the last beep
-//                 if (i < WARNING_NUM_BEEPS - 1) {
-//                     vTaskDelay(WARNING_BEEP_GAP / portTICK_PERIOD_MS);
-//                 }
-//              }
-//             break;
-            
-//         case OFF:
-//             ledc_set_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL, 0);
-//             ledc_update_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL);
-//             break;
-//     }
-// }
 
 void LightIndicatorSystem::setTone(buzzerTone tone) {
     currentTone = tone;
@@ -364,24 +301,21 @@ void LightIndicatorSystem::setTone(buzzerTone tone) {
     
     uint32_t toneDuration = 0;
     uint32_t toneFrequency = 0;
-    uint32_t dutyCycle = LEDC_DUTY;  // or WARNING_DUTY for warning tone if needed
+    uint32_t dutyCycle = LEDC_DUTY; 
 
-    switch(tone) {
+    switch(tone) {   
+        case WARNING:
+            toneFrequency = WARNING_FREQ;
+            toneDuration = WARNING_BEEP_DUR; 
+            break;
         case TICK:
             toneFrequency = TICK_FREQ;
             toneDuration = TICK_DURATION;
-            break;
-            
+            break;   
         case TOCK:
             toneFrequency = TOCK_FREQ;
             toneDuration = TOCK_DURATION;
-            break;
-            
-        case WARNING:
-            toneFrequency = WARNING_FREQ;
-            toneDuration = WARNING_BEEP_DUR;  // Example for one beep; for multiple beeps, you may need additional logic
-            break;
-            
+            break; 
         case OFF:
             // Immediately turn off
             ledc_set_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL, 0);
@@ -394,7 +328,7 @@ void LightIndicatorSystem::setTone(buzzerTone tone) {
     ledc_set_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL, dutyCycle);
     ledc_update_duty(LEDC_LOW_SPEED_MODE, BUZZER_CHANNEL);
     
-    // Start the timer to turn the tone off after toneDuration milliseconds
+    // Start the timer to turn the tone off after tone Duration 
     if (toneTimerHandle != NULL) {
         xTimerChangePeriod(toneTimerHandle, pdMS_TO_TICKS(toneDuration), 0);
         xTimerStart(toneTimerHandle, 0);
@@ -451,8 +385,10 @@ void LightIndicatorSystem::update() {
     if ((potDirection == "LEFT" && !leftIndicatorState) || 
         (potDirection == "RIGHT" && !rightIndicatorState)) {
         warningTone();  // Alert driver if indicator is not on while turning
+        warningFlag = true;
     } else {
         setTone(OFF);
+        warningFlag = false;
     }
 
     // Set GPIO outputs

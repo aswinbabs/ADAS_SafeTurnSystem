@@ -25,7 +25,7 @@
 
 // I2C Constants
 #define I2C_MASTER_NUM        I2C_NUM_0
-#define I2C_MASTER_FREQ_HZ    100000  // Try 100kHz instead of 400kHz
+#define I2C_MASTER_FREQ_HZ    100000  
 #define I2C_TIMEOUT_MS        1000
 
 // LEDC constants for buzzer control
@@ -35,15 +35,14 @@
 
 // Define sound frequencies and durations
 #define TICK_FREQ           3200    // Tick frequency in Hz
-#define TICK_DURATION       5 //15      // Tick duration in ms
+#define TICK_DURATION       15      // Tick duration in ms
 #define TOCK_FREQ           2400    // Tock frequency in Hz
-#define TOCK_DURATION       10//20      // Tock duration in ms
-#define WARNING_FREQ        2000    // Warning frequency in Hz
-#define WARNING_BEEP_DUR    200     // Warning beep duration in ms
-#define WARNING_BEEP_GAP    200     // Gap between warning beeps
-#define WARNING_NUM_BEEPS   3       // Number of beeps in warning sequence
+#define TOCK_DURATION       20      // Tock duration in ms
+#define WARNING_FREQ        1000    // Warning frequency in Hz
+#define WARNING_BEEP_DUR    300     // Warning beep duration in ms
 #define LEDC_DUTY           77      // ~30% duty cycle for normal sounds
 #define WARNING_DUTY        128     // 50% duty cycle for warning (louder)
+#define TOGGLEPERIOD        500     // Toggle period in ms
 
 class LightIndicatorSystem {
 public:
@@ -56,6 +55,7 @@ public:
     void compareAndLogReadings();    // Compare both sensors and log result
     void blinkIndicator();
     void warningTone();
+    bool warningFlag;
 
     static void toneOffCallbackStatic(TimerHandle_t xTimer);
     void toneOffCallback();
@@ -72,6 +72,7 @@ private:
     bool leftIndicatorState;
     bool rightIndicatorState;
     bool headlightState;
+    bool tickState;
     bool foglightState;
     int steeringAnglePot;           // Angle from potentiometer
     int steeringAngleMPU;           // Angle from MPU6050
@@ -80,7 +81,6 @@ private:
 
     unsigned long lastIndicatorToggle = 0;
     unsigned long lastWarningToggle = 0;
-    bool indicatorState = false;
     bool warningActive = false;
     unsigned long warningStartTime = 0;
     TaskHandle_t warningToneTaskHandle = NULL;

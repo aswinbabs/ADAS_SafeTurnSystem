@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "ADAS_MASTER_ESP",
-    "project_version":    "25c4a42-dirty",
+    "project_version":    "3cb1083-dirty",
     "project_path":       "C:/Embedded/ADAS/ADAS_MASTER_ESP",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.3.2",
     "build_dir":          "C:/Embedded/ADAS/ADAS_MASTER_ESP/build",
