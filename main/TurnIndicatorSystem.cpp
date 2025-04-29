@@ -4,9 +4,9 @@
 
 
 LightIndicatorSystem::LightIndicatorSystem() 
-    : warningFlag(false), leftIndicatorState(false), rightIndicatorState(false), 
+    : warningFlag(false), noLeftIndicator(false), noRightIndicator(false), leftIndicatorState(false), rightIndicatorState(false), 
       headlightState(false), foglightState(false), 
-      steeringAnglePot(0), steeringAngleMPU(0), mpuInitialized(false) {}
+      steeringAnglePot(0), steeringAngleMPU(0), mpuInitialized(false), CANBusManager(nullptr), CANBusAvailable(false) {}
 
 void LightIndicatorSystem::begin() {
     // Set GPIO directions
@@ -51,6 +51,12 @@ void LightIndicatorSystem::begin() {
         ESP_LOGE("TIMER", "Failed to create tone timer");
     }
 
+}
+
+void LightIndicatorSystem::setCAN(CANBusHandler* canBUS) {
+    CANBusManager = canBUS;
+    CANBusAvailable = (canBUS != nullptr);
+    ESP_LOGI("LightIndicatorSystem", "CAN BUS manager %s", CANBusAvailable ? "connected" : "not available");
 }
 
 bool LightIndicatorSystem::initI2C() {
@@ -349,6 +355,12 @@ void LightIndicatorSystem::update() {
 
     // Read steering angles from both sensors
     steeringAnglePot = readSteeringAngle();
+
+    if(CANBusAvailable) {
+        CANBusManager->updateSteeringAngle(steeringAnglePot);
+        ESP_LOGI("CAN", "Sent steering angle: %d to CAN", steeringAnglePot);
+    }
+
     if (mpuInitialized) {
         steeringAngleMPU = readMPUAngle();
         // Compare and log readings (only if MPU is initialized)
@@ -361,6 +373,10 @@ void LightIndicatorSystem::update() {
         if (!leftIndicatorState) {
             gpio_set_level(LEFT_INDICATOR_PIN, 0);  // Turn off left indicator if switch released
         }
+        if(CANBusAvailable) {
+            CANBusManager->updateLeftIndicator(leftIndicatorState);
+            ESP_LOGI("CAN", "CANBusAvailable and send leftIndicatorState: %d to CAN", leftIndicatorState);
+        }
     }
 
     if (currentRightSwitchState != lastRightSwitchState) {
@@ -368,28 +384,65 @@ void LightIndicatorSystem::update() {
         if (!rightIndicatorState) {
             gpio_set_level(RIGHT_INDICATOR_PIN, 0);  // Turn off right indicator if switch released
         }
+
+        if(CANBusAvailable) {
+            CANBusManager->updateRightIndicator(rightIndicatorState);
+            ESP_LOGI("CAN", "CANBusAvailable and send rightIndicatorState: %d to CAN", leftIndicatorState);
+        }
     }
 
     if (currentHeadlightSwitchState != lastHeadlightSwitchState) {
         headlightState = currentHeadlightSwitchState; // Same logic for headlight
+
+        if(CANBusAvailable) {
+        CANBusManager->updateHeadlight(headlightState);
+        ESP_LOGI("CAN", "CANBusAvailable and send HeadlightState: %d to CAN", headlightState);
+        }
     }
 
     if (currentFoglightSwitchState != lastFoglightSwitchState) {
         foglightState = currentFoglightSwitchState; // Same logic for foglight
+
+        if(CANBusAvailable) {
+            CANBusManager->updateFoglight(foglightState);
+            ESP_LOGI("CAN", "CANBusAvailable and send FoglightState: %d to CAN", foglightState);
+            }
+
     }
 
     // Get steering direction from potentiometer (primary sensor)
     std::string potDirection = getSteeringDirection(steeringAnglePot);
 
-    // Detect turn without indicators
-    if ((potDirection == "LEFT" && !leftIndicatorState) || 
-        (potDirection == "RIGHT" && !rightIndicatorState)) {
-        warningTone();  // Alert driver if indicator is not on while turning
+    if (potDirection == "LEFT" && !leftIndicatorState) {
+    warningTone();  // Alert driver if indicator is not on while turning
+    warningFlag = true;
+    noLeftIndicator = true;
+    if(CANBusAvailable) {
+        CANBusManager->updateLeftWarning(noLeftIndicator);
+        ESP_LOGI("CAN", "CANBusAvailable and send noLeftIndicator State: %d to CAN", noLeftIndicator);
+        }
+    } 
+    else if (potDirection == "RIGHT" && !rightIndicatorState) {
+        warningTone();
         warningFlag = true;
-    } else {
+        noRightIndicator = true;
+        if(CANBusAvailable) {
+            CANBusManager->updateRightWarning(noRightIndicator);
+            ESP_LOGI("CAN", "CANBusAvailable and send noRightIndicator State: %d to CAN", noRightIndicator);
+            }
+    } 
+    else {
         setTone(OFF);
         warningFlag = false;
-    }
+        noLeftIndicator = false;
+        noRightIndicator = false;
+        if(CANBusAvailable) {
+        CANBusManager->updateLeftWarning(noLeftIndicator);
+        CANBusManager->updateRightWarning(noRightIndicator);
+        ESP_LOGI("CAN", "CANBusAvailable and send noLeftIndicator State: %d & noRightIndicator State: %d to CAN", noLeftIndicator, noRightIndicator);
+        }
+    } 
+    
 
     // Set GPIO outputs
     if (leftIndicatorState || rightIndicatorState) {

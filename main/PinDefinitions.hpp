@@ -30,4 +30,9 @@ static const gpio_num_t STEERING_SENSOR_PIN = GPIO_NUM_34; // ADC1 channel 6
 static const gpio_num_t I2C_SDA_PIN = GPIO_NUM_25;
 static const gpio_num_t I2C_SCL_PIN = GPIO_NUM_26;
 
+
+//CAN pins
+static const gpio_num_t CAN_TX_PIN = GPIO_NUM_4;
+static const gpio_num_t CAN_RX_PIN = GPIO_NUM_13;
+
 #endif // PIN_DEFINITIONS_HPP

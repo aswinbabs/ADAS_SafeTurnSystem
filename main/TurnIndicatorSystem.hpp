@@ -13,6 +13,7 @@
 #include <cmath>
 #include <driver/ledc.h>
 #include <iostream>
+#include "CANBusHandler.hpp"
 
 // MPU6050 Constants
 #define MPU6050_ADDR          0x68    // MPU6050 I2C address
@@ -48,6 +49,7 @@ class LightIndicatorSystem {
 public:
     LightIndicatorSystem();
     void begin();
+    void setCAN(CANBusHandler* canBUS);//Method to set CAN
     void update();
     int readSteeringAngle();         // Read angle from potentiometer
     int readMPUAngle();              // Read angle from MPU6050
@@ -56,6 +58,8 @@ public:
     void blinkIndicator();
     void warningTone();
     bool warningFlag;
+    bool noLeftIndicator;
+    bool noRightIndicator;
 
     static void toneOffCallbackStatic(TimerHandle_t xTimer);
     void toneOffCallback();
@@ -93,8 +97,10 @@ private:
     buzzerTone currentTone = OFF;
     unsigned long toneStartTime = 0;
     void setTone(buzzerTone tone);
+
+    CANBusHandler* CANBusManager;//Pointer to CAN manager
+    bool CANBusAvailable;
    
 };
 
 #endif // LIGHT_INDICATOR_SYSTEM_HPP
-
