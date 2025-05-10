@@ -1,0 +1,124 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr 23 2025 22:11:03[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a29ch ( 41628) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001a2c4 vaddr=3ffb0000 size=02374h (  9076) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001c640 vaddr=40080000 size=039d8h ( 14808) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1601ch ( 90140) map[0m
+[0;32mI (164) esp_image: segment 4: paddr=00036044 vaddr=400839d8 size=0949ch ( 38044) load[0m
+[0;32mI (186) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (186) boot: Disabling RNG early entropy source...[0m
+[0;32mI (198) cpu_start: Multicore app[0m
+[0;32mI (207) cpu_start: Pro cpu start user code[0m
+[0;32mI (207) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (207) app_init: Application information:[0m
+[0;32mI (210) app_init: Project name:     ADAS_MASTER_ESP[0m
+[0;32mI (215) app_init: App version:      d02f938-dirty[0m
+[0;32mI (221) app_init: Compile time:     Apr 23 2025 22:09:49[0m
+[0;32mI (227) app_init: ELF file SHA256:  74a76ca9e...[0m
+[0;32mI (232) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (237) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (242) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (247) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (252) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (259) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (265) heap_init: At 3FFB2C40 len 0002D3C0 (180 KiB): DRAM[0m
+[0;32mI (271) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (278) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (284) heap_init: At 4008CE74 len 0001318C (76 KiB): IRAM[0m
+[0;32mI (292) spi_flash: detected chip: generic[0m
+[0;32mI (295) spi_flash: flash io: dio[0m
+[0;33mW (299) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (313) main_task: Started on CPU0[0m
+[0;32mI (323) main_task: Calling app_main()[0m
+[0;32mI (323) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (323) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (333) CAN_SENDER: TWAI driver installed[0m
+[0;32mI (343) CAN_SENDER: TWAI driver started[0m
+[0;32mI (343) CAN_SENDER: Message sent successfully - counter: 0[0m
+[0;32mI (1353) CAN_SENDER: Message sent successfully - counter: 1[0m
+[0;32mI (2353) CAN_SENDER: Message sent successfully - counter: 2[0m
+[0;32mI (3353) CAN_SENDER: Message sent successfully - counter: 3[0m
+[0;32mI (4353) CAN_SENDER: Message sent successfully - counter: 4[0m
+[0;32mI (5353) CAN_SENDER: Message sent successfully - counter: 5[0m
+[0;32mI (6353) CAN_SENDER: Message sent successfully - counter: 6[0m
+[0;32mI (7353) CAN_SENDER: Message sent successfully - counter: 7[0m
+[0;32mI (8353) CAN_SENDER: Message sent successfully - counter: 8[0m
+[0;32mI (9353) CAN_SENDER: Message sent successfully - counter: 9[0m
+[0;32mI (10353) CAN_SENDER: Message sent successfully - counter: 10[0m
+[0;32mI (11353) CAN_SENDER: Message sent successfully - counter: 11[0m
+[0;32mI (12353) CAN_SENDER: Message sent successfully - counter: 12[0m
+[0;32mI (13353) CAN_SENDER: Message sent successfully - counter: 13[0m
+[0;32mI (14353) CAN_SENDER: Message sent successfully - counter: 14[0m
+[0;32mI (15353) CAN_SENDER: Message sent successfully - counter: 15[0m
+[0;32mI (16353) CAN_SENDER: Message sent successfully - counter: 16[0m
+[0;32mI (17353) CAN_SENDER: Message sent successfully - counter: 17[0m
+[0;32mI (18353) CAN_SENDER: Message sent successfully - counter: 18[0m
+[0;32mI (19353) CAN_SENDER: Message sent successfully - counter: 19[0m
+[0;32mI (20353) CAN_SENDER: Message sent successfully - counter: 20[0m
+[0;32mI (21353) CAN_SENDER: Message sent successfully - counter: 21[0m
+[0;32mI (22353) CAN_SENDER: Message sent successfully - counter: 22[0m
+[0;32mI (23353) CAN_SENDER: Message sent successfully - counter: 23[0m
+[0;32mI (24353) CAN_SENDER: Message sent successfully - counter: 24[0m
+[0;32mI (25353) CAN_SENDER: Message sent successfully - counter: 25[0m
+[0;32mI (26353) CAN_SENDER: Message sent successfully - counter: 26[0m
+[0;32mI (27353) CAN_SENDER: Message sent successfully - counter: 27[0m
+[0;32mI (28353) CAN_SENDER: Message sent successfully - counter: 28[0m
+[0;32mI (29353) CAN_SENDER: Message sent successfully - counter: 29[0m
+[0;32mI (30353) CAN_SENDER: Message sent successfully - counter: 30[0m
+[0;32mI (31353) CAN_SENDER: Message sent successfully - counter: 31[0m
+[0;32mI (32353) CAN_SENDER: Message sent successfully - counter: 32[0m
+[0;32mI (33353) CAN_SENDER: Message sent successfully - counter: 33[0m
+[0;32mI (34353) CAN_SENDER: Message sent successfully - counter: 34[0m
+[0;32mI (35353) CAN_SENDER: Message sent successfully - counter: 35[0m
+[0;32mI (36353) CAN_SENDER: Message sent successfully - counter: 36[0m
+[0;32mI (37353) CAN_SENDER: Message sent successfully - counter: 37[0m
+[0;32mI (38353) CAN_SENDER: Message sent successfully - counter: 38[0m
+[0;32mI (39353) CAN_SENDER: Message sent successfully - counter: 39[0m
+[0;32mI (40353) CAN_SENDER: Message sent successfully - counter: 40[0m
+[0;32mI (41353) CAN_SENDER: Message sent successfully - counter: 41[0m
+[0;32mI (42353) CAN_SENDER: Message sent successfully - counter: 42[0m
+[0;32mI (43353) CAN_SENDER: Message sent successfully - counter: 43[0m
+[0;32mI (44353) CAN_SENDER: Message sent successfully - counter: 44[0m
+[0;32mI (45353) CAN_SENDER: Message sent successfully - counter: 45[0m
+[0;32mI (46353) CAN_SENDER: Message sent successfully - counter: 46[0m
+[0;32mI (47353) CAN_SENDER: Message sent successfully - counter: 47[0m
+[0;32mI (48353) CAN_SENDER: Message sent successfully - counter: 48[0m
+[0;32mI (49353) CAN_SENDER: Message sent successfully - counter: 49[0m
+[0;32mI (50353) CAN_SENDER: Message sent successfully - counter: 50[0m
+[0;32mI (51353) CAN_SENDER: Message sent successfully - counter: 51[0m
+[0;32mI (52353) CAN_SENDER: Message sent successfully - counter: 52[0m
+[0;32mI (53353) CAN_SENDER: Message sent successfully - counter: 53[0m
+[0;32mI (54353) CAN_SENDER: Message sent successfully - counter: 54[0m
+[0;32mI (55353) CAN_SENDER: Message sent successfully - counter: 55[0m
+[0;32mI (56353) CAN_SENDER: Message sent successfully - counter: 56[0m
+[0;32mI (57353) CAN_SENDER: Message sent successfully - counter: 57[0m
+[0;32mI (58353) CAN_SENDER: Message sent successfully - counter: 58[0m
+[0;32mI (59353) CAN_SENDER: Message sent successfully - counter: 59[0m
+[0;32mI (60353) CAN_SENDER: Message sent successfully - counter: 60[0m
+[0;32mI (61353) CAN_SENDER: Message sent successfully - counter: 61[0m
+[0;32mI (62353) CAN_SENDER: Message sent successfully - counter: 62[0m
+[0;32mI (63353) CAN_SENDER: Message sent successfully - counter: 63[0m

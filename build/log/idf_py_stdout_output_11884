@@ -1,0 +1,2719 @@
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xeets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.2-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Apr 23 2025 22:11:03[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0cd40h ( 52544) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=0001cd68 vaddr=3ffb0000 size=0240ch (  9228) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0001f17c vaddr=40080000 size=00e9ch (  3740) load[0m
+[0;32mI (130) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1bbc8h (113608) map[0m
+[0;32mI (176) esp_image: segment 4: paddr=0003bbf0 vaddr=40080e9c size=0dbf0h ( 56304) load[0m
+[0;32mI (206) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (206) boot: Disabling RNG early entropy source...[0m
+[0;32mI (218) cpu_start: Multicore app[0m
+[0;32mI (226) cpu_start: Pro cpu start user code[0m
+[0;32mI (226) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (227) app_init: Application information:[0m
+[0;32mI (229) app_init: Project name:     ADAS_MASTER_ESP[0m
+[0;32mI (235) app_init: App version:      d02f938-dirty[0m
+[0;32mI (240) app_init: Compile time:     Apr 23 2025 22:09:49[0m
+[0;32mI (246) app_init: ELF file SHA256:  f492d7378...[0m
+[0;32mI (252) app_init: ESP-IDF:          v5.3.2-dirty[0m
+[0;32mI (257) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (262) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (267) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (272) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (279) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (285) heap_init: At 3FFB2F00 len 0002D100 (180 KiB): DRAM[0m
+[0;32mI (291) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (297) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (304) heap_init: At 4008EA8C len 00011574 (69 KiB): IRAM[0m
+[0;32mI (312) spi_flash: detected chip: generic[0m
+[0;32mI (315) spi_flash: flash io: dio[0m
+[0;33mW (319) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (332) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (342) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (351) main_task: Started on CPU0[0m
+[0;32mI (361) main_task: Calling app_main()[0m
+[0;32mI (361) Main: Starting ADAS Safe Turn System[0m
+[0;32mI (361) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (371) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (381) CANBusHandler: CAN bus initialized successfully[0m
+[0;32mI (381) Main: CAN bus initialized successfully[0m
+[0;32mI (391) MPU6050: MPU6050 initialized successfully[0m
+[0;32mI (391) LEDC: LEDC initialized successfully[0m
+[0;32mI (401) LightIndicatorSystem: CAN BUS manager connected[0m
+[0;32mI (401) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (411) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (511) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (511) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (611) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (611) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (711) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (711) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (811) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (811) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (911) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (911) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (1011) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (1011) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (1111) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (1111) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (1211) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (1211) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (1311) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (1311) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (1411) CAN: Sent steering angle: 7 to CAN[0m
+[0;32mI (1411) DIRECTION: MATCH: STRAIGHT (Pot: 7, MPU: 53)[0m
+[0;32mI (1511) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (1511) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (1611) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (1611) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (1711) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (1711) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 53)[0m
+[0;32mI (1811) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (1811) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (1911) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (1911) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 52)[0m
+[0;32mI (2011) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2011) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (2111) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (2111) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (2211) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (2211) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (2311) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2311) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (2411) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2411) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (2511) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2511) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (2611) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2611) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (2711) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2711) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (2811) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2811) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (2911) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2911) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (3011) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (3011) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (3111) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (3111) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (3211) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (3211) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 52)[0m
+[0;32mI (3311) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (3311) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (3411) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (3411) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (3511) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (3511) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (3611) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (3611) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (3711) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (3711) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (3811) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (3811) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (3911) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (3911) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 53)[0m
+[0;32mI (4011) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (4011) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (4111) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (4111) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (4211) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (4211) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (4311) CAN: Sent steering angle: 7 to CAN[0m
+[0;32mI (4311) DIRECTION: MATCH: STRAIGHT (Pot: 7, MPU: 53)[0m
+[0;32mI (4411) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (4411) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (4511) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (4511) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (4611) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (4611) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (4711) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (4711) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (4811) CAN: Sent steering angle: 7 to CAN[0m
+[0;32mI (4811) DIRECTION: MATCH: STRAIGHT (Pot: 7, MPU: 53)[0m
+[0;32mI (4911) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (4911) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (5011) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (5011) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (5111) CAN: Sent steering angle: 7 to CAN[0m
+[0;32mI (5111) DIRECTION: MATCH: STRAIGHT (Pot: 7, MPU: 53)[0m
+[0;32mI (5211) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (5211) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (5311) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (5311) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (5411) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (5411) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (5511) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (5511) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 52)[0m
+[0;32mI (5611) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (5611) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (5711) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (5711) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (5811) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (5811) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (5911) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (5911) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (6011) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (6011) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (6111) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (6111) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (6211) CAN: Sent steering angle: 7 to CAN[0m
+[0;32mI (6211) DIRECTION: MATCH: STRAIGHT (Pot: 7, MPU: 53)[0m
+[0;32mI (6311) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (6311) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (6411) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (6411) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (6511) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (6511) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 53)[0m
+[0;32mI (6611) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (6611) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (6711) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (6711) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (6811) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (6811) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (6911) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (6911) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (7011) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (7011) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (7111) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (7111) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (7211) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (7211) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (7311) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (7311) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 53)[0m
+[0;32mI (7411) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (7411) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (7511) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (7511) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (7611) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (7611) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (7711) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (7711) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (7811) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (7811) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (7911) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (7911) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (8011) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (8011) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 53)[0m
+[0;32mI (8111) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (8111) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (8211) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (8211) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (8311) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (8311) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (8411) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (8411) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (8511) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (8511) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (8611) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (8611) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (8711) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (8711) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 53)[0m
+[0;32mI (8811) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (8811) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (8911) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (8911) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 53)[0m
+[0;32mI (9011) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (9011) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (9111) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9111) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (9211) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (9211) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 53)[0m
+[0;32mI (9311) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9311) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (9411) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (9411) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (9511) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9511) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (9611) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9611) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (9711) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9711) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (9811) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9811) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (9911) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9911) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (10011) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (10011) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (10111) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (10111) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (10211) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (10211) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (10311) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (10311) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 53)[0m
+[0;32mI (10411) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (10411) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (10511) CAN: Sent steering angle: 7 to CAN[0m
+[0;32mI (10511) DIRECTION: MATCH: STRAIGHT (Pot: 7, MPU: 53)[0m
+[0;32mI (10611) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (10611) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 53)[0m
+[0;32mI (10711) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (10711) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (10811) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (10811) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (10911) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (10911) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (11011) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (11011) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (11111) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (11111) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 53)[0m
+[0;32mI (11211) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (11211) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (11311) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (11311) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (11411) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (11411) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (11511) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (11511) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (11611) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (11611) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (11711) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (11711) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (11811) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (11811) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (11911) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (11911) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (12011) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (12011) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (12111) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (12111) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (12211) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (12211) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (12311) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (12311) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (12411) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (12411) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 53)[0m
+[0;32mI (12511) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (12511) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (12511) CANBusHandler: CAN message sent with ID 0x101, length 1[0m
+[0;32mI (12511) CANBusHandler: Right indicator state changed to ON[0m
+[0;32mI (12521) CAN: CANBusAvailable and send rightIndicatorState: 0 to CAN[0m
+[0;32mI (12631) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (12631) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (12731) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (12731) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (12831) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (12831) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (12931) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (12931) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (13031) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (13031) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (13131) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (13131) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (13231) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (13231) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (13331) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (13331) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (13431) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (13431) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (13531) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (13531) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (13631) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (13631) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (13731) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (13731) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (13831) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (13831) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (13931) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (13931) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (14031) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (14031) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (14131) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (14131) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (14231) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (14231) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (14331) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (14331) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (14431) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (14431) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (14531) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (14531) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (14631) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (14631) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (14731) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (14731) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (14831) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (14831) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (14931) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (14931) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (15031) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (15031) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (15131) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (15131) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (15231) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (15231) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (15331) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (15331) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (15431) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (15431) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (15531) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (15531) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (15631) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (15631) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (15731) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (15731) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (15831) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (15831) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (15931) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (15931) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (16031) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (16031) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (16131) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (16131) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (16231) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (16231) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (16331) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (16331) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (16431) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (16431) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (16531) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (16531) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (16631) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (16631) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (16731) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (16731) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 53)[0m
+[0;32mI (16831) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (16831) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (16931) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (16931) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (17031) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (17031) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (17131) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (17131) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (17231) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (17231) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 52)[0m
+[0;32mI (17331) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (17331) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (17431) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (17431) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 55)[0m
+[0;32mI (17531) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (17531) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 58)[0m
+[0;32mI (17631) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (17631) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 53)[0m
+[0;32mI (17731) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (17731) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (17831) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (17831) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 46)[0m
+[0;32mI (17931) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (17931) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 53)[0m
+[0;32mI (631) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (631) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 50)[0m
+[0;32mI (731) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (731) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (831) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (831) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (931) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (931) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (1031) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (1031) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (1131) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (1131) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (1231) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (1231) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (1331) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (1331) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (1431) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (1431) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (1531) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (1531) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (1631) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (1631) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (1731) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (1731) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (1831) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (1831) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (1931) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (1931) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (2031) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2031) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (2131) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2131) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (2231) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (2231) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (2331) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2331) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (2431) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2431) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (2531) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2531) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (2631) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2631) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (2731) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2731) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (2831) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (2831) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 51)[0m
+[0;32mI (2931) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (2931) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (3031) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (3031) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (3131) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (3131) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (3231) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (3231) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 51)[0m
+[0;32mI (3331) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (3331) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (3431) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (3431) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (3531) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (3531) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (3631) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (3631) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (3731) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (3731) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (3831) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (3831) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (3931) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (3931) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 52)[0m
+[0;32mI (4031) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (4031) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 52)[0m
+[0;32mI (4131) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (4131) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 51)[0m
+[0;32mI (4231) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (4231) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (4331) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (4331) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (4431) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (4431) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (4531) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (4531) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (4631) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (4631) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (4731) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (4731) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (4831) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (4831) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (4931) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (4931) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (5031) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (5031) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (5131) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (5131) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (5231) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (5231) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 51)[0m
+[0;32mI (5331) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (5331) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (5431) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (5431) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (5531) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (5531) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (5631) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (5631) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (5731) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (5731) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 52)[0m
+[0;32mI (5831) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (5831) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (5931) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (5931) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (6031) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (6031) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (6131) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (6131) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (6231) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (6231) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (6331) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (6331) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 52)[0m
+[0;32mI (6431) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (6431) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 52)[0m
+[0;32mI (6531) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (6531) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (6631) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (6631) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (6731) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (6731) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (6831) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (6831) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (6931) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (6931) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 52)[0m
+[0;32mI (7031) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (7031) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (7131) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (7131) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (7231) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (7231) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 52)[0m
+[0;32mI (7331) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (7331) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (7431) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (7431) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (7531) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (7531) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (7631) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (7631) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (7731) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (7731) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (7831) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (7831) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (7931) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (7931) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (8031) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (8031) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (8131) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (8131) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 52)[0m
+[0;32mI (8231) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (8231) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (8331) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (8331) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (8431) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (8431) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (8531) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (8531) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 46)[0m
+[0;32mI (8531) CANBusHandler: CAN message sent with ID 0x101, length 1[0m
+[0;32mI (8531) CANBusHandler: Right indicator state changed to OFF[0m
+[0;32mI (8541) CAN: CANBusAvailable and send rightIndicatorState: 0 to CAN[0m
+[0;32mI (8641) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (8641) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (8741) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (8741) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (8841) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (8841) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (8941) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (8941) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (9041) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9041) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (9141) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (9141) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 52)[0m
+[0;32mI (9241) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9241) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (9341) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9341) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (9441) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9441) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (9541) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9541) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (9641) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9641) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (9741) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9741) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (9841) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (9841) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (9941) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (9941) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 52)[0m
+[0;32mI (10041) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (10041) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (10141) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (10141) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (10241) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (10241) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 52)[0m
+[0;32mI (10341) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (10341) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (10441) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (10441) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (10541) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (10541) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (10641) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (10641) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 51)[0m
+[0;32mI (10741) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (10741) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (10841) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (10841) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (10941) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (10941) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (11041) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (11041) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (11141) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (11141) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (11241) CAN: Sent steering angle: 6 to CAN[0m
+[0;32mI (11241) DIRECTION: MATCH: STRAIGHT (Pot: 6, MPU: 51)[0m
+[0;32mI (11341) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (11341) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (11441) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (11441) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 51)[0m
+[0;32mI (11541) CAN: Sent steering angle: 1 to CAN[0m
+[0;32mI (11541) DIRECTION: MATCH: STRAIGHT (Pot: 1, MPU: 52)[0m
+[0;32mI (11641) CAN: Sent steering angle: -5 to CAN[0m
+[0;32mI (11641) DIRECTION: MATCH: STRAIGHT (Pot: -5, MPU: 51)[0m
+[0;32mI (11741) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (11741) CANBusHandler: Steering angle changed to -20 from 0[0m
+[0;32mI (11741) CAN: Sent steering angle: -20 to CAN[0m
+[0;32mI (11741) DIRECTION: MATCH: STRAIGHT (Pot: -20, MPU: 52)[0m
+[0;32mI (11851) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (11851) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 52)[0m
+[0;32mI (11951) CAN: Sent steering angle: -35 to CAN[0m
+[0;32mI (11951) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 51)[0m
+[0;32mI (12051) CAN: Sent steering angle: -37 to CAN[0m
+[0;32mI (12051) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 52)[0m
+[0;32mI (12151) CAN: Sent steering angle: -38 to CAN[0m
+[0;32mI (12151) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 51)[0m
+[0;32mI (12251) CAN: Sent steering angle: -36 to CAN[0m
+[0;32mI (12251) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 51)[0m
+[0;32mI (12351) CAN: Sent steering angle: -39 to CAN[0m
+[0;32mI (12351) DIRECTION: MATCH: STRAIGHT (Pot: -39, MPU: 51)[0m
+[0;32mI (12451) CAN: Sent steering angle: -37 to CAN[0m
+[0;32mI (12451) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 51)[0m
+[0;32mI (12551) CAN: Sent steering angle: -37 to CAN[0m
+[0;32mI (12551) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 51)[0m
+[0;32mI (12651) CAN: Sent steering angle: -36 to CAN[0m
+[0;32mI (12651) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 51)[0m
+[0;32mI (12751) CAN: Sent steering angle: -37 to CAN[0m
+[0;32mI (12751) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 51)[0m
+[0;32mI (12851) CAN: Sent steering angle: -36 to CAN[0m
+[0;32mI (12851) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 51)[0m
+[0;32mI (12951) CAN: Sent steering angle: -38 to CAN[0m
+[0;32mI (12951) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 51)[0m
+[0;32mI (13051) CAN: Sent steering angle: -38 to CAN[0m
+[0;32mI (13051) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 51)[0m
+[0;32mI (13151) CAN: Sent steering angle: -37 to CAN[0m
+[0;32mI (13151) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 51)[0m
+[0;32mI (13251) CAN: Sent steering angle: -36 to CAN[0m
+[0;32mI (13251) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 51)[0m
+[0;32mI (13351) CAN: Sent steering angle: -36 to CAN[0m
+[0;32mI (13351) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 51)[0m
+[0;32mI (13451) CAN: Sent steering angle: -37 to CAN[0m
+[0;32mI (13451) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 51)[0m
+[0;32mI (13551) CAN: Sent steering angle: -37 to CAN[0m
+[0;32mI (13551) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 51)[0m
+[0;32mI (13651) CAN: Sent steering angle: -36 to CAN[0m
+[0;32mI (13651) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 51)[0m
+[0;32mI (13751) CAN: Sent steering angle: -36 to CAN[0m
+[0;32mI (13751) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 51)[0m
+[0;32mI (13851) CAN: Sent steering angle: -37 to CAN[0m
+[0;32mI (13851) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 51)[0m
+[0;32mI (13951) CAN: Sent steering angle: -37 to CAN[0m
+[0;32mI (13951) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 51)[0m
+[0;32mI (14051) CAN: Sent steering angle: -37 to CAN[0m
+[0;32mI (14051) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 51)[0m
+[0;32mI (14151) CAN: Sent steering angle: -38 to CAN[0m
+[0;32mI (14151) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 51)[0m
+[0;32mI (14251) CAN: Sent steering angle: -38 to CAN[0m
+[0;32mI (14251) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 51)[0m
+[0;32mI (14351) CAN: Sent steering angle: -39 to CAN[0m
+[0;32mI (14351) DIRECTION: MATCH: STRAIGHT (Pot: -39, MPU: 51)[0m
+[0;32mI (14451) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (14451) CANBusHandler: Steering angle changed to -45 from -20[0m
+[0;32mI (14451) CAN: Sent steering angle: -45 to CAN[0m
+[0;32mI (14451) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 51)[0m
+[0;32mI (14561) CAN: Sent steering angle: -55 to CAN[0m
+[0;32mI (14561) DIRECTION: MATCH: STRAIGHT (Pot: -55, MPU: 51)[0m
+[0;32mI (14661) CAN: Sent steering angle: -61 to CAN[0m
+[0;33mW (14661) DIRECTION: MISMATCH: POT=LEFT (-61), MPU=STRAIGHT (51)[0m
+[0;32mI (14761) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (14761) CANBusHandler: Steering angle changed to -70 from -45[0m
+[0;32mI (14761) CAN: Sent steering angle: -70 to CAN[0m
+[0;33mW (14761) DIRECTION: MISMATCH: POT=LEFT (-70), MPU=STRAIGHT (51)[0m
+[0;32mI (14871) CAN: Sent steering angle: -71 to CAN[0m
+[0;33mW (14871) DIRECTION: MISMATCH: POT=LEFT (-71), MPU=STRAIGHT (51)[0m
+[0;32mI (14971) CAN: Sent steering angle: -70 to CAN[0m
+[0;33mW (14971) DIRECTION: MISMATCH: POT=LEFT (-70), MPU=STRAIGHT (51)[0m
+[0;32mI (15071) CAN: Sent steering angle: -71 to CAN[0m
+[0;33mW (15071) DIRECTION: MISMATCH: POT=LEFT (-71), MPU=STRAIGHT (51)[0m
+[0;32mI (15171) CAN: Sent steering angle: -70 to CAN[0m
+[0;33mW (15171) DIRECTION: MISMATCH: POT=LEFT (-70), MPU=STRAIGHT (51)[0m
+[0;32mI (15271) CAN: Sent steering angle: -71 to CAN[0m
+[0;33mW (15271) DIRECTION: MISMATCH: POT=LEFT (-71), MPU=STRAIGHT (51)[0m
+[0;32mI (15371) CAN: Sent steering angle: -70 to CAN[0m
+[0;33mW (15371) DIRECTION: MISMATCH: POT=LEFT (-70), MPU=STRAIGHT (51)[0m
+[0;32mI (15471) CAN: Sent steering angle: -71 to CAN[0m
+[0;33mW (15471) DIRECTION: MISMATCH: POT=LEFT (-71), MPU=STRAIGHT (51)[0m
+[0;32mI (15571) CAN: Sent steering angle: -71 to CAN[0m
+[0;33mW (15571) DIRECTION: MISMATCH: POT=LEFT (-71), MPU=STRAIGHT (51)[0m
+[0;32mI (15671) CAN: Sent steering angle: -71 to CAN[0m
+[0;33mW (15671) DIRECTION: MISMATCH: POT=LEFT (-71), MPU=STRAIGHT (51)[0m
+[0;32mI (15771) CAN: Sent steering angle: -70 to CAN[0m
+[0;33mW (15771) DIRECTION: MISMATCH: POT=LEFT (-70), MPU=STRAIGHT (51)[0m
+[0;32mI (15871) CAN: Sent steering angle: -71 to CAN[0m
+[0;33mW (15871) DIRECTION: MISMATCH: POT=LEFT (-71), MPU=STRAIGHT (51)[0m
+[0;32mI (15971) CAN: Sent steering angle: -70 to CAN[0m
+[0;33mW (15971) DIRECTION: MISMATCH: POT=LEFT (-70), MPU=STRAIGHT (51)[0m
+[0;32mI (16071) CAN: Sent steering angle: -70 to CAN[0m
+[0;33mW (16071) DIRECTION: MISMATCH: POT=LEFT (-70), MPU=STRAIGHT (51)[0m
+[0;32mI (16171) CAN: Sent steering angle: -70 to CAN[0m
+[0;33mW (16171) DIRECTION: MISMATCH: POT=LEFT (-70), MPU=STRAIGHT (51)[0m
+[0;32mI (16271) CAN: Sent steering angle: -68 to CAN[0m
+[0;33mW (16271) DIRECTION: MISMATCH: POT=LEFT (-68), MPU=STRAIGHT (51)[0m
+[0;32mI (16371) CAN: Sent steering angle: -64 to CAN[0m
+[0;33mW (16371) DIRECTION: MISMATCH: POT=LEFT (-64), MPU=STRAIGHT (51)[0m
+[0;32mI (16471) CAN: Sent steering angle: -54 to CAN[0m
+[0;32mI (16471) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 51)[0m
+[0;32mI (16571) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (16571) CANBusHandler: Steering angle changed to -48 from -70[0m
+[0;32mI (16571) CAN: Sent steering angle: -48 to CAN[0m
+[0;32mI (16571) DIRECTION: MATCH: STRAIGHT (Pot: -48, MPU: 51)[0m
+[0;32mI (16681) CAN: Sent steering angle: -39 to CAN[0m
+[0;32mI (16681) DIRECTION: MATCH: STRAIGHT (Pot: -39, MPU: 51)[0m
+[0;32mI (16781) CAN: Sent steering angle: -32 to CAN[0m
+[0;32mI (16781) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 50)[0m
+[0;32mI (16881) CAN: Sent steering angle: -32 to CAN[0m
+[0;32mI (16881) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 51)[0m
+[0;32mI (16981) CAN: Sent steering angle: -32 to CAN[0m
+[0;32mI (16981) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 51)[0m
+[0;32mI (17081) CAN: Sent steering angle: -33 to CAN[0m
+[0;32mI (17081) DIRECTION: MATCH: STRAIGHT (Pot: -33, MPU: 51)[0m
+[0;32mI (17181) CAN: Sent steering angle: -32 to CAN[0m
+[0;32mI (17181) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 50)[0m
+[0;32mI (17281) CAN: Sent steering angle: -32 to CAN[0m
+[0;32mI (17281) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 51)[0m
+[0;32mI (17381) CAN: Sent steering angle: -32 to CAN[0m
+[0;32mI (17381) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 51)[0m
+[0;32mI (17481) CAN: Sent steering angle: -33 to CAN[0m
+[0;32mI (17481) DIRECTION: MATCH: STRAIGHT (Pot: -33, MPU: 51)[0m
+[0;32mI (17581) CAN: Sent steering angle: -32 to CAN[0m
+[0;32mI (17581) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 51)[0m
+[0;32mI (17681) CAN: Sent steering angle: -32 to CAN[0m
+[0;32mI (17681) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 51)[0m
+[0;32mI (17781) CAN: Sent steering angle: -32 to CAN[0m
+[0;32mI (17781) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 50)[0m
+[0;32mI (17881) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (17881) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 51)[0m
+[0;32mI (17981) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (17981) CANBusHandler: Steering angle changed to -26 from -48[0m
+[0;32mI (17981) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (17981) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (18091) CAN: Sent steering angle: -18 to CAN[0m
+[0;32mI (18091) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 51)[0m
+[0;32mI (18191) CAN: Sent steering angle: -12 to CAN[0m
+[0;32mI (18191) DIRECTION: MATCH: STRAIGHT (Pot: -12, MPU: 51)[0m
+[0;32mI (18291) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (18291) CANBusHandler: Steering angle changed to -5 from -26[0m
+[0;32mI (18291) CAN: Sent steering angle: -5 to CAN[0m
+[0;32mI (18291) DIRECTION: MATCH: STRAIGHT (Pot: -5, MPU: 51)[0m
+[0;32mI (18401) CAN: Sent steering angle: 0 to CAN[0m
+[0;32mI (18401) DIRECTION: MATCH: STRAIGHT (Pot: 0, MPU: 51)[0m
+[0;32mI (18501) CAN: Sent steering angle: 4 to CAN[0m
+[0;32mI (18501) DIRECTION: MATCH: STRAIGHT (Pot: 4, MPU: 51)[0m
+[0;32mI (18601) CAN: Sent steering angle: 9 to CAN[0m
+[0;32mI (18601) DIRECTION: MATCH: STRAIGHT (Pot: 9, MPU: 51)[0m
+[0;32mI (18701) CAN: Sent steering angle: 12 to CAN[0m
+[0;32mI (18701) DIRECTION: MATCH: STRAIGHT (Pot: 12, MPU: 51)[0m
+[0;32mI (18801) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (18801) CANBusHandler: Steering angle changed to 16 from -5[0m
+[0;32mI (18801) CAN: Sent steering angle: 16 to CAN[0m
+[0;32mI (18801) DIRECTION: MATCH: STRAIGHT (Pot: 16, MPU: 50)[0m
+[0;32mI (18911) CAN: Sent steering angle: 18 to CAN[0m
+[0;32mI (18911) DIRECTION: MATCH: STRAIGHT (Pot: 18, MPU: 51)[0m
+[0;32mI (19011) CAN: Sent steering angle: 17 to CAN[0m
+[0;32mI (19011) DIRECTION: MATCH: STRAIGHT (Pot: 17, MPU: 51)[0m
+[0;32mI (19111) CAN: Sent steering angle: 15 to CAN[0m
+[0;32mI (19111) DIRECTION: MATCH: STRAIGHT (Pot: 15, MPU: 51)[0m
+[0;32mI (19211) CAN: Sent steering angle: 16 to CAN[0m
+[0;32mI (19211) DIRECTION: MATCH: STRAIGHT (Pot: 16, MPU: 51)[0m
+[0;32mI (19311) CAN: Sent steering angle: 15 to CAN[0m
+[0;32mI (19311) DIRECTION: MATCH: STRAIGHT (Pot: 15, MPU: 50)[0m
+[0;32mI (19411) CAN: Sent steering angle: 11 to CAN[0m
+[0;32mI (19411) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 50)[0m
+[0;32mI (19511) CAN: Sent steering angle: 8 to CAN[0m
+[0;32mI (19511) DIRECTION: MATCH: STRAIGHT (Pot: 8, MPU: 51)[0m
+[0;32mI (19611) CAN: Sent steering angle: 5 to CAN[0m
+[0;32mI (19611) DIRECTION: MATCH: STRAIGHT (Pot: 5, MPU: 51)[0m
+[0;32mI (19711) CAN: Sent steering angle: 1 to CAN[0m
+[0;32mI (19711) DIRECTION: MATCH: STRAIGHT (Pot: 1, MPU: 51)[0m
+[0;32mI (19811) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (19811) CANBusHandler: Steering angle changed to -4 from 16[0m
+[0;32mI (19811) CAN: Sent steering angle: -4 to CAN[0m
+[0;32mI (19811) DIRECTION: MATCH: STRAIGHT (Pot: -4, MPU: 51)[0m
+[0;32mI (19921) CAN: Sent steering angle: -7 to CAN[0m
+[0;32mI (19921) DIRECTION: MATCH: STRAIGHT (Pot: -7, MPU: 50)[0m
+[0;32mI (20021) CAN: Sent steering angle: -11 to CAN[0m
+[0;32mI (20021) DIRECTION: MATCH: STRAIGHT (Pot: -11, MPU: 51)[0m
+[0;32mI (20121) CAN: Sent steering angle: -15 to CAN[0m
+[0;32mI (20121) DIRECTION: MATCH: STRAIGHT (Pot: -15, MPU: 51)[0m
+[0;32mI (20221) CAN: Sent steering angle: -16 to CAN[0m
+[0;32mI (20221) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 51)[0m
+[0;32mI (20321) CAN: Sent steering angle: -15 to CAN[0m
+[0;32mI (20321) DIRECTION: MATCH: STRAIGHT (Pot: -15, MPU: 51)[0m
+[0;32mI (20421) CAN: Sent steering angle: -15 to CAN[0m
+[0;32mI (20421) DIRECTION: MATCH: STRAIGHT (Pot: -15, MPU: 51)[0m
+[0;32mI (20521) CAN: Sent steering angle: -16 to CAN[0m
+[0;32mI (20521) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 51)[0m
+[0;32mI (20621) CAN: Sent steering angle: -16 to CAN[0m
+[0;32mI (20621) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 51)[0m
+[0;32mI (20721) CAN: Sent steering angle: -17 to CAN[0m
+[0;32mI (20721) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 50)[0m
+[0;32mI (20821) CAN: Sent steering angle: -19 to CAN[0m
+[0;32mI (20821) DIRECTION: MATCH: STRAIGHT (Pot: -19, MPU: 51)[0m
+[0;32mI (20921) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (20921) CANBusHandler: Steering angle changed to -26 from -4[0m
+[0;32mI (20921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (20921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (21031) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (21031) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 51)[0m
+[0;32mI (21131) CAN: Sent steering angle: -34 to CAN[0m
+[0;32mI (21131) DIRECTION: MATCH: STRAIGHT (Pot: -34, MPU: 51)[0m
+[0;32mI (21231) CAN: Sent steering angle: -37 to CAN[0m
+[0;32mI (21231) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 51)[0m
+[0;32mI (21331) CAN: Sent steering angle: -35 to CAN[0m
+[0;32mI (21331) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 51)[0m
+[0;32mI (21431) CAN: Sent steering angle: -35 to CAN[0m
+[0;32mI (21431) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 50)[0m
+[0;32mI (21531) CAN: Sent steering angle: -35 to CAN[0m
+[0;32mI (21531) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 50)[0m
+[0;32mI (21631) CAN: Sent steering angle: -36 to CAN[0m
+[0;32mI (21631) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 50)[0m
+[0;32mI (21731) CAN: Sent steering angle: -36 to CAN[0m
+[0;32mI (21731) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 50)[0m
+[0;32mI (21831) CAN: Sent steering angle: -37 to CAN[0m
+[0;32mI (21831) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 51)[0m
+[0;32mI (21931) CAN: Sent steering angle: -36 to CAN[0m
+[0;32mI (21931) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 50)[0m
+[0;32mI (22031) CAN: Sent steering angle: -35 to CAN[0m
+[0;32mI (22031) DIRECTION: MATCH: STRAIGHT (Pot: -35, MPU: 51)[0m
+[0;32mI (22131) CAN: Sent steering angle: -33 to CAN[0m
+[0;32mI (22131) DIRECTION: MATCH: STRAIGHT (Pot: -33, MPU: 50)[0m
+[0;32mI (22231) CAN: Sent steering angle: -33 to CAN[0m
+[0;32mI (22231) DIRECTION: MATCH: STRAIGHT (Pot: -33, MPU: 51)[0m
+[0;32mI (22331) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (22331) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 51)[0m
+[0;32mI (22431) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (22431) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 51)[0m
+[0;32mI (22531) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (22531) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (22631) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (22631) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (22731) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (22731) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 51)[0m
+[0;32mI (22831) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (22831) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 51)[0m
+[0;32mI (22931) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (22931) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 51)[0m
+[0;32mI (23031) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (23031) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 51)[0m
+[0;32mI (23131) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (23131) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (23231) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (23231) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 51)[0m
+[0;32mI (23331) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (23331) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 51)[0m
+[0;32mI (23431) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (23431) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 51)[0m
+[0;32mI (23531) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (23531) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 51)[0m
+[0;32mI (23631) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (23631) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 51)[0m
+[0;32mI (23731) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (23731) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 51)[0m
+[0;32mI (23831) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (23831) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (23931) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (23931) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (24031) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (24031) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (24131) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (24131) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (24231) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (24231) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (24331) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (24331) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (24431) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (24431) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (24531) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (24531) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 51)[0m
+[0;32mI (24631) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (24631) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (24731) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (24731) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (24831) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (24831) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (24931) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (24931) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (25031) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (25031) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (25131) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (25131) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (25231) CAN: Sent steering angle: -32 to CAN[0m
+[0;32mI (25231) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 50)[0m
+[0;32mI (25331) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (25331) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (25431) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (25431) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (25531) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (25531) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (25631) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (25631) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 49)[0m
+[0;32mI (25731) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (25731) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (25831) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (25831) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (25931) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (25931) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (26031) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (26031) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (26131) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (26131) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 51)[0m
+[0;32mI (26231) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (26231) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 51)[0m
+[0;32mI (26331) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (26331) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (26431) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (26431) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (26531) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (26531) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (26631) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (26631) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (26731) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (26731) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 48)[0m
+[0;32mI (26731) CANBusHandler: CAN message sent with ID 0x103, length 1[0m
+[0;32mI (26731) CANBusHandler: Foglight state changed to ON[0m
+[0;32mI (26741) CAN: CANBusAvailable and send FoglightState: 1 to CAN[0m
+[0;32mI (26841) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (26841) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (26941) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (26941) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (27041) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (27041) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (27141) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (27141) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (27241) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (27241) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (27341) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (27341) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (27441) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (27441) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (27541) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (27541) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 51)[0m
+[0;32mI (27641) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (27641) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (27741) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (27741) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (27841) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (27841) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (27941) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (27941) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (28041) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (28041) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (28141) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (28141) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (28241) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (28241) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (28341) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (28341) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (28441) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (28441) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 50)[0m
+[0;32mI (28541) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (28541) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (28641) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (28641) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (28741) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (28741) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (28841) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (28841) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (28941) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (28941) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (29041) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (29041) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (29141) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (29141) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (29241) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (29241) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (29341) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (29341) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (29441) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (29441) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (29541) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (29541) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (29641) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (29641) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (29741) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (29741) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (29841) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (29841) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (29941) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (29941) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (30041) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (30041) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (30141) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (30141) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (30141) CANBusHandler: CAN message sent with ID 0x103, length 1[0m
+[0;32mI (30141) CANBusHandler: Foglight state changed to OFF[0m
+[0;32mI (30151) CAN: CANBusAvailable and send FoglightState: 0 to CAN[0m
+[0;32mI (30251) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (30251) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (30351) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (30351) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (30451) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (30451) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (30551) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (30551) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (30651) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (30651) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (30751) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (30751) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (30851) CAN: Sent steering angle: -32 to CAN[0m
+[0;32mI (30851) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 50)[0m
+[0;32mI (30951) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (30951) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (31051) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (31051) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (31151) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (31151) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (31251) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (31251) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (31351) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (31351) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (31451) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (31451) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (31551) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (31551) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (31651) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (31651) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (31751) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (31751) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (31851) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (31851) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (31951) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (31951) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (32051) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (32051) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (32151) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (32151) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 45)[0m
+[0;32mI (32151) CANBusHandler: CAN message sent with ID 0x102, length 1[0m
+[0;32mI (32151) CANBusHandler: Headlight state changed to ON[0m
+[0;32mI (32161) CAN: CANBusAvailable and send HeadlightState: 1 to CAN[0m
+[0;32mI (32261) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (32261) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (32361) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (32361) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (32461) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (32461) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (32561) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (32561) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (32661) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (32661) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (32761) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (32761) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (32861) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (32861) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (32961) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (32961) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (33061) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (33061) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (33161) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (33161) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 49)[0m
+[0;32mI (33261) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (33261) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (33361) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (33361) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (33461) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (33461) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (33561) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (33561) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (33661) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (33661) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (33761) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (33761) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (33861) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (33861) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 49)[0m
+[0;32mI (33961) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (33961) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 49)[0m
+[0;32mI (34061) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (34061) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (34161) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (34161) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (34261) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (34261) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 49)[0m
+[0;32mI (34361) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (34361) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 49)[0m
+[0;32mI (34461) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (34461) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 50)[0m
+[0;32mI (34561) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (34561) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (34661) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (34661) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (34761) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (34761) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (34861) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (34861) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 49)[0m
+[0;32mI (34961) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (34961) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 49)[0m
+[0;32mI (34961) CANBusHandler: CAN message sent with ID 0x102, length 1[0m
+[0;32mI (34961) CANBusHandler: Headlight state changed to OFF[0m
+[0;32mI (34971) CAN: CANBusAvailable and send HeadlightState: 0 to CAN[0m
+[0;32mI (35071) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (35071) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (35171) CAN: Sent steering angle: -32 to CAN[0m
+[0;32mI (35171) DIRECTION: MATCH: STRAIGHT (Pot: -32, MPU: 49)[0m
+[0;32mI (35271) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (35271) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (35371) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (35371) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (35471) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (35471) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (35571) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (35571) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (35671) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (35671) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (35771) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (35771) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (35871) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (35871) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (35971) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (35971) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (36071) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (36071) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (36171) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (36171) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (36271) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (36271) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (36371) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (36371) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (36471) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (36471) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 49)[0m
+[0;32mI (36571) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (36571) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (36671) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (36671) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 49)[0m
+[0;32mI (36771) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (36771) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 49)[0m
+[0;32mI (36871) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (36871) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (36971) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (36971) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (37071) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (37071) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (37171) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (37171) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (37271) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (37271) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 50)[0m
+[0;32mI (37371) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (37371) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (37471) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (37471) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 49)[0m
+[0;32mI (37571) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (37571) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (37671) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (37671) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 50)[0m
+[0;32mI (37771) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (37771) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 49)[0m
+[0;32mI (37871) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (37871) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (37971) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (37971) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (38071) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (38071) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (38171) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (38171) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 49)[0m
+[0;32mI (38271) CAN: Sent steering angle: -30 to CAN[0m
+[0;32mI (38271) DIRECTION: MATCH: STRAIGHT (Pot: -30, MPU: 48)[0m
+[0;32mI (38371) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (38371) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (38471) CAN: Sent steering angle: -21 to CAN[0m
+[0;32mI (38471) DIRECTION: MATCH: STRAIGHT (Pot: -21, MPU: 49)[0m
+[0;32mI (38571) CAN: Sent steering angle: -15 to CAN[0m
+[0;32mI (38571) DIRECTION: MATCH: STRAIGHT (Pot: -15, MPU: 49)[0m
+[0;32mI (38671) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (38671) CANBusHandler: Steering angle changed to -5 from -26[0m
+[0;32mI (38671) CAN: Sent steering angle: -5 to CAN[0m
+[0;32mI (38671) DIRECTION: MATCH: STRAIGHT (Pot: -5, MPU: 49)[0m
+[0;32mI (38781) CAN: Sent steering angle: 9 to CAN[0m
+[0;32mI (38781) DIRECTION: MATCH: STRAIGHT (Pot: 9, MPU: 49)[0m
+[0;32mI (38881) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (38881) CANBusHandler: Steering angle changed to 21 from -5[0m
+[0;32mI (38881) CAN: Sent steering angle: 21 to CAN[0m
+[0;32mI (38881) DIRECTION: MATCH: STRAIGHT (Pot: 21, MPU: 49)[0m
+[0;32mI (38991) CAN: Sent steering angle: 34 to CAN[0m
+[0;32mI (38991) DIRECTION: MATCH: STRAIGHT (Pot: 34, MPU: 49)[0m
+[0;32mI (39091) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (39091) CANBusHandler: Steering angle changed to 44 from 21[0m
+[0;32mI (39091) CAN: Sent steering angle: 44 to CAN[0m
+[0;32mI (39091) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 49)[0m
+[0;32mI (39201) CAN: Sent steering angle: 44 to CAN[0m
+[0;32mI (39201) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 49)[0m
+[0;32mI (39301) CAN: Sent steering angle: 44 to CAN[0m
+[0;32mI (39301) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 49)[0m
+[0;32mI (39401) CAN: Sent steering angle: 44 to CAN[0m
+[0;32mI (39401) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 49)[0m
+[0;32mI (39501) CAN: Sent steering angle: 44 to CAN[0m
+[0;32mI (39501) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 49)[0m
+[0;32mI (39601) CAN: Sent steering angle: 54 to CAN[0m
+[0;32mI (39601) DIRECTION: MATCH: STRAIGHT (Pot: 54, MPU: 49)[0m
+[0;32mI (39701) CAN: Sent steering angle: 54 to CAN[0m
+[0;32mI (39701) DIRECTION: MATCH: STRAIGHT (Pot: 54, MPU: 49)[0m
+[0;32mI (39801) CAN: Sent steering angle: 55 to CAN[0m
+[0;32mI (39801) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 49)[0m
+[0;32mI (39901) CAN: Sent steering angle: 55 to CAN[0m
+[0;32mI (39901) DIRECTION: MATCH: STRAIGHT (Pot: 55, MPU: 49)[0m
+[0;32mI (40001) CAN: Sent steering angle: 57 to CAN[0m
+[0;32mI (40001) DIRECTION: MATCH: STRAIGHT (Pot: 57, MPU: 49)[0m
+[0;32mI (40101) CAN: Sent steering angle: 60 to CAN[0m
+[0;32mI (40101) DIRECTION: MATCH: STRAIGHT (Pot: 60, MPU: 49)[0m
+[0;32mI (40201) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (40201) CANBusHandler: Steering angle changed to 75 from 44[0m
+[0;32mI (40201) CAN: Sent steering angle: 75 to CAN[0m
+[0;33mW (40201) DIRECTION: MISMATCH: POT=RIGHT (75), MPU=STRAIGHT (49)[0m
+[0;32mI (40311) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (40311) CANBusHandler: Steering angle changed to 97 from 75[0m
+[0;32mI (40311) CAN: Sent steering angle: 97 to CAN[0m
+[0;33mW (40311) DIRECTION: MISMATCH: POT=RIGHT (97), MPU=STRAIGHT (49)[0m
+[0;32mI (40421) CAN: Sent steering angle: 106 to CAN[0m
+[0;33mW (40421) DIRECTION: MISMATCH: POT=RIGHT (106), MPU=STRAIGHT (49)[0m
+[0;32mI (40521) CAN: Sent steering angle: 107 to CAN[0m
+[0;33mW (40521) DIRECTION: MISMATCH: POT=RIGHT (107), MPU=STRAIGHT (49)[0m
+[0;32mI (40621) CAN: Sent steering angle: 107 to CAN[0m
+[0;33mW (40621) DIRECTION: MISMATCH: POT=RIGHT (107), MPU=STRAIGHT (49)[0m
+[0;32mI (40721) CAN: Sent steering angle: 107 to CAN[0m
+[0;33mW (40721) DIRECTION: MISMATCH: POT=RIGHT (107), MPU=STRAIGHT (49)[0m
+[0;32mI (40821) CAN: Sent steering angle: 106 to CAN[0m
+[0;33mW (40821) DIRECTION: MISMATCH: POT=RIGHT (106), MPU=STRAIGHT (49)[0m
+[0;32mI (40921) CAN: Sent steering angle: 107 to CAN[0m
+[0;33mW (40921) DIRECTION: MISMATCH: POT=RIGHT (107), MPU=STRAIGHT (49)[0m
+[0;32mI (41021) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (41021) CANBusHandler: Steering angle changed to 118 from 97[0m
+[0;32mI (41021) CAN: Sent steering angle: 118 to CAN[0m
+[0;33mW (41021) DIRECTION: MISMATCH: POT=RIGHT (118), MPU=STRAIGHT (50)[0m
+[0;32mI (41131) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (41131) CANBusHandler: Steering angle changed to 139 from 118[0m
+[0;32mI (41131) CAN: Sent steering angle: 139 to CAN[0m
+[0;33mW (41131) DIRECTION: MISMATCH: POT=RIGHT (139), MPU=STRAIGHT (49)[0m
+[0;32mI (41241) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (41241) CANBusHandler: Steering angle changed to 161 from 139[0m
+[0;32mI (41241) CAN: Sent steering angle: 161 to CAN[0m
+[0;33mW (41241) DIRECTION: MISMATCH: POT=RIGHT (161), MPU=STRAIGHT (50)[0m
+[0;32mI (41351) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (41351) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (49)[0m
+[0;32mI (41451) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (41451) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (49)[0m
+[0;32mI (41551) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (41551) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (49)[0m
+[0;32mI (41651) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (41651) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (49)[0m
+[0;32mI (41751) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (41751) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (50)[0m
+[0;32mI (41851) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (41851) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (50)[0m
+[0;32mI (41951) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (41951) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (49)[0m
+[0;32mI (42051) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (42051) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (50)[0m
+[0;32mI (42151) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (42151) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (49)[0m
+[0;32mI (42251) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (42251) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (50)[0m
+[0;32mI (42351) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (42351) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (49)[0m
+[0;32mI (42451) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (42451) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (49)[0m
+[0;32mI (42551) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (42551) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (49)[0m
+[0;32mI (42651) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (42651) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (50)[0m
+[0;32mI (42751) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (42751) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (50)[0m
+[0;32mI (42851) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (42851) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (49)[0m
+[0;32mI (42951) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (42951) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (49)[0m
+[0;32mI (43051) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (43051) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (49)[0m
+[0;32mI (43151) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (43151) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (49)[0m
+[0;32mI (43251) CAN: Sent steering angle: 179 to CAN[0m
+[0;33mW (43251) DIRECTION: MISMATCH: POT=RIGHT (179), MPU=STRAIGHT (50)[0m
+[0;32mI (43351) CAN: Sent steering angle: 171 to CAN[0m
+[0;33mW (43351) DIRECTION: MISMATCH: POT=RIGHT (171), MPU=STRAIGHT (49)[0m
+[0;32mI (43451) CAN: Sent steering angle: 167 to CAN[0m
+[0;33mW (43451) DIRECTION: MISMATCH: POT=RIGHT (167), MPU=STRAIGHT (49)[0m
+[0;32mI (43551) CAN: Sent steering angle: 166 to CAN[0m
+[0;33mW (43551) DIRECTION: MISMATCH: POT=RIGHT (166), MPU=STRAIGHT (49)[0m
+[0;32mI (43651) CAN: Sent steering angle: 165 to CAN[0m
+[0;33mW (43651) DIRECTION: MISMATCH: POT=RIGHT (165), MPU=STRAIGHT (50)[0m
+[0;32mI (43751) CAN: Sent steering angle: 167 to CAN[0m
+[0;33mW (43751) DIRECTION: MISMATCH: POT=RIGHT (167), MPU=STRAIGHT (49)[0m
+[0;32mI (43851) CAN: Sent steering angle: 168 to CAN[0m
+[0;33mW (43851) DIRECTION: MISMATCH: POT=RIGHT (168), MPU=STRAIGHT (49)[0m
+[0;32mI (43951) CAN: Sent steering angle: 151 to CAN[0m
+[0;33mW (43951) DIRECTION: MISMATCH: POT=RIGHT (151), MPU=STRAIGHT (49)[0m
+[0;32mI (44051) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (44051) CANBusHandler: Steering angle changed to 121 from 161[0m
+[0;32mI (44051) CAN: Sent steering angle: 121 to CAN[0m
+[0;33mW (44051) DIRECTION: MISMATCH: POT=RIGHT (121), MPU=STRAIGHT (49)[0m
+[0;32mI (44161) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (44161) CANBusHandler: Steering angle changed to 90 from 121[0m
+[0;32mI (44161) CAN: Sent steering angle: 90 to CAN[0m
+[0;33mW (44161) DIRECTION: MISMATCH: POT=RIGHT (90), MPU=STRAIGHT (49)[0m
+[0;32mI (44271) CAN: Sent steering angle: 89 to CAN[0m
+[0;33mW (44271) DIRECTION: MISMATCH: POT=RIGHT (89), MPU=STRAIGHT (49)[0m
+[0;32mI (44371) CAN: Sent steering angle: 88 to CAN[0m
+[0;33mW (44371) DIRECTION: MISMATCH: POT=RIGHT (88), MPU=STRAIGHT (49)[0m
+[0;32mI (44471) CAN: Sent steering angle: 90 to CAN[0m
+[0;33mW (44471) DIRECTION: MISMATCH: POT=RIGHT (90), MPU=STRAIGHT (50)[0m
+[0;32mI (44571) CAN: Sent steering angle: 80 to CAN[0m
+[0;33mW (44571) DIRECTION: MISMATCH: POT=RIGHT (80), MPU=STRAIGHT (49)[0m
+[0;32mI (44671) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (44671) CANBusHandler: Steering angle changed to 63 from 90[0m
+[0;32mI (44671) CAN: Sent steering angle: 63 to CAN[0m
+[0;33mW (44671) DIRECTION: MISMATCH: POT=RIGHT (63), MPU=STRAIGHT (49)[0m
+[0;32mI (44781) CAN: Sent steering angle: 44 to CAN[0m
+[0;32mI (44781) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 49)[0m
+[0;32mI (44881) CAN: Sent steering angle: 44 to CAN[0m
+[0;32mI (44881) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 49)[0m
+[0;32mI (44981) CAN: Sent steering angle: 44 to CAN[0m
+[0;32mI (44981) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 49)[0m
+[0;32mI (45081) CAN: Sent steering angle: 44 to CAN[0m
+[0;32mI (45081) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 49)[0m
+[0;32mI (45181) CAN: Sent steering angle: 44 to CAN[0m
+[0;32mI (45181) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 49)[0m
+[0;32mI (45281) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (45281) CANBusHandler: Steering angle changed to 29 from 63[0m
+[0;32mI (45281) CAN: Sent steering angle: 29 to CAN[0m
+[0;32mI (45281) DIRECTION: MATCH: STRAIGHT (Pot: 29, MPU: 49)[0m
+[0;32mI (45391) CAN: Sent steering angle: 15 to CAN[0m
+[0;32mI (45391) DIRECTION: MATCH: STRAIGHT (Pot: 15, MPU: 49)[0m
+[0;32mI (45491) CAN: Sent steering angle: 14 to CAN[0m
+[0;32mI (45491) DIRECTION: MATCH: STRAIGHT (Pot: 14, MPU: 49)[0m
+[0;32mI (45591) CAN: Sent steering angle: 16 to CAN[0m
+[0;32mI (45591) DIRECTION: MATCH: STRAIGHT (Pot: 16, MPU: 49)[0m
+[0;32mI (45691) CAN: Sent steering angle: 16 to CAN[0m
+[0;32mI (45691) DIRECTION: MATCH: STRAIGHT (Pot: 16, MPU: 49)[0m
+[0;32mI (45791) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (45791) CANBusHandler: Steering angle changed to 9 from 29[0m
+[0;32mI (45791) CAN: Sent steering angle: 9 to CAN[0m
+[0;32mI (45791) DIRECTION: MATCH: STRAIGHT (Pot: 9, MPU: 49)[0m
+[0;32mI (45901) CAN: Sent steering angle: -9 to CAN[0m
+[0;32mI (45901) DIRECTION: MATCH: STRAIGHT (Pot: -9, MPU: 49)[0m
+[0;32mI (46001) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (46001) CANBusHandler: Steering angle changed to -18 from 9[0m
+[0;32mI (46001) CAN: Sent steering angle: -18 to CAN[0m
+[0;32mI (46001) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 49)[0m
+[0;32mI (46111) CAN: Sent steering angle: -16 to CAN[0m
+[0;32mI (46111) DIRECTION: MATCH: STRAIGHT (Pot: -16, MPU: 49)[0m
+[0;32mI (46211) CAN: Sent steering angle: -17 to CAN[0m
+[0;32mI (46211) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 49)[0m
+[0;32mI (46311) CAN: Sent steering angle: -18 to CAN[0m
+[0;32mI (46311) DIRECTION: MATCH: STRAIGHT (Pot: -18, MPU: 49)[0m
+[0;32mI (46411) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (46411) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 49)[0m
+[0;32mI (46511) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (46511) CANBusHandler: Steering angle changed to -46 from -18[0m
+[0;32mI (46511) CAN: Sent steering angle: -46 to CAN[0m
+[0;32mI (46511) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 49)[0m
+[0;32mI (46621) CAN: Sent steering angle: -52 to CAN[0m
+[0;32mI (46621) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 52)[0m
+[0;32mI (46721) CAN: Sent steering angle: -52 to CAN[0m
+[0;32mI (46721) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 49)[0m
+[0;32mI (46821) CAN: Sent steering angle: -52 to CAN[0m
+[0;32mI (46821) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 49)[0m
+[0;32mI (46921) CAN: Sent steering angle: -54 to CAN[0m
+[0;32mI (46921) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 50)[0m
+[0;32mI (47021) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (47021) CANBusHandler: Steering angle changed to -67 from -46[0m
+[0;32mI (47021) CAN: Sent steering angle: -67 to CAN[0m
+[0;33mW (47021) DIRECTION: MISMATCH: POT=LEFT (-67), MPU=STRAIGHT (49)[0m
+[0;32mI (47131) CAN: Sent steering angle: -86 to CAN[0m
+[0;33mW (47131) DIRECTION: MISMATCH: POT=LEFT (-86), MPU=STRAIGHT (50)[0m
+[0;32mI (47231) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (47231) CANBusHandler: Steering angle changed to -88 from -67[0m
+[0;32mI (47231) CAN: Sent steering angle: -88 to CAN[0m
+[0;33mW (47231) DIRECTION: MISMATCH: POT=LEFT (-88), MPU=STRAIGHT (49)[0m
+[0;32mI (47341) CAN: Sent steering angle: -86 to CAN[0m
+[0;33mW (47341) DIRECTION: MISMATCH: POT=LEFT (-86), MPU=STRAIGHT (49)[0m
+[0;32mI (47441) CAN: Sent steering angle: -86 to CAN[0m
+[0;33mW (47441) DIRECTION: MISMATCH: POT=LEFT (-86), MPU=STRAIGHT (49)[0m
+[0;32mI (47541) CAN: Sent steering angle: -93 to CAN[0m
+[0;33mW (47541) DIRECTION: MISMATCH: POT=LEFT (-93), MPU=STRAIGHT (49)[0m
+[0;32mI (47641) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (47641) CANBusHandler: Steering angle changed to -117 from -88[0m
+[0;32mI (47641) CAN: Sent steering angle: -117 to CAN[0m
+[0;33mW (47641) DIRECTION: MISMATCH: POT=LEFT (-117), MPU=STRAIGHT (49)[0m
+[0;32mI (47751) CAN: Sent steering angle: -130 to CAN[0m
+[0;33mW (47751) DIRECTION: MISMATCH: POT=LEFT (-130), MPU=STRAIGHT (49)[0m
+[0;32mI (47851) CAN: Sent steering angle: -129 to CAN[0m
+[0;33mW (47851) DIRECTION: MISMATCH: POT=LEFT (-129), MPU=STRAIGHT (49)[0m
+[0;32mI (47951) CAN: Sent steering angle: -129 to CAN[0m
+[0;33mW (47951) DIRECTION: MISMATCH: POT=LEFT (-129), MPU=STRAIGHT (49)[0m
+[0;32mI (48051) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (48051) CANBusHandler: Steering angle changed to -139 from -117[0m
+[0;32mI (48051) CAN: Sent steering angle: -139 to CAN[0m
+[0;33mW (48051) DIRECTION: MISMATCH: POT=LEFT (-139), MPU=STRAIGHT (49)[0m
+[0;32mI (48161) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (48161) CANBusHandler: Steering angle changed to -161 from -139[0m
+[0;32mI (48161) CAN: Sent steering angle: -161 to CAN[0m
+[0;33mW (48161) DIRECTION: MISMATCH: POT=LEFT (-161), MPU=STRAIGHT (49)[0m
+[0;32mI (48271) CAN: Sent steering angle: -179 to CAN[0m
+[0;33mW (48271) DIRECTION: MISMATCH: POT=LEFT (-179), MPU=STRAIGHT (48)[0m
+[0;32mI (48371) CAN: Sent steering angle: -179 to CAN[0m
+[0;33mW (48371) DIRECTION: MISMATCH: POT=LEFT (-179), MPU=STRAIGHT (49)[0m
+[0;32mI (48471) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (48471) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (48571) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (48571) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (48671) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (48671) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (48)[0m
+[0;32mI (48771) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (48771) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (48871) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (48871) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (48971) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (48971) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (49071) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (49071) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (49171) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (49171) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (49271) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (49271) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (48)[0m
+[0;32mI (49371) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (49371) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (49471) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (49471) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (49571) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (49571) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (49671) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (49671) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (49771) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (49771) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (49871) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (49871) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (49971) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (49971) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (50071) CAN: Sent steering angle: -179 to CAN[0m
+[0;33mW (50071) DIRECTION: MISMATCH: POT=LEFT (-179), MPU=STRAIGHT (49)[0m
+[0;32mI (50171) CAN: Sent steering angle: -180 to CAN[0m
+[0;33mW (50171) DIRECTION: MISMATCH: POT=LEFT (-180), MPU=STRAIGHT (49)[0m
+[0;32mI (50271) CAN: Sent steering angle: -176 to CAN[0m
+[0;33mW (50271) DIRECTION: MISMATCH: POT=LEFT (-176), MPU=STRAIGHT (49)[0m
+[0;32mI (50371) CAN: Sent steering angle: -151 to CAN[0m
+[0;33mW (50371) DIRECTION: MISMATCH: POT=LEFT (-151), MPU=STRAIGHT (49)[0m
+[0;32mI (50471) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (50471) CANBusHandler: Steering angle changed to -133 from -161[0m
+[0;32mI (50471) CAN: Sent steering angle: -133 to CAN[0m
+[0;33mW (50471) DIRECTION: MISMATCH: POT=LEFT (-133), MPU=STRAIGHT (49)[0m
+[0;32mI (50581) CAN: Sent steering angle: -131 to CAN[0m
+[0;33mW (50581) DIRECTION: MISMATCH: POT=LEFT (-131), MPU=STRAIGHT (49)[0m
+[0;32mI (50681) CAN: Sent steering angle: -132 to CAN[0m
+[0;33mW (50681) DIRECTION: MISMATCH: POT=LEFT (-132), MPU=STRAIGHT (49)[0m
+[0;32mI (50781) CAN: Sent steering angle: -132 to CAN[0m
+[0;33mW (50781) DIRECTION: MISMATCH: POT=LEFT (-132), MPU=STRAIGHT (49)[0m
+[0;32mI (50881) CAN: Sent steering angle: -126 to CAN[0m
+[0;33mW (50881) DIRECTION: MISMATCH: POT=LEFT (-126), MPU=STRAIGHT (49)[0m
+[0;32mI (50981) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (50981) CANBusHandler: Steering angle changed to -100 from -133[0m
+[0;32mI (50981) CAN: Sent steering angle: -100 to CAN[0m
+[0;33mW (50981) DIRECTION: MISMATCH: POT=LEFT (-100), MPU=STRAIGHT (49)[0m
+[0;32mI (51091) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (51091) CANBusHandler: Steering angle changed to -73 from -100[0m
+[0;32mI (51091) CAN: Sent steering angle: -73 to CAN[0m
+[0;33mW (51091) DIRECTION: MISMATCH: POT=LEFT (-73), MPU=STRAIGHT (49)[0m
+[0;32mI (51201) CAN: Sent steering angle: -66 to CAN[0m
+[0;33mW (51201) DIRECTION: MISMATCH: POT=LEFT (-66), MPU=STRAIGHT (49)[0m
+[0;32mI (51301) CAN: Sent steering angle: -65 to CAN[0m
+[0;33mW (51301) DIRECTION: MISMATCH: POT=LEFT (-65), MPU=STRAIGHT (49)[0m
+[0;32mI (51401) CAN: Sent steering angle: -66 to CAN[0m
+[0;33mW (51401) DIRECTION: MISMATCH: POT=LEFT (-66), MPU=STRAIGHT (49)[0m
+[0;32mI (51501) CAN: Sent steering angle: -62 to CAN[0m
+[0;33mW (51501) DIRECTION: MISMATCH: POT=LEFT (-62), MPU=STRAIGHT (49)[0m
+[0;32mI (51601) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (51601) CANBusHandler: Steering angle changed to -45 from -73[0m
+[0;32mI (51601) CAN: Sent steering angle: -45 to CAN[0m
+[0;32mI (51601) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 49)[0m
+[0;32mI (51711) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (51711) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 49)[0m
+[0;32mI (51811) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (51811) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 49)[0m
+[0;32mI (51911) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (51911) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (52011) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (52011) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 49)[0m
+[0;32mI (52111) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (52111) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (52211) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (52211) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (52311) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (52311) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (52411) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (52411) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 48)[0m
+[0;32mI (52511) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (52511) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (52611) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (52611) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (52711) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (52711) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 49)[0m
+[0;32mI (52811) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (52811) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (52911) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (52911) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (53011) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (53011) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (53111) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (53111) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (53211) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (53211) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (53311) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (53311) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (53411) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (53411) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (53511) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (53511) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (53611) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (53611) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (53711) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (53711) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (53811) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (53811) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (53911) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (53911) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (54011) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (54011) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (54111) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (54111) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (54211) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (54211) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (54311) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (54311) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (54411) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (54411) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (54511) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (54511) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (54611) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (54611) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (54711) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (54711) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (54811) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (54811) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (54911) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (54911) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (55011) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (55011) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (55111) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (55111) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (55211) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (55211) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (55311) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (55311) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (55411) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (55411) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (55511) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (55511) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (55611) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (55611) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (55711) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (55711) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (55811) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (55811) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 49)[0m
+[0;32mI (55911) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (55911) CANBusHandler: Steering angle changed to -25 from -45[0m
+[0;32mI (55911) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (55911) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 47)[0m
+[0;32mI (56021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (56021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (56121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (56121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (56221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (56221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (56321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (56321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 43)[0m
+[0;32mI (56421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (56421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 47)[0m
+[0;32mI (56521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (56521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (56621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (56621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (56721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (56721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (56821) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (56821) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 46)[0m
+[0;32mI (56921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (56921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 46)[0m
+[0;32mI (57021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (57021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 44)[0m
+[0;32mI (57121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (57121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (57221) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (57221) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (57321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (57321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (57421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (57421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (57521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (57521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (57621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (57621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (57721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (57721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 47)[0m
+[0;32mI (57821) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (57821) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (57921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (57921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (58021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (58021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (58121) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (58121) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 48)[0m
+[0;32mI (58221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (58221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 47)[0m
+[0;32mI (58321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (58321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (58421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (58421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (58521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (58521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (58621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (58621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (58721) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (58721) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 49)[0m
+[0;32mI (58821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (58821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (58921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (58921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (59021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (59021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (59121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (59121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (59221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (59221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 47)[0m
+[0;32mI (59321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (59321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (59421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (59421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (59521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (59521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (59621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (59621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 47)[0m
+[0;32mI (59721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (59721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (59821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (59821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (59921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (59921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (60021) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (60021) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 48)[0m
+[0;32mI (60121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (60121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (60221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (60221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (60321) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (60321) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 49)[0m
+[0;32mI (60421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (60421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (60521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (60521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (60621) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (60621) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 49)[0m
+[0;32mI (60721) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (60721) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (60821) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (60821) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 48)[0m
+[0;32mI (60921) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (60921) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (61021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (61021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (61121) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (61121) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 49)[0m
+[0;32mI (61221) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (61221) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 48)[0m
+[0;32mI (61321) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (61321) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (61421) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (61421) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 49)[0m
+[0;32mI (61521) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (61521) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (61621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (61621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (61721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (61721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (61821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (61821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (61921) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (61921) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 47)[0m
+[0;32mI (62021) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (62021) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (62121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (62121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (62221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (62221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (62321) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (62321) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (62421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (62421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (62521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (62521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (62621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (62621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (62721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (62721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (62821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (62821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (62921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (62921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (63021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (63021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (63121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (63121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (63221) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (63221) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (63321) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (63321) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (63421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (63421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (63521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (63521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (63621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (63621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (63721) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (63721) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (63821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (63821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (63921) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (63921) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 49)[0m
+[0;32mI (64021) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (64021) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (64121) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (64121) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (64221) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (64221) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (64321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (64321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (64421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (64421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (64521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (64521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (64621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (64621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (64721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (64721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (64821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (64821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (64921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (64921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (65021) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (65021) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (65121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (65121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (65221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (65221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (65321) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (65321) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (65421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (65421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (65521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (65521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (65621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (65621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (65721) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (65721) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 49)[0m
+[0;32mI (65821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (65821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (65921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (65921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (66021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (66021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (66121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (66121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (66221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (66221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (66321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (66321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (66421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (66421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (66521) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (66521) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (66621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (66621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (66721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (66721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (66821) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (66821) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (66921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (66921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (67021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (67021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (67121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (67121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (67221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (67221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (67321) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (67321) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (67421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (67421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (67521) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (67521) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 48)[0m
+[0;32mI (67621) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (67621) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (67721) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (67721) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 49)[0m
+[0;32mI (67821) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (67821) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 48)[0m
+[0;32mI (67921) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (67921) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 48)[0m
+[0;32mI (68021) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (68021) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (68121) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (68121) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (68221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (68221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (68321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (68321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (68421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (68421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (68521) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (68521) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 49)[0m
+[0;32mI (68621) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (68621) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (68721) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (68721) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (68821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (68821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (68921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (68921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (69021) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (69021) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (69121) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (69121) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 49)[0m
+[0;32mI (69221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (69221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (69321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (69321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (69421) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (69421) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 48)[0m
+[0;32mI (69521) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (69521) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (69621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (69621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (69721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (69721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (69821) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (69821) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 49)[0m
+[0;32mI (69921) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (69921) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (70021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (70021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (70121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (70121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (70221) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (70221) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (70321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (70321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (70421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (70421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (70521) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (70521) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 48)[0m
+[0;32mI (70621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (70621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (70721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (70721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (70821) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (70821) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (70921) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (70921) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (71021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (71021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (71121) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (71121) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 49)[0m
+[0;32mI (71221) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (71221) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 48)[0m
+[0;32mI (71321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (71321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (71421) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (71421) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 48)[0m
+[0;32mI (71521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (71521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (71621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (71621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (71721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (71721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 47)[0m
+[0;32mI (71821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (71821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (71921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (71921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (72021) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (72021) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 48)[0m
+[0;32mI (72121) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (72121) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (72221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (72221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (72321) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (72321) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 48)[0m
+[0;32mI (72421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (72421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (72521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (72521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (72621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (72621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 47)[0m
+[0;32mI (72721) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (72721) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 47)[0m
+[0;32mI (72821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (72821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (72921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (72921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 47)[0m
+[0;32mI (73021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (73021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (73121) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (73121) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 48)[0m
+[0;32mI (73221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (73221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (73321) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (73321) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 52)[0m
+[0;32mI (73421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (73421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (73521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (73521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (73621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (73621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (73721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (73721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (73821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (73821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (73921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (73921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (74021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (74021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (74121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (74121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (74221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (74221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (74321) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (74321) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (74421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (74421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (74521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (74521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (74621) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (74621) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (74721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (74721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (74821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (74821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (74921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (74921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (75021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (75021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (75121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (75121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (75221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (75221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (75321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (75321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (75421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (75421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (75521) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (75521) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 50)[0m
+[0;32mI (75621) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (75621) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 50)[0m
+[0;32mI (75721) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (75721) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (75821) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (75821) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (75921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (75921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (76021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (76021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (76121) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (76121) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 50)[0m
+[0;32mI (76221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (76221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (76321) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (76321) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (76421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (76421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (76521) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (76521) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (76621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (76621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (76721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (76721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (76821) CAN: Sent steering angle: -24 to CAN[0m
+[0;32mI (76821) DIRECTION: MATCH: STRAIGHT (Pot: -24, MPU: 50)[0m
+[0;32mI (76921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (76921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (77021) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (77021) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 51)[0m
+[0;32mI (77121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (77121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (77221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (77221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (77321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (77321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (77421) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (77421) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (77521) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (77521) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (77621) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (77621) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (77721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (77721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (77821) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (77821) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (77921) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (77921) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 49)[0m
+[0;32mI (78021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (78021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (78121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (78121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (78221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (78221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (78321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (78321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (78421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (78421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (78521) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (78521) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (78621) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (78621) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (78721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (78721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (78821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (78821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (78921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (78921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (79021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (79021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (79121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (79121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (79221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (79221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (79321) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (79321) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 50)[0m
+[0;32mI (79421) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (79421) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 50)[0m
+[0;32mI (79521) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (79521) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (79621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (79621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (79721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (79721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (79821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (79821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (79921) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (79921) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (80021) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (80021) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (80121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (80121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (80221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (80221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (80321) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (80321) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (80421) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (80421) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 50)[0m
+[0;32mI (80521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (80521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (80621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (80621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (80721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (80721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (80821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (80821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (80921) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (80921) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (81021) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (81021) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (81121) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (81121) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 50)[0m
+[0;32mI (81221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (81221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (81321) CAN: Sent steering angle: -28 to CAN[0m
+[0;32mI (81321) DIRECTION: MATCH: STRAIGHT (Pot: -28, MPU: 50)[0m
+[0;32mI (81421) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (81421) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (81521) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (81521) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (81621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (81621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (81721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (81721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (81821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (81821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (81921) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (81921) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 50)[0m
+[0;32mI (82021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (82021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (82121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (82121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (82221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (82221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (82321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (82321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (82421) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (82421) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (82521) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (82521) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 50)[0m
+[0;32mI (82621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (82621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (82721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (82721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (82821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (82821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (82921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (82921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (83021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (83021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (83121) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (83121) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (83221) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (83221) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (83321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (83321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (83421) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (83421) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (83521) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (83521) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 50)[0m
+[0;32mI (83621) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (83621) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 50)[0m
+[0;32mI (83721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (83721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (83821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (83821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (83921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (83921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (84021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (84021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (84121) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (84121) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (84221) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (84221) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (84321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (84321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (84421) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (84421) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 51)[0m
+[0;32mI (84521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (84521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 48)[0m
+[0;32mI (84621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (84621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (84721) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (84721) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 51)[0m
+[0;32mI (84821) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (84821) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (84921) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (84921) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (85021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (85021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (85121) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (85121) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (85221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (85221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 49)[0m
+[0;32mI (85321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (85321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (85421) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (85421) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 50)[0m
+[0;32mI (85521) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (85521) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 50)[0m
+[0;32mI (85621) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (85621) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 52)[0m
+[0;32mI (85721) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (85721) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (85821) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (85821) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 51)[0m
+[0;32mI (85921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (85921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 52)[0m
+[0;32mI (86021) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (86021) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (86121) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (86121) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 51)[0m
+[0;32mI (86221) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (86221) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (86321) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (86321) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (86421) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (86421) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 51)[0m
+[0;32mI (86521) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (86521) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (86621) CAN: Sent steering angle: -27 to CAN[0m
+[0;32mI (86621) DIRECTION: MATCH: STRAIGHT (Pot: -27, MPU: 51)[0m
+[0;32mI (86721) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (86721) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 51)[0m
+[0;32mI (86821) CAN: Sent steering angle: -25 to CAN[0m
+[0;32mI (86821) DIRECTION: MATCH: STRAIGHT (Pot: -25, MPU: 51)[0m
+[0;32mI (86921) CAN: Sent steering angle: -26 to CAN[0m
+[0;32mI (86921) DIRECTION: MATCH: STRAIGHT (Pot: -26, MPU: 51)[0m
+[0;32mI (87021) CAN: Sent steering angle: -31 to CAN[0m
+[0;32mI (87021) DIRECTION: MATCH: STRAIGHT (Pot: -31, MPU: 51)[0m
+[0;32mI (87121) CAN: Sent steering angle: -37 to CAN[0m
+[0;32mI (87121) DIRECTION: MATCH: STRAIGHT (Pot: -37, MPU: 51)[0m
+[0;32mI (87221) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (87221) CANBusHandler: Steering angle changed to -47 from -25[0m
+[0;32mI (87221) CAN: Sent steering angle: -47 to CAN[0m
+[0;32mI (87221) DIRECTION: MATCH: STRAIGHT (Pot: -47, MPU: 51)[0m
+[0;32mI (87331) CAN: Sent steering angle: -56 to CAN[0m
+[0;32mI (87331) DIRECTION: MATCH: STRAIGHT (Pot: -56, MPU: 51)[0m
+[0;32mI (87431) CAN: Sent steering angle: -56 to CAN[0m
+[0;32mI (87431) DIRECTION: MATCH: STRAIGHT (Pot: -56, MPU: 51)[0m
+[0;32mI (87531) CAN: Sent steering angle: -57 to CAN[0m
+[0;32mI (87531) DIRECTION: MATCH: STRAIGHT (Pot: -57, MPU: 50)[0m
+[0;32mI (87631) CAN: Sent steering angle: -55 to CAN[0m
+[0;32mI (87631) DIRECTION: MATCH: STRAIGHT (Pot: -55, MPU: 51)[0m
+[0;32mI (87731) CAN: Sent steering angle: -56 to CAN[0m
+[0;32mI (87731) DIRECTION: MATCH: STRAIGHT (Pot: -56, MPU: 51)[0m
+[0;32mI (87831) CAN: Sent steering angle: -55 to CAN[0m
+[0;32mI (87831) DIRECTION: MATCH: STRAIGHT (Pot: -55, MPU: 51)[0m
+[0;32mI (87931) CAN: Sent steering angle: -56 to CAN[0m
+[0;32mI (87931) DIRECTION: MATCH: STRAIGHT (Pot: -56, MPU: 51)[0m
+[0;32mI (88031) CAN: Sent steering angle: -57 to CAN[0m
+[0;32mI (88031) DIRECTION: MATCH: STRAIGHT (Pot: -57, MPU: 51)[0m
+[0;32mI (88131) CAN: Sent steering angle: -55 to CAN[0m
+[0;32mI (88131) DIRECTION: MATCH: STRAIGHT (Pot: -55, MPU: 50)[0m
+[0;32mI (88231) CAN: Sent steering angle: -57 to CAN[0m
+[0;32mI (88231) DIRECTION: MATCH: STRAIGHT (Pot: -57, MPU: 51)[0m
+[0;32mI (88331) CAN: Sent steering angle: -56 to CAN[0m
+[0;32mI (88331) DIRECTION: MATCH: STRAIGHT (Pot: -56, MPU: 50)[0m
+[0;32mI (88431) CAN: Sent steering angle: -57 to CAN[0m
+[0;32mI (88431) DIRECTION: MATCH: STRAIGHT (Pot: -57, MPU: 51)[0m
+[0;32mI (88531) CAN: Sent steering angle: -58 to CAN[0m
+[0;32mI (88531) DIRECTION: MATCH: STRAIGHT (Pot: -58, MPU: 51)[0m
+[0;32mI (88631) CAN: Sent steering angle: -65 to CAN[0m
+[0;33mW (88631) DIRECTION: MISMATCH: POT=LEFT (-65), MPU=STRAIGHT (51)[0m
+[0;32mI (88731) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (88731) CANBusHandler: Steering angle changed to -75 from -47[0m
+[0;32mI (88731) CAN: Sent steering angle: -75 to CAN[0m
+[0;33mW (88731) DIRECTION: MISMATCH: POT=LEFT (-75), MPU=STRAIGHT (51)[0m
+[0;32mI (88841) CAN: Sent steering angle: -86 to CAN[0m
+[0;33mW (88841) DIRECTION: MISMATCH: POT=LEFT (-86), MPU=STRAIGHT (51)[0m
+[0;32mI (88941) CAN: Sent steering angle: -87 to CAN[0m
+[0;33mW (88941) DIRECTION: MISMATCH: POT=LEFT (-87), MPU=STRAIGHT (50)[0m
+[0;32mI (89041) CAN: Sent steering angle: -90 to CAN[0m
+[0;33mW (89041) DIRECTION: MISMATCH: POT=LEFT (-90), MPU=STRAIGHT (51)[0m
+[0;32mI (89141) CAN: Sent steering angle: -90 to CAN[0m
+[0;33mW (89141) DIRECTION: MISMATCH: POT=LEFT (-90), MPU=STRAIGHT (50)[0m
+[0;32mI (89241) CAN: Sent steering angle: -88 to CAN[0m
+[0;33mW (89241) DIRECTION: MISMATCH: POT=LEFT (-88), MPU=STRAIGHT (50)[0m
+[0;32mI (89341) CAN: Sent steering angle: -90 to CAN[0m
+[0;33mW (89341) DIRECTION: MISMATCH: POT=LEFT (-90), MPU=STRAIGHT (50)[0m
+[0;32mI (89441) CAN: Sent steering angle: -89 to CAN[0m
+[0;33mW (89441) DIRECTION: MISMATCH: POT=LEFT (-89), MPU=STRAIGHT (50)[0m
+[0;32mI (89541) CAN: Sent steering angle: -88 to CAN[0m
+[0;33mW (89541) DIRECTION: MISMATCH: POT=LEFT (-88), MPU=STRAIGHT (50)[0m
+[0;32mI (89641) CAN: Sent steering angle: -88 to CAN[0m
+[0;33mW (89641) DIRECTION: MISMATCH: POT=LEFT (-88), MPU=STRAIGHT (50)[0m
+[0;32mI (89741) CAN: Sent steering angle: -87 to CAN[0m
+[0;33mW (89741) DIRECTION: MISMATCH: POT=LEFT (-87), MPU=STRAIGHT (50)[0m
+[0;32mI (89841) CAN: Sent steering angle: -88 to CAN[0m
+[0;33mW (89841) DIRECTION: MISMATCH: POT=LEFT (-88), MPU=STRAIGHT (50)[0m
+[0;32mI (89941) CAN: Sent steering angle: -88 to CAN[0m
+[0;33mW (89941) DIRECTION: MISMATCH: POT=LEFT (-88), MPU=STRAIGHT (50)[0m
+[0;32mI (90041) CAN: Sent steering angle: -87 to CAN[0m
+[0;33mW (90041) DIRECTION: MISMATCH: POT=LEFT (-87), MPU=STRAIGHT (50)[0m
+[0;32mI (90141) CAN: Sent steering angle: -84 to CAN[0m
+[0;33mW (90141) DIRECTION: MISMATCH: POT=LEFT (-84), MPU=STRAIGHT (50)[0m
+[0;32mI (90241) CAN: Sent steering angle: -80 to CAN[0m
+[0;33mW (90241) DIRECTION: MISMATCH: POT=LEFT (-80), MPU=STRAIGHT (50)[0m
+[0;32mI (90341) CAN: Sent steering angle: -78 to CAN[0m
+[0;33mW (90341) DIRECTION: MISMATCH: POT=LEFT (-78), MPU=STRAIGHT (50)[0m
+[0;32mI (90441) CAN: Sent steering angle: -79 to CAN[0m
+[0;33mW (90441) DIRECTION: MISMATCH: POT=LEFT (-79), MPU=STRAIGHT (50)[0m
+[0;32mI (90541) CAN: Sent steering angle: -76 to CAN[0m
+[0;33mW (90541) DIRECTION: MISMATCH: POT=LEFT (-76), MPU=STRAIGHT (50)[0m
+[0;32mI (90641) CAN: Sent steering angle: -77 to CAN[0m
+[0;33mW (90641) DIRECTION: MISMATCH: POT=LEFT (-77), MPU=STRAIGHT (51)[0m
+[0;32mI (90741) CAN: Sent steering angle: -76 to CAN[0m
+[0;33mW (90741) DIRECTION: MISMATCH: POT=LEFT (-76), MPU=STRAIGHT (50)[0m
+[0;32mI (90841) CAN: Sent steering angle: -74 to CAN[0m
+[0;33mW (90841) DIRECTION: MISMATCH: POT=LEFT (-74), MPU=STRAIGHT (50)[0m
+[0;32mI (90941) CAN: Sent steering angle: -75 to CAN[0m
+[0;33mW (90941) DIRECTION: MISMATCH: POT=LEFT (-75), MPU=STRAIGHT (50)[0m
+[0;32mI (91041) CAN: Sent steering angle: -75 to CAN[0m
+[0;33mW (91041) DIRECTION: MISMATCH: POT=LEFT (-75), MPU=STRAIGHT (50)[0m
+[0;32mI (91141) CAN: Sent steering angle: -74 to CAN[0m
+[0;33mW (91141) DIRECTION: MISMATCH: POT=LEFT (-74), MPU=STRAIGHT (50)[0m
+[0;32mI (91241) CAN: Sent steering angle: -70 to CAN[0m
+[0;33mW (91241) DIRECTION: MISMATCH: POT=LEFT (-70), MPU=STRAIGHT (50)[0m
+[0;32mI (91341) CAN: Sent steering angle: -66 to CAN[0m
+[0;33mW (91341) DIRECTION: MISMATCH: POT=LEFT (-66), MPU=STRAIGHT (50)[0m
+[0;32mI (91441) CAN: Sent steering angle: -63 to CAN[0m
+[0;33mW (91441) DIRECTION: MISMATCH: POT=LEFT (-63), MPU=STRAIGHT (50)[0m
+[0;32mI (91541) CAN: Sent steering angle: -61 to CAN[0m
+[0;33mW (91541) DIRECTION: MISMATCH: POT=LEFT (-61), MPU=STRAIGHT (50)[0m
+[0;32mI (91641) CAN: Sent steering angle: -58 to CAN[0m
+[0;32mI (91641) DIRECTION: MATCH: STRAIGHT (Pot: -58, MPU: 51)[0m
+[0;32mI (91741) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (91741) CANBusHandler: Steering angle changed to -55 from -75[0m
+[0;32mI (91741) CAN: Sent steering angle: -55 to CAN[0m
+[0;32mI (91741) DIRECTION: MATCH: STRAIGHT (Pot: -55, MPU: 50)[0m
+[0;32mI (91851) CAN: Sent steering angle: -51 to CAN[0m
+[0;32mI (91851) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 50)[0m
+[0;32mI (91951) CAN: Sent steering angle: -50 to CAN[0m
+[0;32mI (91951) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 50)[0m
+[0;32mI (92051) CAN: Sent steering angle: -50 to CAN[0m
+[0;32mI (92051) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 50)[0m
+[0;32mI (92151) CAN: Sent steering angle: -50 to CAN[0m
+[0;32mI (92151) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 50)[0m
+[0;32mI (92251) CAN: Sent steering angle: -50 to CAN[0m
+[0;32mI (92251) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 50)[0m
+[0;32mI (92351) CAN: Sent steering angle: -50 to CAN[0m
+[0;32mI (92351) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 50)[0m
+[0;32mI (92451) CAN: Sent steering angle: -50 to CAN[0m
+[0;32mI (92451) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 51)[0m
+[0;32mI (92551) CAN: Sent steering angle: -49 to CAN[0m
+[0;32mI (92551) DIRECTION: MATCH: STRAIGHT (Pot: -49, MPU: 51)[0m
+[0;32mI (92651) CAN: Sent steering angle: -50 to CAN[0m
+[0;32mI (92651) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 50)[0m
+[0;32mI (92751) CAN: Sent steering angle: -52 to CAN[0m
+[0;32mI (92751) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 50)[0m
+[0;32mI (92851) CAN: Sent steering angle: -50 to CAN[0m
+[0;32mI (92851) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 50)[0m
+[0;32mI (92951) CAN: Sent steering angle: -51 to CAN[0m
+[0;32mI (92951) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 50)[0m
+[0;32mI (93051) CAN: Sent steering angle: -50 to CAN[0m
+[0;32mI (93051) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 50)[0m
+[0;32mI (93151) CAN: Sent steering angle: -50 to CAN[0m
+[0;32mI (93151) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 50)[0m
+[0;32mI (93251) CAN: Sent steering angle: -51 to CAN[0m
+[0;32mI (93251) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 50)[0m
+[0;32mI (93351) CAN: Sent steering angle: -51 to CAN[0m
+[0;32mI (93351) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 50)[0m
+[0;32mI (93451) CAN: Sent steering angle: -50 to CAN[0m
+[0;32mI (93451) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 50)[0m
+[0;32mI (93551) CAN: Sent steering angle: -52 to CAN[0m
+[0;32mI (93551) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 50)[0m
+[0;32mI (93651) CAN: Sent steering angle: -50 to CAN[0m
+[0;32mI (93651) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 50)[0m
+[0;32mI (93751) CAN: Sent steering angle: -51 to CAN[0m
+[0;32mI (93751) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 50)[0m
+[0;32mI (93851) CAN: Sent steering angle: -50 to CAN[0m
+[0;32mI (93851) DIRECTION: MATCH: STRAIGHT (Pot: -50, MPU: 50)[0m
+[0;32mI (93951) CAN: Sent steering angle: -51 to CAN[0m
+[0;32mI (93951) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 50)[0m
+[0;32mI (94051) CAN: Sent steering angle: -51 to CAN[0m
+[0;32mI (94051) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 50)[0m
+[0;32mI (94151) CAN: Sent steering angle: -52 to CAN[0m
+[0;32mI (94151) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 51)[0m
+[0;32mI (94251) CAN: Sent steering angle: -52 to CAN[0m
+[0;32mI (94251) DIRECTION: MATCH: STRAIGHT (Pot: -52, MPU: 50)[0m
+[0;32mI (94351) CAN: Sent steering angle: -53 to CAN[0m
+[0;32mI (94351) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 50)[0m
+[0;32mI (94451) CAN: Sent steering angle: -53 to CAN[0m
+[0;32mI (94451) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 50)[0m
+[0;32mI (94551) CAN: Sent steering angle: -53 to CAN[0m
+[0;32mI (94551) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 50)[0m
+[0;32mI (94651) CAN: Sent steering angle: -53 to CAN[0m
+[0;32mI (94651) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 50)[0m
+[0;32mI (94751) CAN: Sent steering angle: -54 to CAN[0m
+[0;32mI (94751) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 50)[0m
+[0;32mI (94851) CAN: Sent steering angle: -53 to CAN[0m
+[0;32mI (94851) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 50)[0m
+[0;32mI (94951) CAN: Sent steering angle: -53 to CAN[0m
+[0;32mI (94951) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 49)[0m
+[0;32mI (95051) CAN: Sent steering angle: -53 to CAN[0m
+[0;32mI (95051) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 50)[0m
+[0;32mI (95151) CAN: Sent steering angle: -54 to CAN[0m
+[0;32mI (95151) DIRECTION: MATCH: STRAIGHT (Pot: -54, MPU: 50)[0m
+[0;32mI (95251) CAN: Sent steering angle: -60 to CAN[0m
+[0;32mI (95251) DIRECTION: MATCH: STRAIGHT (Pot: -60, MPU: 50)[0m
+[0;32mI (95351) CAN: Sent steering angle: -68 to CAN[0m
+[0;33mW (95351) DIRECTION: MISMATCH: POT=LEFT (-68), MPU=STRAIGHT (50)[0m
+[0;32mI (95451) CAN: Sent steering angle: -73 to CAN[0m
+[0;33mW (95451) DIRECTION: MISMATCH: POT=LEFT (-73), MPU=STRAIGHT (49)[0m
+[0;32mI (95551) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (95551) CANBusHandler: Steering angle changed to -81 from -55[0m
+[0;32mI (95551) CAN: Sent steering angle: -81 to CAN[0m
+[0;33mW (95551) DIRECTION: MISMATCH: POT=LEFT (-81), MPU=STRAIGHT (50)[0m
+[0;32mI (95661) CAN: Sent steering angle: -81 to CAN[0m
+[0;33mW (95661) DIRECTION: MISMATCH: POT=LEFT (-81), MPU=STRAIGHT (49)[0m
+[0;32mI (95761) CAN: Sent steering angle: -80 to CAN[0m
+[0;33mW (95761) DIRECTION: MISMATCH: POT=LEFT (-80), MPU=STRAIGHT (50)[0m
+[0;32mI (95861) CAN: Sent steering angle: -81 to CAN[0m
+[0;33mW (95861) DIRECTION: MISMATCH: POT=LEFT (-81), MPU=STRAIGHT (50)[0m
+[0;32mI (95961) CAN: Sent steering angle: -82 to CAN[0m
+[0;33mW (95961) DIRECTION: MISMATCH: POT=LEFT (-82), MPU=STRAIGHT (49)[0m
+[0;32mI (96061) CAN: Sent steering angle: -81 to CAN[0m
+[0;33mW (96061) DIRECTION: MISMATCH: POT=LEFT (-81), MPU=STRAIGHT (50)[0m
+[0;32mI (96161) CAN: Sent steering angle: -80 to CAN[0m
+[0;33mW (96161) DIRECTION: MISMATCH: POT=LEFT (-80), MPU=STRAIGHT (50)[0m
+[0;32mI (96261) CAN: Sent steering angle: -81 to CAN[0m
+[0;33mW (96261) DIRECTION: MISMATCH: POT=LEFT (-81), MPU=STRAIGHT (50)[0m
+[0;32mI (96361) CAN: Sent steering angle: -80 to CAN[0m
+[0;33mW (96361) DIRECTION: MISMATCH: POT=LEFT (-80), MPU=STRAIGHT (50)[0m
+[0;32mI (96461) CAN: Sent steering angle: -80 to CAN[0m
+[0;33mW (96461) DIRECTION: MISMATCH: POT=LEFT (-80), MPU=STRAIGHT (50)[0m
+[0;32mI (96561) CAN: Sent steering angle: -80 to CAN[0m
+[0;33mW (96561) DIRECTION: MISMATCH: POT=LEFT (-80), MPU=STRAIGHT (50)[0m
+[0;32mI (96661) CAN: Sent steering angle: -77 to CAN[0m
+[0;33mW (96661) DIRECTION: MISMATCH: POT=LEFT (-77), MPU=STRAIGHT (50)[0m
+[0;32mI (96761) CAN: Sent steering angle: -73 to CAN[0m
+[0;33mW (96761) DIRECTION: MISMATCH: POT=LEFT (-73), MPU=STRAIGHT (50)[0m
+[0;32mI (96861) CAN: Sent steering angle: -72 to CAN[0m
+[0;33mW (96861) DIRECTION: MISMATCH: POT=LEFT (-72), MPU=STRAIGHT (50)[0m
+[0;32mI (96961) CAN: Sent steering angle: -67 to CAN[0m
+[0;33mW (96961) DIRECTION: MISMATCH: POT=LEFT (-67), MPU=STRAIGHT (50)[0m
+[0;32mI (97061) CAN: Sent steering angle: -65 to CAN[0m
+[0;33mW (97061) DIRECTION: MISMATCH: POT=LEFT (-65), MPU=STRAIGHT (50)[0m
+[0;32mI (97161) CAN: Sent steering angle: -64 to CAN[0m
+[0;33mW (97161) DIRECTION: MISMATCH: POT=LEFT (-64), MPU=STRAIGHT (49)[0m
+[0;32mI (97261) CAN: Sent steering angle: -64 to CAN[0m
+[0;33mW (97261) DIRECTION: MISMATCH: POT=LEFT (-64), MPU=STRAIGHT (49)[0m
+[0;32mI (97361) CAN: Sent steering angle: -64 to CAN[0m
+[0;33mW (97361) DIRECTION: MISMATCH: POT=LEFT (-64), MPU=STRAIGHT (50)[0m
+[0;32mI (97461) CAN: Sent steering angle: -63 to CAN[0m
+[0;33mW (97461) DIRECTION: MISMATCH: POT=LEFT (-63), MPU=STRAIGHT (50)[0m
+[0;32mI (97561) CAN: Sent steering angle: -63 to CAN[0m
+[0;33mW (97561) DIRECTION: MISMATCH: POT=LEFT (-63), MPU=STRAIGHT (50)[0m
+[0;32mI (97661) CAN: Sent steering angle: -62 to CAN[0m
+[0;33mW (97661) DIRECTION: MISMATCH: POT=LEFT (-62), MPU=STRAIGHT (50)[0m
+[0;32mI (97761) CAN: Sent steering angle: -64 to CAN[0m
+[0;33mW (97761) DIRECTION: MISMATCH: POT=LEFT (-64), MPU=STRAIGHT (49)[0m
+[0;32mI (97861) CAN: Sent steering angle: -63 to CAN[0m
+[0;33mW (97861) DIRECTION: MISMATCH: POT=LEFT (-63), MPU=STRAIGHT (50)[0m
+[0;32mI (97961) CAN: Sent steering angle: -63 to CAN[0m
+[0;33mW (97961) DIRECTION: MISMATCH: POT=LEFT (-63), MPU=STRAIGHT (50)[0m
+[0;32mI (98061) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (98061) CANBusHandler: Steering angle changed to -58 from -81[0m
+[0;32mI (98061) CAN: Sent steering angle: -58 to CAN[0m
+[0;32mI (98061) DIRECTION: MATCH: STRAIGHT (Pot: -58, MPU: 50)[0m
+[0;32mI (98171) CAN: Sent steering angle: -55 to CAN[0m
+[0;32mI (98171) DIRECTION: MATCH: STRAIGHT (Pot: -55, MPU: 50)[0m
+[0;32mI (98271) CAN: Sent steering angle: -53 to CAN[0m
+[0;32mI (98271) DIRECTION: MATCH: STRAIGHT (Pot: -53, MPU: 50)[0m
+[0;32mI (98371) CAN: Sent steering angle: -51 to CAN[0m
+[0;32mI (98371) DIRECTION: MATCH: STRAIGHT (Pot: -51, MPU: 50)[0m
+[0;32mI (98471) CAN: Sent steering angle: -46 to CAN[0m
+[0;32mI (98471) DIRECTION: MATCH: STRAIGHT (Pot: -46, MPU: 50)[0m
+[0;32mI (98571) CAN: Sent steering angle: -42 to CAN[0m
+[0;32mI (98571) DIRECTION: MATCH: STRAIGHT (Pot: -42, MPU: 49)[0m
+[0;32mI (98671) CAN: Sent steering angle: -45 to CAN[0m
+[0;32mI (98671) DIRECTION: MATCH: STRAIGHT (Pot: -45, MPU: 50)[0m
+[0;32mI (98771) CAN: Sent steering angle: -42 to CAN[0m
+[0;32mI (98771) DIRECTION: MATCH: STRAIGHT (Pot: -42, MPU: 50)[0m
+[0;32mI (98871) CAN: Sent steering angle: -43 to CAN[0m
+[0;32mI (98871) DIRECTION: MATCH: STRAIGHT (Pot: -43, MPU: 50)[0m
+[0;32mI (98971) CAN: Sent steering angle: -41 to CAN[0m
+[0;32mI (98971) DIRECTION: MATCH: STRAIGHT (Pot: -41, MPU: 50)[0m
+[0;32mI (99071) CAN: Sent steering angle: -41 to CAN[0m
+[0;32mI (99071) DIRECTION: MATCH: STRAIGHT (Pot: -41, MPU: 49)[0m
+[0;32mI (99171) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (99171) CANBusHandler: Steering angle changed to -38 from -58[0m
+[0;32mI (99171) CAN: Sent steering angle: -38 to CAN[0m
+[0;32mI (99171) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 50)[0m
+[0;32mI (99281) CAN: Sent steering angle: -39 to CAN[0m
+[0;32mI (99281) DIRECTION: MATCH: STRAIGHT (Pot: -39, MPU: 50)[0m
+[0;32mI (99381) CAN: Sent steering angle: -38 to CAN[0m
+[0;32mI (99381) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 50)[0m
+[0;32mI (99481) CAN: Sent steering angle: -38 to CAN[0m
+[0;32mI (99481) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 49)[0m
+[0;32mI (99581) CAN: Sent steering angle: -38 to CAN[0m
+[0;32mI (99581) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 50)[0m
+[0;32mI (99681) CAN: Sent steering angle: -38 to CAN[0m
+[0;32mI (99681) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 50)[0m
+[0;32mI (99781) CAN: Sent steering angle: -38 to CAN[0m
+[0;32mI (99781) DIRECTION: MATCH: STRAIGHT (Pot: -38, MPU: 49)[0m
+[0;32mI (99881) CAN: Sent steering angle: -36 to CAN[0m
+[0;32mI (99881) DIRECTION: MATCH: STRAIGHT (Pot: -36, MPU: 50)[0m
+[0;32mI (99981) CAN: Sent steering angle: -29 to CAN[0m
+[0;32mI (99981) DIRECTION: MATCH: STRAIGHT (Pot: -29, MPU: 49)[0m
+[0;32mI (100081) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (100081) CANBusHandler: Steering angle changed to -17 from -38[0m
+[0;32mI (100081) CAN: Sent steering angle: -17 to CAN[0m
+[0;32mI (100081) DIRECTION: MATCH: STRAIGHT (Pot: -17, MPU: 49)[0m
+[0;32mI (100191) CAN: Sent steering angle: -4 to CAN[0m
+[0;32mI (100191) DIRECTION: MATCH: STRAIGHT (Pot: -4, MPU: 49)[0m
+[0;32mI (100291) CAN: Sent steering angle: -1 to CAN[0m
+[0;32mI (100291) DIRECTION: MATCH: STRAIGHT (Pot: -1, MPU: 49)[0m
+[0;32mI (100391) CAN: Sent steering angle: 0 to CAN[0m
+[0;32mI (100391) DIRECTION: MATCH: STRAIGHT (Pot: 0, MPU: 50)[0m
+[0;32mI (100491) CAN: Sent steering angle: -2 to CAN[0m
+[0;32mI (100491) DIRECTION: MATCH: STRAIGHT (Pot: -2, MPU: 50)[0m
+[0;32mI (100591) CAN: Sent steering angle: -1 to CAN[0m
+[0;32mI (100591) DIRECTION: MATCH: STRAIGHT (Pot: -1, MPU: 49)[0m
+[0;32mI (100691) CAN: Sent steering angle: 0 to CAN[0m
+[0;32mI (100691) DIRECTION: MATCH: STRAIGHT (Pot: 0, MPU: 49)[0m
+[0;32mI (100791) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (100791) CANBusHandler: Steering angle changed to 11 from -17[0m
+[0;32mI (100791) CAN: Sent steering angle: 11 to CAN[0m
+[0;32mI (100791) DIRECTION: MATCH: STRAIGHT (Pot: 11, MPU: 49)[0m
+[0;32mI (100901) CAN: Sent steering angle: 26 to CAN[0m
+[0;32mI (100901) DIRECTION: MATCH: STRAIGHT (Pot: 26, MPU: 49)[0m
+[0;32mI (101001) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (101001) CANBusHandler: Steering angle changed to 36 from 11[0m
+[0;32mI (101001) CAN: Sent steering angle: 36 to CAN[0m
+[0;32mI (101001) DIRECTION: MATCH: STRAIGHT (Pot: 36, MPU: 49)[0m
+[0;32mI (101111) CAN: Sent steering angle: 38 to CAN[0m
+[0;32mI (101111) DIRECTION: MATCH: STRAIGHT (Pot: 38, MPU: 50)[0m
+[0;32mI (101211) CAN: Sent steering angle: 38 to CAN[0m
+[0;32mI (101211) DIRECTION: MATCH: STRAIGHT (Pot: 38, MPU: 50)[0m
+[0;32mI (101311) CAN: Sent steering angle: 39 to CAN[0m
+[0;32mI (101311) DIRECTION: MATCH: STRAIGHT (Pot: 39, MPU: 50)[0m
+[0;32mI (101411) CAN: Sent steering angle: 38 to CAN[0m
+[0;32mI (101411) DIRECTION: MATCH: STRAIGHT (Pot: 38, MPU: 50)[0m
+[0;32mI (101511) CAN: Sent steering angle: 44 to CAN[0m
+[0;32mI (101511) DIRECTION: MATCH: STRAIGHT (Pot: 44, MPU: 50)[0m
+[0;32mI (101611) CANBusHandler: CAN message sent with ID 0x106, length 2[0m
+[0;32mI (101611) CANBusHandler: Steering angle changed to 58 from 36[0m
+[0;32mI (101611) CAN: Sent steering angle: 58 to CAN[0m
+[0;32mI (101611) DIRECTION: MATCH: STRAIGHT (Pot: 58, MPU: 50)[0m
+[0;32mI (101721) CAN: Sent steering angle: 69 to CAN[0m
+[0;33mW (101721) DIRECTION: MISMATCH: POT=RIGHT (69), MPU=STRAIGHT (50)[0m
+[0;32mI (101821) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (101821) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (101921) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (101921) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (102021) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (102021) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (49)[0m
+[0;32mI (102121) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (102121) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (102221) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (102221) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (102321) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (102321) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (102421) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (102421) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (49)[0m
+[0;32mI (102521) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (102521) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (49)[0m
+[0;32mI (102621) CAN: Sent steering angle: 75 to CAN[0m
+[0;33mW (102621) DIRECTION: MISMATCH: POT=RIGHT (75), MPU=STRAIGHT (49)[0m
+[0;32mI (102721) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (102721) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (102821) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (102821) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (49)[0m
+[0;32mI (102921) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (102921) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (49)[0m
+[0;32mI (103021) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (103021) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (49)[0m
+[0;32mI (103121) CAN: Sent steering angle: 75 to CAN[0m
+[0;33mW (103121) DIRECTION: MISMATCH: POT=RIGHT (75), MPU=STRAIGHT (49)[0m
+[0;32mI (103221) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (103221) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (103321) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (103321) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (103421) CAN: Sent steering angle: 75 to CAN[0m
+[0;33mW (103421) DIRECTION: MISMATCH: POT=RIGHT (75), MPU=STRAIGHT (49)[0m
+[0;32mI (103521) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (103521) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (49)[0m
+[0;32mI (103621) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (103621) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (49)[0m
+[0;32mI (103721) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (103721) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (103821) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (103821) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (103921) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (103921) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (49)[0m
+[0;32mI (104021) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (104021) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (104121) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (104121) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (49)[0m
+[0;32mI (104221) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (104221) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (104321) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (104321) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (104421) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (104421) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (49)[0m
+[0;32mI (104521) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (104521) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (104621) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (104621) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (49)[0m
+[0;32mI (104721) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (104721) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (104821) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (104821) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (104921) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (104921) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (49)[0m
+[0;32mI (105021) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (105021) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (105121) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (105121) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (49)[0m
+[0;32mI (105221) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (105221) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (49)[0m
+[0;32mI (105321) CAN: Sent steering angle: 72 to CAN[0m
+[0;33mW (105321) DIRECTION: MISMATCH: POT=RIGHT (72), MPU=STRAIGHT (50)[0m
+[0;32mI (105421) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (105421) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (105521) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (105521) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (105621) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (105621) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (105721) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (105721) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (49)[0m
+[0;32mI (105821) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (105821) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (105921) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (105921) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (106021) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (106021) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (106121) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (106121) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (106221) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (106221) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (106321) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (106321) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (106421) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (106421) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (106521) CAN: Sent steering angle: 72 to CAN[0m
+[0;33mW (106521) DIRECTION: MISMATCH: POT=RIGHT (72), MPU=STRAIGHT (51)[0m
+[0;32mI (106621) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (106621) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (106721) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (106721) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (106821) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (106821) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (106921) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (106921) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (107021) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (107021) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (107121) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (107121) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (107221) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (107221) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (107321) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (107321) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (107421) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (107421) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (107521) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (107521) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (107621) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (107621) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (107721) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (107721) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (107821) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (107821) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (107921) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (107921) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (108021) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (108021) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (108121) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (108121) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (108221) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (108221) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (108321) CAN: Sent steering angle: 75 to CAN[0m
+[0;33mW (108321) DIRECTION: MISMATCH: POT=RIGHT (75), MPU=STRAIGHT (50)[0m
+[0;32mI (108421) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (108421) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (51)[0m
+[0;32mI (108521) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (108521) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (108621) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (108621) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (108721) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (108721) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (108821) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (108821) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (108921) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (108921) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (109021) CAN: Sent steering angle: 75 to CAN[0m
+[0;33mW (109021) DIRECTION: MISMATCH: POT=RIGHT (75), MPU=STRAIGHT (50)[0m
+[0;32mI (109121) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (109121) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (109221) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (109221) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (109321) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (109321) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (109421) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (109421) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (109521) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (109521) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (109621) CAN: Sent steering angle: 72 to CAN[0m
+[0;33mW (109621) DIRECTION: MISMATCH: POT=RIGHT (72), MPU=STRAIGHT (50)[0m
+[0;32mI (109721) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (109721) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (109821) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (109821) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (109921) CAN: Sent steering angle: 75 to CAN[0m
+[0;33mW (109921) DIRECTION: MISMATCH: POT=RIGHT (75), MPU=STRAIGHT (50)[0m
+[0;32mI (110021) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (110021) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (110121) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (110121) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (110221) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (110221) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (110321) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (110321) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (110421) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (110421) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m
+[0;32mI (110521) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (110521) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (110621) CAN: Sent steering angle: 73 to CAN[0m
+[0;33mW (110621) DIRECTION: MISMATCH: POT=RIGHT (73), MPU=STRAIGHT (50)[0m
+[0;32mI (110721) CAN: Sent steering angle: 74 to CAN[0m
+[0;33mW (110721) DIRECTION: MISMATCH: POT=RIGHT (74), MPU=STRAIGHT (50)[0m

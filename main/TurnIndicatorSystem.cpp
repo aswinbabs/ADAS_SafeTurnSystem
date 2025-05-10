@@ -239,7 +239,7 @@ void LightIndicatorSystem::compareAndLogReadings() {
     // Only log direction if both sensors agree, otherwise log mismatch
     if (potDirection == mpuDirection) {
         ESP_LOGI("DIRECTION", "MATCH: %s (Pot: %d, MPU: %d)", 
-                 potDirection.c_str(), steeringAnglePot, steeringAngleMPU);
+                    potDirection.c_str(), steeringAnglePot, steeringAngleMPU);
     } else {
         ESP_LOGW("DIRECTION", "MISMATCH: POT=%s (%d), MPU=%s (%d)", 
                  potDirection.c_str(), steeringAnglePot, 
@@ -387,7 +387,7 @@ void LightIndicatorSystem::update() {
 
         if(CANBusAvailable) {
             CANBusManager->updateRightIndicator(rightIndicatorState);
-            ESP_LOGI("CAN", "CANBusAvailable and send rightIndicatorState: %d to CAN", leftIndicatorState);
+            ESP_LOGI("CAN", "CANBusAvailable and send rightIndicatorState: %d to CAN", rightIndicatorState);
         }
     }
 
@@ -431,6 +431,24 @@ void LightIndicatorSystem::update() {
             ESP_LOGI("CAN", "CANBusAvailable and send noRightIndicator State: %d to CAN", noRightIndicator);
             }
     } 
+    else if (potDirection == "LEFT" && rightIndicatorState) {
+        warningTone();
+        warningFlag = true;
+        noLeftIndicator = true;
+        if(CANBusAvailable) {
+            CANBusManager->updateLeftWarning(noLeftIndicator);
+            ESP_LOGI("CAN", "CANBusAvailable and send noLeftIndicator State: %d to CAN", noLeftIndicator);
+            }
+    }
+    else if (potDirection == "RIGHT" && leftIndicatorState) {
+        warningTone();
+        warningFlag = true;
+        noRightIndicator = true;
+        if(CANBusAvailable) {
+            CANBusManager->updateRightWarning(noRightIndicator);
+            ESP_LOGI("CAN", "CANBusAvailable and send noRightIndicator State: %d to CAN", noRightIndicator);
+            }
+    }
     else {
         setTone(OFF);
         warningFlag = false;
